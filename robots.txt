@@ -1,0 +1,52 @@
+# ================================================
+# robots.txt para Casas Prefabricadas Canarias
+# Dominio: casasprefabricadascanarias.es
+# Última actualización: 2026
+# ================================================
+
+User-agent: *
+Crawl-delay: 2
+
+# ================================================
+# PERMITIR ACCESO - Todo el sitio (recomendado)
+# ================================================
+Allow: /
+
+# ================================================
+# BLOQUEAR ACCESO - Páginas que NO deben indexarse
+# ================================================
+Disallow: /gracias.html
+Disallow: /admin/
+Disallow: /private/
+Disallow: /tmp/
+Disallow: /backup/
+Disallow: /cgi-bin/
+
+# ================================================
+# SITEMAP
+# ================================================
+Sitemap: https://casasprefabricadascanarias.es/sitemap.xml
+
+# ================================================
+# CONFIGURACIÓN ESPECÍFICA PARA GOOGLE
+# ================================================
+User-agent: Googlebot
+Allow: /
+Disallow: /gracias.html
+Crawl-delay: 1
+
+# ================================================
+# BLOQUEAR ROBOTS DE SPAM (opcional)
+# ================================================
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+# ================================================
+# FIN DEL ARCHIVO
+# ================================================
