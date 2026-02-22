@@ -279,6 +279,11 @@ function setupFormValidation() {
 // =========================================
 
 // Configurar redirección automática después de 15 segundos en páginas de agradecimiento
+// =========================================
+// REDIRECCIÓN AUTOMÁTICA PARA PÁGINAS DE AGRADECIMIENTO
+// =========================================
+
+// Configurar redirección automática después de 15 segundos en páginas de agradecimiento
 function setupThankYouRedirect() {
     // Verificar si estamos en una página de agradecimiento
     const thankYouContainer = document.querySelector('.thank-you-container');
@@ -286,12 +291,12 @@ function setupThankYouRedirect() {
     if (thankYouContainer) {
         let userInteracted = false;
         
-        // Redirección después de 15 segundos
+        // Redirección después de 15 segundos a la página principal
         setTimeout(function() {
             if (!userInteracted) {
                 window.location.href = 'https://casasprefabricadascanarias.es';
             }
-        }, 15000);
+        }, 15000); // 15 segundos
 
         // Detectar interacción del usuario
         document.addEventListener('click', function() {
@@ -447,4 +452,5 @@ if (typeof window !== 'undefined') {
         setupSmoothScroll,
         setupThankYouRedirect
     };
+
 }
