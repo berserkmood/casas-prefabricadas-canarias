@@ -134,7 +134,12 @@ function handleFormSubmit(formId, successMessageId) {
                         });
                     }
                     
-                    // Restaurar botón después de 3 segundos
+                    // 🔴 NUEVO: Redirigir a gracias.html después de 1.5 segundos
+                    setTimeout(function() {
+                        window.location.href = 'https://casasprefabricadascanarias.es/gracias.html';
+                    }, 1500);
+                    
+                    // Restaurar botón después de 3 segundos (por si acaso)
                     setTimeout(() => {
                         submitButton.disabled = false;
                         submitButton.innerHTML = 'Enviar solicitud <i class="fas fa-paper-plane ml-2"></i>';
@@ -454,3 +459,4 @@ if (typeof window !== 'undefined') {
     };
 
 }
+
