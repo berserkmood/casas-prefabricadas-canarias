@@ -124,28 +124,31 @@
     </div>
 
 
-    <main class="article-wrapper">
-        <!-- HERO -->
-        <div class="article-hero" role="img" aria-label="Casa modular moderna integrada en el paisaje canario">
-            <img src="../assets/images/hero-normativa.webp"
-                 alt="Casa modular moderna con vistas al mar en Tenerife"
-                 loading="eager">
-            <div class="article-hero-overlay" aria-hidden="true"></div>
-            <div class="article-hero-content">
-                <div class="article-hero-tags">
-                    <span class="hero-tag"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Canarias</span>
-                    <span class="hero-tag"><i class="fas fa-book-open" aria-hidden="true"></i> Guía legal 2026</span>
-                </div>
-                <h1 class="article-hero-title">
-                    Normativa y permisos para <span>casas prefabricadas</span> en Canarias
-                </h1>
-                <div class="article-hero-meta">
-                    <span><i class="fas fa-clock" aria-hidden="true"></i> 14 min de lectura</span>
-                    <span class="hero-meta-sep" aria-hidden="true">·</span>
-                    <span><i class="fas fa-tag" aria-hidden="true"></i> Licencias · Suelo · Trámites</span>
-                </div>
+    
+       <!-- HERO NORMATIVA - CON CLASES GLOBALES -->
+<section class="hero-section guias-hero">
+    <div class="hero-overlay" style="background-image: url('../assets/images/hero-normativa.webp')"></div>
+    <div class="section-container relative z-10 py-24 lg:py-32 text-white">
+        <div class="max-w-3xl mx-auto text-center animate-fade-up">
+            <div class="badge-floating mb-6 animate-fade-up delay-100">
+                <i class="fas fa-map-marker-alt mr-2"></i> CANARIAS · GUÍA LEGAL 2026
+            </div>
+            <h1 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+                Normativa y permisos para <span class="text-green-400">casas prefabricadas</span> en Canarias
+            </h1>
+            <p class="text-xl text-white/90 mb-8 animate-fade-up delay-300">
+                Todo lo que necesitas saber sobre licencias, suelo rústico y urbano, y plazos reales de tramitación en las islas.
+            </p>
+            <div class="flex flex-wrap gap-4 justify-center animate-fade-up delay-400">
+                <span class="badge-floating"><i class="fas fa-clock mr-2"></i>14 min lectura</span>
+                <span class="badge-floating"><i class="fas fa-tag mr-2"></i>Licencias · Suelo · Trámites</span>
             </div>
         </div>
+    </div>
+</section>
+
+
+        <main class="article-wrapper">
 
         <!-- MENÚ ÍNDICE -->
         <nav class="article-menu" aria-label="Índice del artículo">
@@ -688,5 +691,4 @@
 </script>
 
 </body>
-
 </html>
