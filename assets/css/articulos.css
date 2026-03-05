@@ -679,13 +679,12 @@
 /* ============================================ */
 /* TARJETA SOLICITA TU PRESUPUESTO - RESPONSIVE MEJORADO */
 /* ============================================ */
-
 #solicita-presupuesto {
     margin: 4rem 0 2rem;
 }
 
 .presupuesto-card-simple {
-    background: white;
+    background: #ffffff;
     border-radius: 1.5rem;
     padding: 2.5rem;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
@@ -756,19 +755,20 @@
 }
 
 /* ============================================ */
-/* BOTÓN CTA - VERSIÓN OPTIMIZADA */
+/* BOTÓN CTA - VERSIÓN OPTIMIZADA Y ROBUSTA    */
 /* ============================================ */
-
 .presupuesto-button-simple {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
+
     width: auto;
-    min-width: 200px;
     max-width: 100%;
+    min-width: 0;              /* evita forzar ancho mínimo en layouts estrechos */
+
     background: #16a34a;
-    color: white;
+    color: #ffffff;
     padding: 0.875rem 1.5rem;
     border-radius: 0.75rem;
     font-weight: 600;
@@ -781,37 +781,15 @@
     border: none;
     cursor: pointer;
     box-sizing: border-box;
-    white-space: normal;      /* ← Permite salto de línea */
-    word-break: break-word;   /* ← Rompe palabras largas */
+
+    white-space: normal;       /* permite saltos de línea */
+    word-break: break-word;    /* rompe palabras largas si hace falta */
     margin: 0 auto 1rem auto;
 }
 
-/* Móvil: ancho completo */
-@media (max-width: 768px) {
-    .presupuesto-button-simple {
-        width: 100%;
-        min-width: unset;
-        padding: 0.875rem 1rem;
-        font-size: 0.95rem;
-    }
-}
-
-/* Pantallas muy pequeñas: texto en dos líneas */
-@media (max-width: 480px) {
-    .presupuesto-button-simple {
-        padding: 0.75rem 0.875rem;
-        font-size: 0.9rem;
-        white-space: normal;
-    }
-}
-
-@media (max-width: 360px) {
-    .presupuesto-button-simple {
-        padding: 0.7rem 0.75rem;
-        font-size: 0.85rem;
-        flex-direction: column;  /* Icono arriba, texto abajo */
-        gap: 0.25rem;
-    }
+.presupuesto-button-simple i {
+    font-size: 1rem;
+    flex-shrink: 0;            /* el icono no se deforma */
 }
 
 /* Hover effect */
@@ -821,9 +799,61 @@
     box-shadow: 0 6px 16px rgba(22, 163, 74, 0.4);
 }
 
-.presupuesto-button-simple i {
-    font-size: 1rem;
-    flex-shrink: 0;
+/* ============================================ */
+/* RESPONSIVE                                  */
+/* ============================================ */
+
+/* Móvil / tablet: botón ocupa todo el ancho de la tarjeta */
+@media (max-width: 768px) {
+    .presupuesto-card-simple {
+        padding: 2rem 1.5rem;
+    }
+
+    .presupuesto-button-simple {
+        width: 100%;
+        padding: 0.875rem 1rem;
+        font-size: 0.95rem;
+    }
 }
+
+/* Pantallas pequeñas */
+@media (max-width: 480px) {
+    .presupuesto-card-simple {
+        padding: 1.75rem 1.25rem;
+    }
+
+    .presupuesto-title-simple {
+        font-size: 1.7rem;
+    }
+
+    .presupuesto-title-simple span {
+        font-size: 1.2rem;
+    }
+
+    .presupuesto-text-simple {
+        font-size: 1rem;
+    }
+
+    .presupuesto-button-simple {
+        padding: 0.8rem 0.9rem;
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+}
+
+/* Móviles muy estrechos: icono arriba, texto abajo */
+@media (max-width: 360px) {
+    .presupuesto-card-simple {
+        padding: 1.5rem 1rem;
+    }
+
+    .presupuesto-button-simple {
+        flex-direction: column;
+        gap: 0.3rem;
+        padding: 0.75rem 0.8rem;
+        font-size: 0.85rem;
+    }
+}
+
 
 
