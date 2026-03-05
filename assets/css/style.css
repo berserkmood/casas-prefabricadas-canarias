@@ -152,123 +152,58 @@ h1, h2, h3, h4, .brand-title {
 /* HERO SECTIONS */
 /* ========================================= */
 
+css
 /* ============================================ */
-/* HERO PROFESIONAL - TOTALMENTE RESPONSIVE */
+/* CORRECCIONES PARA HERO Y BOTÓN */
 /* ============================================ */
 
+/* Asegurar que la imagen se vea siempre */
+.hero-section .hero-overlay {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.3;  /* Mantén tu opacidad original */
+}
+
+/* El contenedor de la imagen debe tener altura */
 .hero-section {
     position: relative;
-    width: 100%;
-    min-height: 90vh;                /* Desktop: 90vh */
+    min-height: 90vh;
     display: flex;
     align-items: center;
-    overflow: hidden;
-    background-color: #0f172a;        /* Fallback */
+    background: #0f172a;  /* Color de fondo por si la imagen no carga */
 }
 
-.hero-section.hero-guia {
-    min-height: 50vh;                 /* Guías: más pequeño */
-}
-
-/* Contenedor de imagen (nuevo) */
-.hero-image-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-}
-
-/* Imagen con object-fit - MEJOR OPCIÓN */
-.hero-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;                /* Cubre sin deformar */
-    object-position: center;          /* Centra la imagen */
-    display: block;
-}
-
-/* Picture source para móvil - permite cambiar el encuadre */
+/* Altura reducida en móvil */
 @media (max-width: 768px) {
-    .hero-image {
-        object-position: 70% center;   /* Enfoca parte derecha en móvil */
+    .hero-section {
+        min-height: 70vh;
+    }
+    
+    .hero-section.guias-hero {
+        min-height: 50vh;
+    }
+    
+    /* Ajuste del padding del contenido */
+    .hero-section .section-container {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
     }
 }
 
-/* Overlay con gradiente (mejor que opacidad plana) */
-.hero-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(
-        to right,
-        rgba(15, 23, 42, 0.9) 0%,
-        rgba(15, 23, 42, 0.6) 50%,
-        rgba(15, 23, 42, 0.4) 100%
-    );
-    z-index: 2;
-}
-
-/* Contenido del hero */
-.hero-content {
-    position: relative;
-    z-index: 3;
-    width: 100%;
-}
-
-.hero-text-wrapper {
-    max-width: 700px;
-}
-
-.hero-text-centered {
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-/* Títulos */
-.hero-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 4rem;                  /* Desktop grande */
-    font-weight: 700;
-    color: white;
-    line-height: 1.1;
-    margin-bottom: 1.5rem;
-    text-shadow: 0 2px 10px rgba(0,0,0,0.3);
-}
-
-.hero-title-small {
-    font-size: 3rem;                   /* Para guías */
-}
-
-.hero-title .text-green {
-    color: #4ade80;
-}
-
-.hero-subtitle {
-    font-size: 1.25rem;
-    color: rgba(255,255,255,0.9);
-    max-width: 600px;
-    margin-bottom: 2rem;
-    line-height: 1.5;
-}
-
-/* Badge */
-.badge-floating {
-    display: inline-flex;
-    align-items: center;
-    background: rgba(74, 222, 128, 0.15);
-    backdrop-filter: blur(8px);
-    color: #4ade80;
-    padding: 0.75rem 1.5rem;
-    border-radius: 50px;
-    font-weight: 600;
-    font-size: 0.9rem;
-    margin-bottom: 1.5rem;
-    border: 1px solid rgba(74, 222, 128, 0.2);
+@media (max-width: 480px) {
+    .hero-section {
+        min-height: 60vh;
+    }
+    
+    .hero-section.guias-hero {
+        min-height: 40vh;
+    }
+    
+    .hero-section .section-container {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
 }
 
 /* ============================================ */
@@ -837,3 +772,4 @@ h1, h2, h3, h4, .brand-title {
     }
 
 }
+
