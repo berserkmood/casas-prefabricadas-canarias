@@ -127,25 +127,7 @@
     
        <!-- HERO NORMATIVA - CON CLASES GLOBALES -->
 <section class="hero-section guias-hero">
-    <!-- Contenedor de imagen profesional -->
-    <div class="hero-image-container">
-        <picture>
-            <!-- Versión móvil: enfocada en detalles legales/arquitectónicos -->
-            <source media="(max-width: 768px)" 
-                    srcset="../assets/images/hero-normativa.webp">
-            <!-- Versión desktop: imagen completa -->
-            <source media="(min-width: 769px)" 
-                    srcset="../assets/images/hero-normativa.webp">
-            <!-- Fallback -->
-            <img src="../assets/images/hero-normativa.webp" 
-                 alt="Planos y documentos legales para casas prefabricadas en Canarias"
-                 class="hero-image"
-                 loading="eager">
-        </picture>
-    </div>
-    <!-- Overlay con gradiente -->
-    <div class="hero-overlay-gradient"></div>
-    
+    <div class="hero-overlay" style="background-image: url('../assets/images/hero-normativa.webp')"></div>
     <div class="section-container relative z-10 py-24 lg:py-32 text-white">
         <div class="max-w-3xl mx-auto text-center animate-fade-up">
             <div class="badge-floating mb-6 animate-fade-up delay-100">
@@ -713,6 +695,7 @@
 </body>
 
 </html>
+
 
 
 
