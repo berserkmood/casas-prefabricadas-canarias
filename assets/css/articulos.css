@@ -760,21 +760,24 @@
 /* ============================================ */
 
 .presupuesto-button-simple {
-    display: flex;                    /* ← Flex para mejor control */
+    display: flex;
     align-items: center;
     justify-content: center;
     gap: 0.75rem;
-    width: fit-content;               /* ← Ancho según contenido en desktop */
-    min-width: 200px;                 /* ← Ancho mínimo reducido */
-    max-width: 100%;                  /* ← Nunca más ancho que el contenedor */
-    margin: 0 auto 1rem auto;         /* ← Centrado horizontal */
+    
+    /* 📌 CLAVE: Permitir que el texto fluya */
+    white-space: normal;        /* ← Permite saltos de línea */
+    word-break: break-word;     /* ← Rompe palabras largas si es necesario */
+    hyphens: auto;              /* ← Añade guiones cuando sea posible (opcional) */
+    
+    /* Estilos base */
     background: #16a34a;
     color: white;
     padding: 1rem 2rem;
     border-radius: 0.75rem;
     font-weight: 600;
     font-size: 1.1rem;
-    line-height: 1.4;                 /* ← Mejor espacio entre líneas si salta */
+    line-height: 1.4;           /* ← Espacio entre líneas si el texto salta */
     text-decoration: none;
     text-align: center;
     transition: all 0.3s ease;
@@ -782,54 +785,54 @@
     border: none;
     cursor: pointer;
     box-sizing: border-box;
-    white-space: normal;              /* ← Permite salto de línea siempre */
-    word-break: break-word;           /* ← Rompe palabras largas si es necesario */
-}
-
-/* Hover effect */
-.presupuesto-button-simple:hover {
-    background: #15803d;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 16px rgba(22, 163, 74, 0.4);
-}
-
-.presupuesto-button-simple i {
-    font-size: 1rem;
-    flex-shrink: 0;                   /* ← El icono no se encoge */
+    
+    /* Ancho responsive */
+    width: fit-content;         /* ← Desktop: ancho según contenido */
+    min-width: 200px;
+    max-width: 100%;            /* ← Nunca más ancho que el contenedor */
+    margin: 0 auto 1rem auto;
 }
 
 /* ============================================ */
-/* RESPONSIVE - MÓVIL */
+/* MÓVIL - Ancho completo y ajuste de texto */
 /* ============================================ */
 
 @media (max-width: 768px) {
     .presupuesto-button-simple {
-        width: 100%;                   /* ← Ancho completo en móvil */
-        min-width: unset;              /* ← Eliminamos el mínimo */
-        padding: 1rem 1.5rem;          /* ← Padding cómodo */
+        width: 100%;              /* ← Ocupa todo el ancho disponible */
+        min-width: unset;
+        padding: 1rem 1.25rem;    /* ← Padding lateral reducido */
         font-size: 1rem;
-        white-space: normal;           /* ← Permite salto de línea */
     }
 }
 
 @media (max-width: 480px) {
     .presupuesto-button-simple {
-        padding: 0.9rem 1.25rem;
+        padding: 0.9rem 1rem;
         font-size: 0.95rem;
-        gap: 0.5rem;                   /* ← Menos espacio icono-texto */
+        gap: 0.5rem;
     }
 }
 
-@media (max-width: 360px) {
+/* 📌 NUEVO: Para pantallas muy estrechas - texto en columna */
+@media (max-width: 380px) {
     .presupuesto-button-simple {
-        padding: 0.8rem 1rem;
-        font-size: 0.9rem;
-        flex-direction: column;        /* ← Icono arriba, texto abajo si es necesario */
-        gap: 0.3rem;
+        flex-direction: column;    /* ← Icono arriba, texto abajo */
+        padding: 0.8rem 0.75rem;
+        gap: 0.25rem;
     }
     
     .presupuesto-button-simple i {
-        margin: 0;                     /* ← Ajuste para versión columna */
+        margin: 0;                 /* ← Ajuste para versión columna */
+        font-size: 1.1rem;         /* ← Icono ligeramente más grande */
+    }
+}
+
+/* Para pantallas extremadamente pequeñas */
+@media (max-width: 320px) {
+    .presupuesto-button-simple {
+        font-size: 0.85rem;
+        padding: 0.7rem 0.5rem;
     }
 }
 
