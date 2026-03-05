@@ -7,13 +7,13 @@
   <!-- ============================================= -->
   <!-- SITEMAP para Casas Prefabricadas Canarias    -->
   <!-- Dominio: casasprefabricadascanarias.es       -->
-  <!-- Fecha: 2026-02-13                            -->
+  <!-- Fecha: 2026-03-05 (ACTUALIZADA)              -->
   <!-- ============================================= -->
 
   <!-- PÁGINA PRINCIPAL -->
   <url>
     <loc>https://casasprefabricadascanarias.es/</loc>
-    <lastmod>2026-02-13</lastmod>
+    <lastmod>2026-03-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -21,7 +21,7 @@
   <!-- PÁGINA DE TENERIFE -->
   <url>
     <loc>https://casasprefabricadascanarias.es/tenerife.html</loc>
-    <lastmod>2026-02-13</lastmod>
+    <lastmod>2026-03-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -29,9 +29,37 @@
   <!-- PÁGINA DE GRAN CANARIA -->
   <url>
     <loc>https://casasprefabricadascanarias.es/gran-canaria.html</loc>
-    <lastmod>2026-02-13</lastmod>
+    <lastmod>2026-03-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
+  </url>
+
+  <!-- ============================================= -->
+  <!-- NUEVAS GUÍAS (AÑADIDAS)                      -->
+  <!-- ============================================= -->
+
+  <!-- PÁGINA PRINCIPAL DE GUÍAS -->
+  <url>
+    <loc>https://casasprefabricadascanarias.es/guias.html</loc>
+    <lastmod>2026-03-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- GUÍA DE NORMATIVA Y PERMISOS -->
+  <url>
+    <loc>https://casasprefabricadascanarias.es/guias/normativa-permisos-casas-prefabricadas-canarias.html</loc>
+    <lastmod>2026-03-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- GUÍA DE MATERIALES SEGÚN CLIMA -->
+  <url>
+    <loc>https://casasprefabricadascanarias.es/guias/materiales-segun-clima-canarias.html</loc>
+    <lastmod>2026-03-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 
 </urlset>

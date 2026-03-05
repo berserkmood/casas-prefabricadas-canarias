@@ -460,3 +460,34 @@ if (typeof window !== 'undefined') {
 
 }
 
+// ============================================ //
+// BOTÓN VOLVER AL MENÚ - FUNCIONALIDAD //
+// ============================================ //
+
+(function() {
+    const backToTopBtn = document.getElementById('backToTop');
+    const menuElement = document.querySelector('.article-menu'); // Busca el menú
+    
+    if (!backToTopBtn || !menuElement) return;
+    
+    function toggleButton() {
+        if (window.scrollY > 400) {
+            backToTopBtn.classList.add('visible');
+        } else {
+            backToTopBtn.classList.remove('visible');
+        }
+    }
+    
+    function scrollToMenu() {
+        menuElement.scrollIntoView({ 
+            behavior: 'smooth',
+            block: 'start'
+        });
+    }
+    
+    window.addEventListener('scroll', toggleButton);
+    backToTopBtn.addEventListener('click', scrollToMenu);
+    
+    toggleButton();
+    console.log('✅ Botón volver al menú inicializado');
+})();

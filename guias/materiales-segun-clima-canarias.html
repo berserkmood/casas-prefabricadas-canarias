@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Materiales para casas prefabricadas en Canarias: madera, hormigón o modular según el clima</title>
+    <meta name="description" content="Guía completa sobre materiales para casas prefabricadas en Canarias. Madera, hormigón o modular: cuál elegir según el clima de cada isla. Ventajas, desventajas y mantenimiento.">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Guías sobre casas prefabricadas en Canarias">
+    <meta property="og:description" content="Madera, hormigón o modular: descubre cuál es el mejor material para tu casa prefabricada en Canarias según el clima de cada isla.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://casasprefabricadascanarias.es/assets/images/hero-canarias.webp">
+    
+    <!-- Favicon - CORREGIDO: rutas relativas a assets -->
+    <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png">
+    <link rel="manifest" href="../assets/site.webmanifest">
+    
+    <!-- Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Tailwind (opcional, para utilidades adicionales) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Cookiebot (si lo usas) -->
+    <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="dd87c81a-15b8-4787-b17c-a690de30bef1" data-blockingmode="auto" type="text/javascript"></script>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/articulos.css">
+    <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="dd87c81a-15b8-4787-b17c-a690de30bef1" data-blockingmode="auto" type="text/javascript"></script>
+
+</head>
+<body>
+    <!-- ============================================ -->
+    <!-- HEADER -->
+    <!-- ============================================ -->
+    <header class="header-fixed" id="header">
+        <nav class="section-container flex items-center justify-between h-16 lg:h-20">
+            <a href="../index.html" class="flex items-center gap-3 group">
+                <div class="logo-box">
+                    <img src="../assets/images/icono-logo.png" alt="icono-logo">
+                </div>
+                <div>
+                    <div class="brand-title">Casas Prefabricadas</div>
+                    <div class="brand-sub">Canarias</div>
+                </div>
+            </a>
+            
+            <!-- Menú Desktop -->
+            <div class="hidden md:flex items-center gap-8">
+                <a href="../index.html" class="nav-link">Inicio</a>
+                <a href="../tenerife.html" class="nav-link">Tenerife</a>
+                <a href="../gran-canaria.html" class="nav-link">Gran Canaria</a>
+                <a href="guias.html" class="nav-link">Guías</a>
+                
+                <a href="../index.html#contacto" class="btn-cta text-sm" onclick="window.location.href='../index.html#contacto'; location.reload();">
+                    Solicitar información
+                </a>
+            </div>
+            
+            <!-- Botón Menú Mobile -->
+            <button id="mobile-menu-button" class="md:hidden text-gray-700 hover:text-primary transition-colors p-2">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+        </nav>
+    </header>
+
+    <!-- ============================================ -->
+    <!-- MENÚ MÓVIL -->
+    <!-- ============================================ -->
+    <div id="mobile-menu-container" class="mobile-menu-container">
+        <div class="mobile-menu-content">
+            <div class="mobile-menu-header">
+                <div class="mobile-menu-logo">
+                    <div class="logo-box">
+                        <img src="../assets/images/icono-logo.png" alt="icono-logo">
+                    </div>
+                    <div>
+                        <div class="brand-title">Casas Prefabricadas</div>
+                        <div class="brand-sub">Canarias</div>
+                    </div>
+                </div>
+                <button id="mobile-menu-close" class="mobile-menu-close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <div class="mobile-menu-nav">
+                <a href="../index.html" class="mobile-menu-item">
+                    <i class="fas fa-home mobile-menu-icon"></i> Inicio
+                </a>
+                <a href="../tenerife.html" class="mobile-menu-item">
+                    <i class="fas fa-map-marker-alt mobile-menu-icon"></i> Tenerife
+                </a>
+                <a href="../gran-canaria.html" class="mobile-menu-item">
+                    <i class="fas fa-map-marker-alt mobile-menu-icon"></i> Gran Canaria
+                </a>
+                <a href="guias.html" class="mobile-menu-item">
+                    <i class="fas fa-book-open mobile-menu-icon"></i> Guías
+                </a>
+            </div>
+            
+            <div class="mobile-menu-cta">
+                <a href="../index.html#contacto" class="btn-cta btn-cta-mobile w-full justify-center" 
+                   onclick="closeMobileMenu(); window.location.href='../index.html#contacto';">
+                    Solicitar información <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+            
+            <div class="mobile-menu-footer">
+                <div class="flex items-center gap-2 mb-2">
+                    <i class="fas fa-envelope text-slate-400"></i>
+                    <span class="text-sm">info.casasprefabricadascanarias@gmail.com</span>
+                </div>
+                <p class="text-xs text-slate-500 mt-3">
+                    Servicio gratuito de información
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <main class="article-wrapper">
+    <!-- ============================================ -->
+    <!-- HERO - MATERIALES SEGÚN CLIMA -->
+    <!-- ============================================ -->
+    <div class="article-hero" role="img" aria-label="Diferentes tipos de materiales para casas prefabricadas en el paisaje canario">
+        <img src="../assets/images/hero-materiales.webp"
+             alt="Muestra de materiales de construcción: madera, hormigón y módulos prefabricados en entorno canario"
+             loading="eager">
+        <div class="article-hero-overlay" aria-hidden="true"></div>
+        <div class="article-hero-content">
+            <div class="article-hero-tags">
+                <span class="hero-tag"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Canarias</span>
+                <span class="hero-tag"><i class="fas fa-thermometer-half" aria-hidden="true"></i> Clima</span>
+                <span class="hero-tag"><i class="fas fa-tree" aria-hidden="true"></i> Materiales 2026</span>
+            </div>
+            <h1 class="article-hero-title">
+                ¿Madera, hormigón o modular? La mejor <span>casa prefabricada</span> según el clima de Canarias
+            </h1>
+            <div class="article-hero-meta">
+                <span><i class="fas fa-clock" aria-hidden="true"></i> 12 min de lectura</span>
+                <span class="hero-meta-sep" aria-hidden="true">·</span>
+                <span><i class="fas fa-tag" aria-hidden="true"></i> Madera · Hormigón · Modular · Clima</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================ -->
+    <!-- MENÚ ÍNDICE - MATERIALES Y CLIMA -->
+    <!-- ============================================ -->
+    <nav class="article-menu" aria-label="Índice del artículo">
+        <div class="article-menu-header">
+            <h2><i class="fas fa-list-ul" aria-hidden="true"></i> Índice</h2>
+            <p>Haz clic en cualquier sección para ir directamente</p>
+        </div>
+        <ol class="article-menu-list" role="list">
+            <li><a href="#materiales-clima-canario" class="article-menu-link"><span class="amn">1</span><span>Materiales y clima canario</span><i class="fas fa-chevron-right" aria-hidden="true"></i></a></li>
+            <li><a href="#norte-sur-medianias" class="article-menu-link"><span class="amn">2</span><span>Norte, sur, medianías</span><i class="fas fa-chevron-right" aria-hidden="true"></i></a></li>
+            <li><a href="#madera-medianias" class="article-menu-link"><span class="amn">3</span><span>Madera: confort en medianías</span><i class="fas fa-chevron-right" aria-hidden="true"></i></a></li>
+            <li><a href="#hormigon-costa" class="article-menu-link"><span class="amn">4</span><span>Hormigón: costa e inercia</span><i class="fas fa-chevron-right" aria-hidden="true"></i></a></li>
+            <li><a href="#modular-rapidez" class="article-menu-link"><span class="amn">5</span><span>Modular: rapidez con matices</span><i class="fas fa-chevron-right" aria-hidden="true"></i></a></li>
+            <li><a href="#tabla-comparativa" class="article-menu-link"><span class="amn">6</span><span>Tabla comparativa</span><i class="fas fa-chevron-right" aria-hidden="true"></i></a></li>
+            <li><a href="#tu-caso-concreto" class="article-menu-link"><span class="amn">7</span><span>Tu caso concreto</span><i class="fas fa-chevron-right" aria-hidden="true"></i></a></li>
+            <li><a href="#solicita-presupuesto" class="article-menu-link"><span class="amn">8</span><span>Solicita tu presupuesto adaptado al clima de tu isla</span><i class="fas fa-chevron-right" aria-hidden="true"></i></a></li>
+        </ol>
+    </nav>
+
+
+
+<article class="article-body">
+
+  <section id="materiales-clima" class="article-section">
+    <h2>
+      <span class="h2-icon" aria-hidden="true">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.84Z"/><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"/><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"/></svg>
+      </span>
+      <span class="h2-num">1.</span>
+      Materiales y clima canario
+    </h2>
+
+    <p>
+      Modular no es un material: es un <strong>sistema industrializado</strong> que puede usar madera, acero, hormigón ligero, panel sándwich, etc. Madera y hormigón son materiales con comportamiento específico.
+    </p>
+
+    <p>Decide por:</p>
+
+    <ul>
+      <li><strong>Ubicación</strong> (norte húmedo, sur seco, medianías suaves)</li>
+      <li><strong>Uso</strong> (habitual, vacacional, alquiler)</li>
+      <li><strong>Mantenimiento que aceptas</strong> (bajo, medio, alto)</li>
+    </ul>
+  </section>
+
+  <section id="norte-sur-medianias" class="article-section">
+    <h2>
+      <span class="h2-icon" aria-hidden="true">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
+      </span>
+      <span class="h2-num">2.</span>
+      Norte, sur, medianías
+    </h2>
+
+    <ul>
+      <li><strong>Norte / barlovento:</strong> humedad alta, lluvia fina, condensaciones.</li>
+      <li><strong>Sur / árido:</strong> sol directo, salitre, amplitud térmica.</li>
+      <li><strong>Medianías:</strong> temperaturas suaves, menos extremos.</li>
+    </ul>
+  </section>
+
+  <section id="madera-confort" class="article-section">
+    <h2>
+      <span class="h2-icon" aria-hidden="true">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m17 14 3 3.3a1 1 0 0 1-.7 1.7H4.7a1 1 0 0 1-.7-1.7L7 14l-3-3.3a1 1 0 0 1 .7-1.7h4.6L7 6.3a1 1 0 0 1 .7-1.7h8.6a1 1 0 0 1 .7 1.7L15 9h4.6a1 1 0 0 1 .7 1.7L17 14"/><path d="M12 22v-3"/></svg>
+      </span>
+      <span class="h2-num">3.</span>
+      Madera: confort en medianías
+    </h2>
+
+    <p>La madera gana terreno en Canarias por su confort natural.</p>
+
+    <h3>Ventajas clave</h3>
+
+    <ul>
+      <li><strong>Regula humedad:</strong> absorbe exceso, libera cuando hace falta.</li>
+      <li><strong>Confort térmico:</strong> templado, sin extremos bruscos.</li>
+      <li><strong>Sostenible:</strong> almacena CO2, baja huella de carbono.</li>
+      <li><strong>Rápida:</strong> montaje preciso en fábrica.</li>
+    </ul>
+
+    <h3>Problemas reales</h3>
+
+    <ul>
+      <li><strong>Costa expuesta:</strong> salitre + sol = mantenimiento intensivo (lasures anuales).</li>
+      <li><strong>Norte húmedo:</strong> hongos si no hay ventilación perfecta.</li>
+      <li><strong>Exige proveedor local:</strong> maderas tropicales + tratamientos específicos.</li>
+    </ul>
+
+    <div class="article-note" role="note">
+      <span class="note-icon" aria-hidden="true">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/><path d="M9 18h6"/><path d="M10 22h4"/></svg>
+      </span>
+      <div>
+        <strong>Ideal para:</strong> medianías norte/sur, primera residencia, quien acepta mantenimiento moderado.
+      </div>
+    </div>
+  </section>
+
+  <section id="hormigon-costa" class="article-section">
+    <h2>
+      <span class="h2-icon" aria-hidden="true">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="16" height="20" x="4" y="2" rx="2" ry="2"/><path d="M9 22v-4h6v4"/><path d="M8 6h.01"/><path d="M16 6h.01"/><path d="M12 6h.01"/><path d="M12 10h.01"/><path d="M12 14h.01"/><path d="M16 10h.01"/><path d="M16 14h.01"/><path d="M8 10h.01"/><path d="M8 14h.01"/></svg>
+      </span>
+      <span class="h2-num">4.</span>
+      Hormigón: costa e inercia
+    </h2>
+
+    <p>Rey tradicional en Canarias por durabilidad.</p>
+
+    <h3>Ventajas clave</h3>
+
+    <ul>
+      <li><strong>Inercia térmica:</strong> almacena calor/frío, estabiliza interiores.</li>
+      <li><strong>Resiste salitre:</strong> armado bien protegido = décadas sin problemas.</li>
+      <li><strong>Mantenimiento bajo:</strong> fachada enfoscada aguanta años.</li>
+      <li><strong>Sensación maciza:</strong> "casa de verdad".</li>
+    </ul>
+
+    <h3>Problemas reales</h3>
+
+    <ul>
+      <li><strong>Sur soleado:</strong> acumula calor si no hay sombras.</li>
+      <li><strong>Medianías frescas:</strong> sensación fría sin buen aislamiento.</li>
+      <li><strong>Cimentación pesada:</strong> terrenos complicados suben coste.</li>
+    </ul>
+
+    <div class="article-note" role="note">
+      <span class="note-icon" aria-hidden="true">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/><path d="M9 18h6"/><path d="M10 22h4"/></svg>
+      </span>
+      <div>
+        <strong>Ideal para:</strong> costa expuesta al mar, quien prioriza durabilidad, diseño bioclimático bien estudiado.
+      </div>
+    </div>
+  </section>
+
+  <section id="modular-rapidez" class="article-section">
+    <h2>
+      <span class="h2-icon" aria-hidden="true">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 7.7c0-.6-.4-1.2-.8-1.5l-6.3-3.9a1.72 1.72 0 0 0-1.7 0l-10.3 6c-.5.2-.9.8-.9 1.4v6.6c0 .5.4 1.2.8 1.5l6.3 3.9a1.72 1.72 0 0 0 1.7 0l10.3-6c.5-.3.9-1 .9-1.5Z"/><path d="M10 21.9V14L2.1 9.1"/><path d="m10 14 11.9-6.9"/><path d="M14 19.8v-8.1"/><path d="M18 17.5V9.4"/></svg>
+      </span>
+      <span class="h2-num">5.</span>
+      Modular: rapidez con matices
+    </h2>
+
+    <p>Módulos 3D fabricados en taller, montaje en días.</p>
+
+    <h3>Ventajas clave</h3>
+
+    <ul>
+      <li><strong>Velocidad:</strong> fabrica mientras tramitas licencia.</li>
+      <li><strong>Control fábrica:</strong> menos errores de obra.</li>
+      <li><strong>Versátil:</strong> elige madera, acero, hormigón ligero.</li>
+      <li><strong>Aislamiento preciso:</strong> roturas puente térmico garantizadas.</li>
+    </ul>
+
+    <h3>Problemas reales</h3>
+
+    <ul>
+      <li><strong>Logística:</strong> camiones/grúas necesitan acceso.</li>
+      <li><strong>Calidad variable:</strong> no todos los modulares son iguales.</li>
+      <li><strong>Sellados críticos:</strong> malas juntas = filtraciones.</li>
+    </ul>
+
+    <div class="article-note" role="note">
+      <span class="note-icon" aria-hidden="true">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/><path d="M9 18h6"/><path d="M10 22h4"/></svg>
+      </span>
+      <div>
+        <strong>Ideal para:</strong> todo el archipiélago (ajustando materiales), quien quiere minimizar obra, proyectos repetibles.
+      </div>
+    </div>
+  </section>
+
+ <section id="tabla-comparativa" class="article-section">
+    <h2>
+        <span class="h2-icon" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18"/><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M3 9h18"/><path d="M3 15h18"/></svg>
+        </span>
+        <span class="h2-num">6.</span>
+        Tabla comparativa
+    </h2>
+
+    <div class="article-table-wrap">
+        <table class="article-table">
+            <thead>
+                <tr>
+                    <th>Criterio</th>
+                    <th>Madera</th>
+                    <th>Hormigón</th>
+                    <th>Modular</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td data-label="Criterio"><strong>Térmico</strong></td>
+                    <td data-label="Madera">Confortable, baja inercia</td>
+                    <td data-label="Hormigón">Alta inercia, estable</td>
+                    <td data-label="Modular">Variable (buen aislamiento)</td>
+                </tr>
+                <tr>
+                    <td data-label="Criterio"><strong>Humedad</strong></td>
+                    <td data-label="Madera">Regula natural</td>
+                    <td data-label="Hormigón">Depende aislamiento</td>
+                    <td data-label="Modular">Depende sellados</td>
+                </tr>
+                <tr>
+                    <td data-label="Criterio"><strong>Salitre costa</strong></td>
+                    <td data-label="Madera">Mantenimiento alto</td>
+                    <td data-label="Hormigón">Excelente</td>
+                    <td data-label="Modular">Depende recubrimientos</td>
+                </tr>
+                <tr>
+                    <td data-label="Criterio"><strong>Rapidez</strong></td>
+                    <td data-label="Madera">Alta (prefabricada)</td>
+                    <td data-label="Hormigón">Media</td>
+                    <td data-label="Modular">Muy alta</td>
+                </tr>
+                <tr>
+                    <td data-label="Criterio"><strong>Mantenimiento</strong></td>
+                    <td data-label="Madera">Medio-alto</td>
+                    <td data-label="Hormigón">Bajo</td>
+                    <td data-label="Modular">Bajo-medio</td>
+                </tr>
+                <tr>
+                    <td data-label="Criterio"><strong>Medianías</strong></td>
+                    <td data-label="Madera" class="td-stars">★★★★★</td>
+                    <td data-label="Hormigón" class="td-stars">★★★★</td>
+                    <td data-label="Modular" class="td-stars">★★★★★</td>
+                </tr>
+                <tr>
+                    <td data-label="Criterio"><strong>Costa expuesta</strong></td>
+                    <td data-label="Madera" class="td-stars">★★★</td>
+                    <td data-label="Hormigón" class="td-stars">★★★★★</td>
+                    <td data-label="Modular" class="td-stars">★★★★</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+  <section id="tu-caso-concreto" class="article-section">
+    <h2>
+      <span class="h2-icon" aria-hidden="true">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+      </span>
+      <span class="h2-num">7.</span>
+      Tu caso concreto
+    </h2>
+
+    <div class="article-case">
+      <h3>Medianías (norte/sur), vivienda habitual</h3>
+      <p><strong>Ganador:</strong> Madera o modular madera.</p>
+      <p>Clima suave + confort natural.</p>
+    </div>
+
+    <div class="article-case">
+      <h3>Costa sur expuesta</h3>
+      <p><strong>Ganador:</strong> Hormigón o modular hormigón.</p>
+      <p>Salitre + sol directo.</p>
+    </div>
+
+    <div class="article-case">
+      <h3>Norte húmedo costero</h3>
+      <p><strong>Ganador:</strong> Modular con fachada ventilada.</p>
+      <p>Sellados fábrica + ventilación controlada.</p>
+    </div>
+
+    <div class="article-case">
+      <h3>Máxima rapidez</h3>
+      <p><strong>Ganador:</strong> Modular (cualquier material bien adaptado).</p>
+      <p>Fábrica paralela a licencias.</p>
+    </div>
+  </section>
+
+<!-- ============================================ -->
+<!-- SECCIÓN 8: SOLICITA TU PRESUPUESTO - VERSIÓN SIMPLE -->
+<!-- ============================================ -->
+
+<section id="solicita-presupuesto" class="presupuesto-section">
+    <div class="presupuesto-card-simple">
+        <div class="presupuesto-header">
+            <div class="presupuesto-icon-simple">
+                <i class="fas fa-calculator"></i>
+            </div>
+            <h2 class="presupuesto-title-simple">
+                Solicita tu presupuesto <span>adaptado al clima de tu isla</span>
+            </h2>
+        </div>
+        
+        <p class="presupuesto-text-simple">
+            Te ayudamos a encontrar la mejor opción para tu terreno, tu presupuesto y el clima de tu isla. Sin compromiso y 100% gratuito.
+        </p>
+        
+        <div class="presupuesto-features-simple">
+            <div class="feature-item-simple">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <div class="feature-item-simple">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <div class="feature-item-simple">
+                <i class="fas fa-check-circle"></i>
+            </div>
+        </div>
+        
+        <a href="../index.html#contacto" class="presupuesto-button-simple" onclick="window.location.href='../index.html#contacto'; location.reload();">
+            <i class="fas fa-paper-plane"></i>
+            Solicitar presupuesto personalizado
+        </a>
+        
+    </div>
+</section>
+  
+
+</article>
+
+
+
+</main>
+
+
+
+    <!-- ============================================ -->
+<!-- BOTÓN VOLVER ARRIBA -->
+<!-- Coloca esto justo antes de cerrar el <body> -->
+<!-- ============================================ -->
+
+        <button id="backToTop" class="back-to-top" aria-label="Volver arriba">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+
+     <footer class="bg-slate-900 text-white py-16">
+        <div class="section-container">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-10 pb-12 border-b border-slate-800">
+                <div>
+                    <div class="flex items-center gap-3 mb-4">
+                        <a href="../index.html" class="flex items-center gap-3 hover:opacity-80 transition-opacity">
+                            <div class="logo-box">
+                                <img src="../assets/images/icono-logo.png" alt="icono-logo">
+                            </div>
+                            <div>
+                                <div class="brand-title">Casas Prefabricadas</div>
+                                <div class="brand-sub">Canarias</div>
+                            </div>
+                        </a>
+                    </div>
+                    <p class="text-slate-400 text-sm mt-3">
+                        Conectamos a personas interesadas en casas prefabricadas con los mejores profesionales de Canarias.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold text-lg mb-5">Navegación</h4>
+                    <div class="flex flex-col gap-3 text-slate-400 text-sm">
+                        <a href="../index.html" class="hover:text-green-400 transition-colors">Inicio</a>
+                        <a href="../tenerife.html" class="hover:text-green-400 transition-colors">Tenerife</a>
+                        <a href="../gran-canaria.html" class="hover:text-green-400 transition-colors">Gran Canaria</a>
+                        <a href="guias/guias.html" class="hover:text-green-400 transition-colors">Guías</a>
+                        <a href="../index.html#contacto" class="hover:text-green-400 transition-colors" onclick="window.location.href='../index.html#contacto'; location.reload();">Contacto</a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold text-lg mb-5">Zonas</h4>
+                    <div class="flex flex-col gap-3 text-slate-400 text-sm">
+                        <a href="../tenerife.html" class="hover:text-green-400 transition-colors">Tenerife</a>
+                        <a href="../gran-canaria.html" class="hover:text-green-400 transition-colors">Gran Canaria</a>
+                        <span class="text-slate-600">Lanzarote (próximamente)</span>
+                        <span class="text-slate-600">Fuerteventura (próximamente)</span>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold text-lg mb-5">Contacto</h4>
+                    <div class="space-y-3 text-slate-400 text-sm">
+                        <p class="flex items-center gap-2">
+                            <i class="fas fa-envelope"></i>
+                            <span>info.casasprefabricadascanarias@gmail.com</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-slate-500 text-sm">
+                    © 2026 Casas Prefabricadas Canarias. Plataforma de conexión con empresas constructoras.
+                </p>
+                <div class="flex gap-6 text-slate-500 text-sm">
+                    <a href="../aviso-legal.html" class="hover:text-white transition-colors">Aviso Legal</a>
+                    <a href="../privacidad.html" class="hover:text-white transition-colors">Política de Privacidad</a>
+                    <a href="../cookies.html" class="hover:text-white transition-colors">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- ============================================ -->
+    <!-- SCRIPT (ENLACE A TU JS) -->
+    <!-- ============================================ -->
+    <script src="../assets/js/script.js"></script>
+    <script>
+    // Resalta la sección activa en el menú al hacer scroll
+    window.addEventListener('scroll', function() {
+        const sections = document.querySelectorAll('h2[id]');
+        const menuLinks = document.querySelectorAll('.article-menu-link');
+        
+        let current = '';
+        
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop - 100;
+            if (window.scrollY >= sectionTop) {
+                current = section.getAttribute('id');
+            }
+        });
+        
+        menuLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === `#${current}`) {
+                link.classList.add('active');
+            }
+        });
+    });
+</script>
+
+</body>
+</html>

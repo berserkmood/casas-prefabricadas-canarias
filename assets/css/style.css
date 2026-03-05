@@ -1,30 +1,25 @@
 /* ========================================= */
 /* SISTEMA DE DISEÑO - Casas Prefabricadas Canarias */
+/* VERSIÓN OPTIMIZADA - GLOBAL */
 /* ========================================= */
 
 :root {
-    --primary: 205 65% 35%;    /* Azul Océano */
-    --accent: 155 55% 38%;     /* Verde Sostenible */
-    --background: 40 33% 98%;  /* Arena */
+    --primary: 205 65% 35%;
+    --accent: 155 55% 38%;
+    --background: 40 33% 98%;
     --foreground: 220 25% 15%;
     --secondary: 210 20% 98%;
+    --green: #16a34a;
+    --green-hover: #15803d;
 }
 
-/* ========================================= */
-/* RESET Y ESTILOS BASE */
-/* ========================================= */
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+/* Reset y base */
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
     font-family: 'DM Sans', sans-serif;
     background-color: hsl(var(--background));
     color: hsl(var(--foreground));
-    margin: 0;
     line-height: 1.6;
 }
 
@@ -39,9 +34,7 @@ h1, h2, h3, h4, .brand-title {
 
 .header-fixed {
     position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
+    top: 0; left: 0; right: 0;
     z-index: 1000;
     background: rgba(255, 255, 255, 0.97);
     backdrop-filter: blur(10px);
@@ -49,13 +42,10 @@ h1, h2, h3, h4, .brand-title {
     transition: all 0.3s ease;
 }
 
-.header-fixed.scrolled {
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-}
+.header-fixed.scrolled { box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); }
 
 .logo-box {
-    width: 45px;
-    height: 45px;
+    width: 45px; height: 45px;
     border-radius: 10px;
     background: linear-gradient(135deg, hsl(var(--primary)), hsl(205 70% 45%));
     color: white;
@@ -65,9 +55,7 @@ h1, h2, h3, h4, .brand-title {
     transition: transform 0.3s ease;
 }
 
-.logo-box:hover {
-    transform: rotate(-5deg);
-}
+.logo-box:hover { transform: rotate(-5deg); }
 
 .brand-title {
     font-size: 1.25rem;
@@ -93,11 +81,10 @@ h1, h2, h3, h4, .brand-title {
     position: relative;
     padding: 0.5rem 0;
     transition: color 0.3s ease;
+    text-decoration: none;
 }
 
-.nav-link:hover {
-    color: hsl(var(--primary));
-}
+.nav-link:hover { color: hsl(var(--primary)); }
 
 .nav-link.active {
     color: hsl(var(--primary));
@@ -107,10 +94,8 @@ h1, h2, h3, h4, .brand-title {
 .nav-link.active::after {
     content: '';
     position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 2px;
+    bottom: 0; left: 0;
+    width: 100%; height: 2px;
     background: linear-gradient(90deg, hsl(var(--primary)), hsl(var(--accent)));
     border-radius: 2px;
 }
@@ -176,6 +161,8 @@ h1, h2, h3, h4, .brand-title {
     align-items: center;
 }
 
+.hero-section.guias-hero { min-height: 50vh; }
+
 .hero-overlay {
     position: absolute;
     inset: 0;
@@ -199,19 +186,17 @@ h1, h2, h3, h4, .brand-title {
 }
 
 /* ========================================= */
-/* CARDS MEJORADAS - COLORIDAS COMO TENERIFE */
+/* CARDS */
 /* ========================================= */
 
-.info-card {
+.info-card, .info-card-alt {
     background: white;
     border-radius: 1rem;
     padding: 2.5rem;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: all 0.3s ease;
     height: 100%;
     border: 1px solid #f1f5f9;
-    position: relative;
-    overflow: hidden;
 }
 
 .info-card:hover {
@@ -220,8 +205,7 @@ h1, h2, h3, h4, .brand-title {
 }
 
 .info-card-icon {
-    width: 70px;
-    height: 70px;
+    width: 70px; height: 70px;
     border-radius: 18px;
     display: flex;
     align-items: center;
@@ -237,67 +221,11 @@ h1, h2, h3, h4, .brand-title {
     box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
 }
 
-/* Colores específicos para cada card */
-.card-intermediacion .info-card-icon {
-    background: linear-gradient(135deg, #3b82f6, #1d4ed8);
-    color: white;
-}
-
-.card-analisis .info-card-icon {
-    background: linear-gradient(135deg, #10b981, #059669);
-    color: white;
-}
-
-.card-asesoramiento .info-card-icon {
-    background: linear-gradient(135deg, #8b5cf6, #7c3aed);
-    color: white;
-}
-
-.card-compromiso .info-card-icon {
-    background: linear-gradient(135deg, #f59e0b, #d97706);
-    color: white;
-}
-
-/* CARDS GENERALES PARA TENERIFE/GRAN CANARIA */
-.info-card-alt {
-    background: white;
-    border-radius: 1rem;
-    padding: 2.5rem;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    height: 100%;
-    border: 1px solid #f1f5f9;
-}
-
-.info-card-alt:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
-}
-
-.info-card-icon-alt {
-    width: 60px;
-    height: 60px;
-    border-radius: 12px;
-    background: linear-gradient(135deg, hsl(var(--primary)), hsl(205 70% 45%));
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.5rem;
-    margin-bottom: 1.5rem;
-}
-
-/* TYPE ICONS */
-.type-icon {
-    width: 70px;
-    height: 70px;
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.75rem;
-    margin-bottom: 1.5rem;
-}
+/* Colores específicos para cards */
+.card-intermediacion .info-card-icon { background: linear-gradient(135deg, #3b82f6, #1d4ed8); color: white; }
+.card-analisis .info-card-icon { background: linear-gradient(135deg, #10b981, #059669); color: white; }
+.card-asesoramiento .info-card-icon { background: linear-gradient(135deg, #8b5cf6, #7c3aed); color: white; }
+.card-compromiso .info-card-icon { background: linear-gradient(135deg, #f59e0b, #d97706); color: white; }
 
 /* ========================================= */
 /* ISLAND CARDS */
@@ -313,27 +241,20 @@ h1, h2, h3, h4, .brand-title {
     transition: transform 0.3s ease;
 }
 
-.island-card:hover {
-    transform: translateY(-8px);
-}
+.island-card:hover { transform: translateY(-8px); }
 
 .island-card img {
-    width: 100%;
-    height: 100%;
+    width: 100%; height: 100%;
     object-fit: cover;
     transition: transform 0.6s ease;
     opacity: 0.7;
 }
 
-.island-card:hover img {
-    transform: scale(1.05);
-}
+.island-card:hover img { transform: scale(1.05); }
 
 .island-content {
     position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    bottom: 0; left: 0; right: 0;
     padding: 2.5rem;
     background: linear-gradient(transparent, rgba(0, 0, 0, 0.9));
     color: white;
@@ -353,7 +274,6 @@ h1, h2, h3, h4, .brand-title {
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
     border: 1px solid #f1f5f9;
     transition: all 0.3s ease;
-    overflow: hidden;
 }
 
 .step-card:hover {
@@ -362,8 +282,7 @@ h1, h2, h3, h4, .brand-title {
 }
 
 .step-number {
-    width: 60px;
-    height: 60px;
+    width: 60px; height: 60px;
     border-radius: 50%;
     background: linear-gradient(135deg, hsl(var(--primary)), hsl(205 70% 45%));
     color: white;
@@ -374,72 +293,6 @@ h1, h2, h3, h4, .brand-title {
     font-size: 1.5rem;
     margin: 0 auto 1.5rem;
     box-shadow: 0 6px 15px rgba(30, 64, 175, 0.3);
-    position: relative;
-    z-index: 1;
-}
-
-/* STEP CARDS ALTERNATIVOS (TENERIFE/GRAN CANARIA) */
-.step-card-alt {
-    position: relative;
-    padding: 2rem;
-    background: white;
-    border-radius: 1rem;
-    text-align: center;
-    height: 100%;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
-    border: 1px solid #f1f5f9;
-}
-
-.step-number-alt {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background: linear-gradient(135deg, hsl(var(--primary)), hsl(205 70% 45%));
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 700;
-    font-size: 1.25rem;
-    margin: 0 auto 1.5rem;
-}
-
-/* ========================================= */
-/* ASPECTOS CLAVE / VENTAJAS */
-/* ========================================= */
-
-.aspect-card {
-    background: white;
-    border-radius: 1rem;
-    padding: 2rem;
-    border: 1px solid #e2e8f0;
-    transition: all 0.3s ease;
-}
-
-.aspect-card:hover {
-    border-color: hsl(var(--primary));
-    box-shadow: 0 10px 30px rgba(30, 64, 175, 0.1);
-    transform: translateY(-5px);
-}
-
-.ventaja-card {
-    background: white;
-    border-radius: 1rem;
-    padding: 2rem;
-    border-left: 4px solid hsl(var(--accent));
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
-    height: 100%;
-}
-
-/* ========================================= */
-/* PRICE CARD */
-/* ========================================= */
-
-.price-card {
-    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
-    border-radius: 1rem;
-    padding: 2.5rem;
-    border: 1px solid #e2e8f0;
 }
 
 /* ========================================= */
@@ -449,10 +302,6 @@ h1, h2, h3, h4, .brand-title {
 .faq-item {
     border-bottom: 1px solid #e2e8f0;
     padding: 1.5rem 0;
-}
-
-.faq-item[open] {
-    padding-bottom: 1.5rem;
 }
 
 .faq-question {
@@ -467,22 +316,15 @@ h1, h2, h3, h4, .brand-title {
     color: #1e293b;
 }
 
-.faq-question:hover {
-    color: hsl(var(--primary));
-}
-
-.faq-question::-webkit-details-marker {
-    display: none;
-}
+.faq-question:hover { color: hsl(var(--primary)); }
+.faq-question::-webkit-details-marker { display: none; }
 
 .faq-question i {
     transition: transform 0.3s ease;
     margin-left: 1rem;
 }
 
-.faq-item[open] .faq-question i {
-    transform: rotate(180deg);
-}
+.faq-item[open] .faq-question i { transform: rotate(180deg); }
 
 .faq-answer {
     padding-top: 1rem;
@@ -497,7 +339,7 @@ h1, h2, h3, h4, .brand-title {
 }
 
 /* ========================================= */
-/* FORMULARIO FORMSPREE */
+/* FORMULARIO */
 /* ========================================= */
 
 .form-container {
@@ -508,7 +350,7 @@ h1, h2, h3, h4, .brand-title {
     border: 1px solid #f1f5f9;
 }
 
-.form-input {
+.form-input, .form-input-alt {
     width: 100%;
     padding: 0.875rem 1rem;
     border: 2px solid #e2e8f0;
@@ -518,10 +360,6 @@ h1, h2, h3, h4, .brand-title {
     transition: all 0.3s ease;
     background: white;
     color: #1e293b;
-}
-
-.form-input::placeholder {
-    color: #94a3b8;
 }
 
 .form-input:focus {
@@ -536,54 +374,28 @@ h1, h2, h3, h4, .brand-title {
     background-repeat: no-repeat;
     background-position: right 1rem center;
     background-size: 1.5em;
-    color: #1e293b;
-}
-
-/* Formulario alternativo para Tenerife/Gran Canaria */
-.form-input-alt {
-    width: 100%;
-    padding: 0.875rem 1rem;
-    border: 2px solid #e2e8f0;
-    border-radius: 0.75rem;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 1rem;
-    transition: all 0.3s ease;
-    background: white;
-    color: #1e293b;
-}
-
-.form-input-alt:focus {
-    outline: none;
-    border-color: hsl(var(--primary));
-    box-shadow: 0 0 0 3px rgba(30, 64, 175, 0.1);
 }
 
 /* ========================================= */
-/* MENÚ MÓVIL COMPLETAMENTE REDISEÑADO */
+/* MENÚ MÓVIL */
 /* ========================================= */
 
 .mobile-menu-container {
     position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    top: 0; left: 0; right: 0; bottom: 0;
     background: rgba(0, 0, 0, 0.5);
     z-index: 9999;
     display: none;
     backdrop-filter: blur(4px);
 }
 
-.mobile-menu-container.open {
-    display: block;
-}
+.mobile-menu-container.open { display: block; }
 
 .mobile-menu-content {
     position: absolute;
-    top: 0;
-    right: 0;
-    width: 85%;
-    max-width: 320px;
+    top: 0; right: 0;
+    width: 92%;
+    max-width: 380px;
     height: 100%;
     background: white;
     box-shadow: -4px 0 20px rgba(0, 0, 0, 0.1);
@@ -592,9 +404,7 @@ h1, h2, h3, h4, .brand-title {
     transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.mobile-menu-container.open .mobile-menu-content {
-    transform: translateX(0);
-}
+.mobile-menu-container.open .mobile-menu-content { transform: translateX(0); }
 
 .mobile-menu-header {
     padding: 1.5rem;
@@ -608,11 +418,21 @@ h1, h2, h3, h4, .brand-title {
     display: flex;
     align-items: center;
     gap: 0.75rem;
+    white-space: nowrap;
+}
+
+.mobile-menu-logo .brand-title {
+    font-size: 1.2rem;
+    white-space: nowrap;
+}
+
+.mobile-menu-logo .brand-sub {
+    font-size: 0.7rem;
+    white-space: nowrap;
 }
 
 .mobile-menu-close {
-    width: 40px;
-    height: 40px;
+    width: 40px; height: 40px;
     border-radius: 50%;
     background: #f1f5f9;
     display: flex;
@@ -622,15 +442,12 @@ h1, h2, h3, h4, .brand-title {
     cursor: pointer;
     transition: all 0.2s ease;
     border: none;
+    flex-shrink: 0;
 }
 
-.mobile-menu-close:hover {
-    background: #e2e8f0;
-}
+.mobile-menu-close:hover { background: #e2e8f0; }
 
-.mobile-menu-nav {
-    padding: 1.5rem;
-}
+.mobile-menu-nav { padding: 1.5rem; }
 
 .mobile-menu-item {
     display: flex;
@@ -643,14 +460,8 @@ h1, h2, h3, h4, .brand-title {
     transition: all 0.2s ease;
 }
 
-.mobile-menu-item:last-child {
-    border-bottom: none;
-}
-
-.mobile-menu-item:hover {
-    color: hsl(var(--primary));
-}
-
+.mobile-menu-item:last-child { border-bottom: none; }
+.mobile-menu-item:hover { color: hsl(var(--primary)); }
 .mobile-menu-item.active {
     color: hsl(var(--primary));
     font-weight: 600;
@@ -660,16 +471,12 @@ h1, h2, h3, h4, .brand-title {
     width: 24px;
     margin-right: 0.75rem;
     color: #94a3b8;
+    flex-shrink: 0;
 }
 
-.mobile-menu-item.active .mobile-menu-icon {
-    color: hsl(var(--primary));
-}
+.mobile-menu-item.active .mobile-menu-icon { color: hsl(var(--primary)); }
 
-.mobile-menu-cta {
-    margin: 1.5rem;
-    margin-top: 2rem;
-}
+.mobile-menu-cta { margin: 1.5rem; margin-top: 2rem; }
 
 .mobile-menu-footer {
     padding: 1.5rem;
@@ -680,7 +487,7 @@ h1, h2, h3, h4, .brand-title {
 }
 
 /* ========================================= */
-/* PÁGINA DE AGRADECIMIENTO (THANK YOU) */
+/* PÁGINA DE AGRADECIMIENTO */
 /* ========================================= */
 
 .thank-you-container {
@@ -697,19 +504,12 @@ h1, h2, h3, h4, .brand-title {
 }
 
 @keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(40px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 .success-icon {
-    width: 80px;
-    height: 80px;
+    width: 80px; height: 80px;
     border-radius: 50%;
     background: linear-gradient(135deg, hsl(var(--accent)), hsl(160 50% 45%));
     color: white;
@@ -723,20 +523,10 @@ h1, h2, h3, h4, .brand-title {
 }
 
 @keyframes bounceIn {
-    0% {
-        opacity: 0;
-        transform: scale(0.3);
-    }
-    50% {
-        opacity: 1;
-        transform: scale(1.05);
-    }
-    70% {
-        transform: scale(0.95);
-    }
-    100% {
-        transform: scale(1);
-    }
+    0% { opacity: 0; transform: scale(0.3); }
+    50% { opacity: 1; transform: scale(1.05); }
+    70% { transform: scale(0.95); }
+    100% { transform: scale(1); }
 }
 
 .thank-you-container h1 {
@@ -745,28 +535,6 @@ h1, h2, h3, h4, .brand-title {
     font-weight: 700;
     color: #1e293b;
     margin-bottom: 1.5rem;
-    line-height: 1.2;
-}
-
-.thank-you-container p {
-    color: #475569;
-    line-height: 1.7;
-    margin-bottom: 1.5rem;
-    font-size: 1.125rem;
-}
-
-.highlight-box {
-    background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
-    border: 2px solid #bbf7d0;
-    border-radius: 1rem;
-    padding: 1.5rem;
-    margin: 2rem 0;
-    text-align: left;
-}
-
-.highlight-box strong {
-    color: #059669;
-    font-weight: 700;
 }
 
 .btn-back {
@@ -791,33 +559,6 @@ h1, h2, h3, h4, .brand-title {
 .btn-back:hover {
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(30, 64, 175, 0.3);
-    background: linear-gradient(135deg, hsl(205 70% 40%), hsl(205 75% 50%));
-}
-
-.btn-back i {
-    transition: transform 0.3s ease;
-}
-
-.btn-back:hover i {
-    transform: translateX(-3px);
-}
-
-.contact-info {
-    margin-top: 2rem;
-    padding-top: 2rem;
-    border-top: 1px solid #e2e8f0;
-    color: #64748b;
-    font-size: 0.875rem;
-}
-
-.contact-info a {
-    color: hsl(var(--primary));
-    text-decoration: none;
-    font-weight: 600;
-}
-
-.contact-info a:hover {
-    text-decoration: underline;
 }
 
 /* ========================================= */
@@ -850,194 +591,68 @@ h1, h2, h3, h4, .brand-title {
     width: 100%;
 }
 
-.section-padding {
-    padding: 6rem 0;
-}
+.section-padding { padding: 6rem 0; }
 
-.text-primary {
-    color: hsl(var(--primary));
-}
+.text-primary { color: hsl(var(--primary)); }
 
-/* ========================================= */
-/* COLORES UTILITARIOS */
-/* ========================================= */
-
-/* COLORES DE FONDO PARA TARJETAS DE TIPO */
+/* Clases de color utilitarias */
+.bg-amber-50 { background-color: #fffbeb; }
 .bg-amber-100 { background-color: #fef3c7; }
+.bg-amber-600 { background-color: #d97706; }
 .text-amber-600 { color: #d97706; }
+.text-amber-700 { color: #b45309; }
 
+.bg-blue-50 { background-color: #eff6ff; }
 .bg-blue-100 { background-color: #dbeafe; }
+.bg-blue-600 { background-color: #2563eb; }
 .text-blue-600 { color: #2563eb; }
+.text-blue-700 { color: #1d4ed8; }
 
-.bg-green-100 { background-color: #d1fae5; }
-.text-green-600 { color: #059669; }
-
-.bg-purple-100 { background-color: #e9d5ff; }
-.text-purple-600 { color: #7c3aed; }
-
-.bg-red-100 { background-color: #fee2e2; }
-.text-red-600 { color: #dc2626; }
-
-.bg-indigo-100 { background-color: #e0e7ff; }
-.text-indigo-600 { color: #4f46e5; }
-
-.bg-gray-100 { background-color: #f3f4f6; }
-.text-gray-600 { color: #4b5563; }
-
-.bg-yellow-100 { background-color: #fef3c7; }
-.text-yellow-600 { color: #d97706; }
-
-/* COLORES UTILITARIOS PARA FONDOS DE SECCIÓN */
-.bg-white { background-color: white; }
-.bg-slate-50 { background-color: #f8fafc; }
-.bg-slate-900 { background-color: #0f172a; }
-.from-slate-900 { --tw-gradient-from: #0f172a; }
-.to-slate-800 { --tw-gradient-to: #1e293b; }
-
-/* UTILIDADES DE TEXTO */
-.text-white { color: white; }
-.text-slate-300 { color: #cbd5e1; }
-.text-slate-400 { color: #94a3b8; }
-.text-slate-500 { color: #64748b; }
-.text-slate-600 { color: #475569; }
-.text-slate-700 { color: #334155; }
-.text-gray-600 { color: #4b5563; }
-.text-gray-700 { color: #374151; }
+.bg-green-50 { background-color: #f0fdf4; }
+.bg-green-100 { background-color: #dcfce7; }
+.bg-green-500 { background-color: #22c55e; }
+.text-green-400 { color: #4ade80; }
+.text-green-500 { color: #22c55e; }
+.text-green-600 { color: #16a34a; }
+.text-green-700 { color: #15803d; }
 
 /* ========================================= */
-/* RESPONSIVE */
+/* RESPONSIVE GLOBAL */
 /* ========================================= */
 
 @media (max-width: 768px) {
-    .section-padding { 
-        padding: 4rem 0; 
-    }
-    
-    .hero-section { 
-        min-height: 70vh; 
-    }
-    
-    .logo-box {
-        width: 40px;
-        height: 40px;
-    }
-    
-    .brand-title {
-        font-size: 1.15rem;
-    }
-    
-    .brand-sub {
-        font-size: 0.7rem;
-    }
-    
-    .faq-item {
-        padding: 1.25rem 0;
-    }
-    
-    .faq-question {
-        font-size: 1rem;
-    }
-    
-    .info-card,
-    .info-card-alt,
-    .step-card,
-    .step-card-alt,
-    .ventaja-card,
-    .aspect-card {
-        padding: 1.5rem;
-    }
-    
-    .form-container {
-        padding: 1.5rem;
-    }
-    
-    .btn-cta,
-    .btn-secondary {
-        padding: 0.75rem 1.5rem;
-        font-size: 0.95rem;
-    }
-    
-    /* MEJORAS PARA BOTONES EN MÓVIL */
-    .btn-cta-mobile {
-        width: 100%;
-        justify-content: center;
-        padding: 1rem 1.5rem;
-    }
-    
-    .island-card {
-        height: 350px;
-    }
-    
-    .island-content {
-        padding: 1.5rem;
-    }
-    
-    /* Página de agradecimiento responsive */
-    .thank-you-container {
-        padding: 2rem 1.5rem;
-    }
-    
-    .thank-you-container h1 {
-        font-size: 2rem;
-    }
-    
-    .success-icon {
-        width: 70px;
-        height: 70px;
-        font-size: 2rem;
-    }
+    .section-padding { padding: 4rem 0; }
+    .hero-section { min-height: 70vh; }
+    .hero-section.guias-hero { min-height: 40vh; }
+    .logo-box { width: 40px; height: 40px; }
+    .brand-title { font-size: 1.15rem; }
+    .brand-sub { font-size: 0.7rem; }
+    .faq-item { padding: 1.25rem 0; }
+    .faq-question { font-size: 1rem; }
+    .info-card, .info-card-alt, .step-card { padding: 1.5rem; }
+    .form-container { padding: 1.5rem; }
+    .btn-cta, .btn-secondary { padding: 0.75rem 1.5rem; font-size: 0.95rem; }
+    .island-card { height: 350px; }
+    .island-content { padding: 1.5rem; }
 }
 
 @media (max-width: 480px) {
-    .section-padding {
-        padding: 3rem 0;
-    }
-    
-    .hero-section {
-        min-height: 60vh;
-    }
-    
-    .section-container {
-        padding: 0 1rem;
-    }
-    
-    .island-card {
-        height: 300px;
-    }
+    .section-padding { padding: 3rem 0; }
+    .hero-section { min-height: 60vh; }
+    .section-container { padding: 0 1rem; }
+    .island-card { height: 300px; }
+    .mobile-menu-content { width: 95%; max-width: 340px; }
+    .mobile-menu-logo .brand-title { font-size: 1.1rem; }
 }
 
-/* ========================================= */
-/* MEJORAS ESPECÍFICAS PARA DISPOSITIVOS */
-/* ========================================= */
-
-/* Oculta scrollbar en navegadores Webkit pero mantiene funcionalidad */
-.mobile-menu-content::-webkit-scrollbar {
-    width: 4px;
-}
-
-.mobile-menu-content::-webkit-scrollbar-track {
-    background: #f1f5f9;
-}
-
-.mobile-menu-content::-webkit-scrollbar-thumb {
-    background: #cbd5e1;
-    border-radius: 2px;
-}
-
-/* Prevenir zoom en inputs en iOS */
+/* iOS zoom prevention */
 @media screen and (max-width: 768px) {
-    input,
-    select,
-    textarea {
-        font-size: 16px !important; /* Evita zoom automático en iOS */
-    }
+    input, select, textarea { font-size: 16px !important; }
 }
 
-/* Mejora de rendimiento para animaciones */
+/* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
-    *,
-    *::before,
-    *::after {
+    *, *::before, *::after {
         animation-duration: 0.01ms !important;
         animation-iteration-count: 1 !important;
         transition-duration: 0.01ms !important;
