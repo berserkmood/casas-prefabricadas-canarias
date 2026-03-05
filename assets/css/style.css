@@ -160,6 +160,7 @@ h1, h2, h3, h4, .brand-title {
   background: #0f172a; /* Fallback */
   overflow: hidden;
   color: #ffffff;
+    margin-top: 80px;
 }
 
 /* Variante para guías: algo más baja en desktop */
@@ -883,6 +884,7 @@ h1, h2, h3, h4, .brand-title {
     }
 
 }
+
 
 
 
