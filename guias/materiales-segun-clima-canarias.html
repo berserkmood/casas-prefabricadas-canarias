@@ -126,32 +126,14 @@
     
     <!-- HERO MATERIALES - CON CLASES GLOBALES -->
 <section class="hero-section guias-hero">
-    <!-- Contenedor de imagen profesional -->
-    <div class="hero-image-container">
-        <picture>
-            <!-- Versión móvil: enfocada en muestras de materiales -->
-            <source media="(max-width: 768px)" 
-                    srcset="../assets/images/hero-materiales.webp">
-            <!-- Versión desktop: imagen completa -->
-            <source media="(min-width: 769px)" 
-                    srcset="../assets/images/hero-materiales.webp">
-            <!-- Fallback -->
-            <img src="../assets/images/hero-materiales.webp" 
-                 alt="Muestras de materiales para casas prefabricadas: madera, hormigón y módulos en Canarias"
-                 class="hero-image"
-                 loading="eager">
-        </picture>
-    </div>
-    <!-- Overlay con gradiente -->
-    <div class="hero-overlay-gradient"></div>
-    
+    <div class="hero-overlay" style="background-image: url('../assets/images/hero-materiales.webp');"></div>
     <div class="section-container relative z-10 py-24 lg:py-32 text-white">
         <div class="max-w-3xl mx-auto text-center animate-fade-up">
             <div class="badge-floating mb-6 animate-fade-up delay-100">
                 <i class="fas fa-thermometer-half mr-2"></i> CANARIAS · MATERIALES · CLIMA
             </div>
             <h1 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">
-                ¿<span class="text-green-400">Casa prefabricada</span> de madera, hormigón o modular? Elige la mejor opción según tu clima
+                ¿<span class="text-green-400">Casa prefabricada</span> de madera, hormigón o modular? Elige la mejor opción
             </h1>
             <p class="text-xl text-white/90 mb-8 animate-fade-up delay-300">
                 Análisis completo de materiales para el norte, sur y medianías de Canarias. Ventajas térmicas, humedad y mantenimiento.
@@ -163,7 +145,6 @@
         </div>
     </div>
 </section>
-
     <main class="article-wrapper">
 
     <!-- ============================================ -->
@@ -597,6 +578,7 @@
 </body>
 
 </html>
+
 
 
 
