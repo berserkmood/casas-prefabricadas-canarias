@@ -760,24 +760,20 @@
 /* ============================================ */
 
 .presupuesto-button-simple {
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 0.75rem;
-    
-    /* 📌 CLAVE: Permitir que el texto fluya */
-    white-space: normal;        /* ← Permite saltos de línea */
-    word-break: break-word;     /* ← Rompe palabras largas si es necesario */
-    hyphens: auto;              /* ← Añade guiones cuando sea posible (opcional) */
-    
-    /* Estilos base */
+    gap: 0.5rem;
+    width: auto;
+    min-width: 200px;
+    max-width: 100%;
     background: #16a34a;
     color: white;
-    padding: 1rem 2rem;
+    padding: 0.875rem 1.5rem;
     border-radius: 0.75rem;
     font-weight: 600;
-    font-size: 1.1rem;
-    line-height: 1.4;           /* ← Espacio entre líneas si el texto salta */
+    font-size: 1rem;
+    line-height: 1.4;
     text-decoration: none;
     text-align: center;
     transition: all 0.3s ease;
@@ -785,55 +781,49 @@
     border: none;
     cursor: pointer;
     box-sizing: border-box;
-    
-    /* Ancho responsive */
-    width: fit-content;         /* ← Desktop: ancho según contenido */
-    min-width: 200px;
-    max-width: 100%;            /* ← Nunca más ancho que el contenedor */
+    white-space: normal;      /* ← Permite salto de línea */
+    word-break: break-word;   /* ← Rompe palabras largas */
     margin: 0 auto 1rem auto;
 }
 
-/* ============================================ */
-/* MÓVIL - Ancho completo y ajuste de texto */
-/* ============================================ */
-
+/* Móvil: ancho completo */
 @media (max-width: 768px) {
     .presupuesto-button-simple {
-        width: 100%;              /* ← Ocupa todo el ancho disponible */
+        width: 100%;
         min-width: unset;
-        padding: 1rem 1.25rem;    /* ← Padding lateral reducido */
-        font-size: 1rem;
+        padding: 0.875rem 1rem;
+        font-size: 0.95rem;
     }
 }
 
+/* Pantallas muy pequeñas: texto en dos líneas */
 @media (max-width: 480px) {
     .presupuesto-button-simple {
-        padding: 0.9rem 1rem;
-        font-size: 0.95rem;
-        gap: 0.5rem;
+        padding: 0.75rem 0.875rem;
+        font-size: 0.9rem;
+        white-space: normal;
     }
 }
 
-/* 📌 NUEVO: Para pantallas muy estrechas - texto en columna */
-@media (max-width: 380px) {
+@media (max-width: 360px) {
     .presupuesto-button-simple {
-        flex-direction: column;    /* ← Icono arriba, texto abajo */
-        padding: 0.8rem 0.75rem;
+        padding: 0.7rem 0.75rem;
+        font-size: 0.85rem;
+        flex-direction: column;  /* Icono arriba, texto abajo */
         gap: 0.25rem;
     }
-    
-    .presupuesto-button-simple i {
-        margin: 0;                 /* ← Ajuste para versión columna */
-        font-size: 1.1rem;         /* ← Icono ligeramente más grande */
-    }
 }
 
-/* Para pantallas extremadamente pequeñas */
-@media (max-width: 320px) {
-    .presupuesto-button-simple {
-        font-size: 0.85rem;
-        padding: 0.7rem 0.5rem;
-    }
+/* Hover effect */
+.presupuesto-button-simple:hover {
+    background: #15803d;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(22, 163, 74, 0.4);
+}
+
+.presupuesto-button-simple i {
+    font-size: 1rem;
+    flex-shrink: 0;
 }
 
 
