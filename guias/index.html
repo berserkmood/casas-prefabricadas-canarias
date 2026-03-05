@@ -125,22 +125,40 @@
     <!-- ============================================ -->
     <!-- HERO -->
     <!-- ============================================ -->
-    <section class="hero-section">
-        <div class="hero-overlay" style="background-image: url('../assets/images/hero-guias.webp'); opacity: 0.15;"></div>
-        <div class="section-container relative z-10 py-24 lg:py-32 text-white">
-            <div class="max-w-3xl mx-auto text-center animate-fade-up">
-                <span class="inline-block bg-green-500 text-white px-4 py-2 rounded-full text-sm font-bold mb-6 shadow-lg">
-                    📚 GUÍAS PRÁCTICAS
-                </span>
-                <h1 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">
-                    Tu guía definitiva de <span class="text-green-400">casas prefabricadas</span> en Canarias
-                </h1>
-                <p class="text-xl text-white/90">
-                    Normativa, permisos, materiales y clima. Información actualizada para el archipiélago.
-                </p>
-            </div>
+   <section class="hero-section">
+    <!-- Contenedor de imagen profesional -->
+    <div class="hero-image-container">
+        <picture>
+            <!-- Versión móvil: imagen más enfocada (70% derecha) -->
+            <source media="(max-width: 768px)" 
+                    srcset="../assets/images/hero-guias-mobile.webp">
+            <!-- Versión desktop: imagen completa -->
+            <source media="(min-width: 769px)" 
+                    srcset="../assets/images/hero-guias.webp">
+            <!-- Fallback -->
+            <img src="../assets/images/hero-guias.webp" 
+                 alt="Guías de casas prefabricadas en Canarias - normativa, materiales y clima"
+                 class="hero-image"
+                 loading="eager">
+        </picture>
+    </div>
+    <!-- Overlay con gradiente (mejor legibilidad) -->
+    <div class="hero-overlay-gradient"></div>
+    
+    <div class="section-container relative z-10 py-24 lg:py-32 text-white">
+        <div class="max-w-3xl mx-auto text-center animate-fade-up">
+            <span class="inline-block bg-green-500 text-white px-4 py-2 rounded-full text-sm font-bold mb-6 shadow-lg">
+                📚 GUÍAS PRÁCTICAS
+            </span>
+            <h1 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+                Tu guía definitiva de <span class="text-green-400">casas prefabricadas</span> en Canarias
+            </h1>
+            <p class="text-xl text-white/90">
+                Normativa, permisos, materiales y clima. Información actualizada para el archipiélago.
+            </p>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- ============================================ -->
     <!-- TARJETAS DE GUÍAS -->
@@ -371,4 +389,5 @@
     <script src="../assets/js/script.js"></script>
     
 </body>
+
 </html>
