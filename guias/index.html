@@ -122,40 +122,47 @@
         </div>
     </div>
 
-    <!-- ============================================ -->
-    <!-- HERO -->
-    <!-- ============================================ -->
-   <section class="hero-section">
-    <!-- Contenedor de imagen profesional -->
-    <div class="hero-image-container">
-        <picture>
-            <!-- Versión móvil: imagen más enfocada (70% derecha) -->
-            <source media="(max-width: 768px)" 
-                    srcset="../assets/images/hero-guias.webp">
-            <!-- Versión desktop: imagen completa -->
-            <source media="(min-width: 769px)" 
-                    srcset="../assets/images/hero-guias.webp">
-            <!-- Fallback -->
-            <img src="../assets/images/hero-guias.webp" 
-                 alt="Guías de casas prefabricadas en Canarias - normativa, materiales y clima"
-                 class="hero-image"
-                 loading="eager">
-        </picture>
+   <!-- ============================================ -->
+<!-- HERO - GUÍAS PRÁCTICAS (MEJORADO) -->
+<!-- ============================================ -->
+<section class="hero-section hero-guias guias-hero">
+    <!-- Overlay con imagen -->
+    <div class="hero-overlay" 
+         style="background-image: url('../assets/images/hero-guias.webp');">
     </div>
-    <!-- Overlay con gradiente (mejor legibilidad) -->
-    <div class="hero-overlay-gradient"></div>
-    
-    <div class="section-container relative z-10 py-24 lg:py-32 text-white">
-        <div class="max-w-3xl mx-auto text-center animate-fade-up">
-            <span class="inline-block bg-green-500 text-white px-4 py-2 rounded-full text-sm font-bold mb-6 shadow-lg">
-                📚 GUÍAS PRÁCTICAS
-            </span>
-            <h1 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">
-                Tu guía definitiva de <span class="text-green-400">casas prefabricadas</span> en Canarias
+
+    <div class="section-container">
+        <div class="hero-content">
+            <!-- Badge principal -->
+            <div class="badge-floating hero-badge">
+                <i class="fas fa-book-open mr-2"></i>
+                📚 GUÍAS PRÁCTICAS · CANARIAS
+            </div>
+
+            <!-- Título principal -->
+            <h1 class="hero-title">
+                Tu guía definitiva de 
+                <span class="hero-highlight">casas prefabricadas</span> 
+                en Canarias
             </h1>
-            <p class="text-xl text-white/90">
+
+            <!-- Subtítulo -->
+            <p class="hero-subtitle">
                 Normativa, permisos, materiales y clima. Información actualizada para el archipiélago.
             </p>
+
+            <!-- Metadatos (opcional, puedes mantenerlo o quitarlo) -->
+            <div class="hero-meta">
+                <span class="badge-floating">
+                    <i class="fas fa-file-contract mr-2"></i>Normativa
+                </span>
+                <span class="badge-floating">
+                    <i class="fas fa-tree mr-2"></i>Materiales
+                </span>
+                <span class="badge-floating">
+                    <i class="fas fa-umbrella mr-2"></i>Clima
+                </span>
+            </div>
         </div>
     </div>
 </section>
@@ -391,4 +398,5 @@
 </body>
 
 </html>
+
 
