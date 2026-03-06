@@ -8,9 +8,11 @@
     
     <!-- Open Graph -->
     <meta property="og:title" content="Guías sobre casas prefabricadas en Canarias">
-    <meta property="og:description" content="Madera, hormigón o modular: descubre cuál es el mejor material para tu casa prefabricada en Canarias según el clima de cada isla.">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="https://casasprefabricadascanarias.es/assets/images/hero-canarias.webp">
+<meta name="description" content="Madera, hormigón o modular: descubre qué material es mejor para construir casas prefabricadas en Canarias según el clima, la isla y la ubicación.">
+<meta property="og:description" content="Madera, hormigón o modular: descubre qué material es mejor para construir casas prefabricadas en Canarias según el clima, la isla y la ubicación.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://casasprefabricadascanarias.es/assets/images/hero-canarias.webp">
+<meta property="og:url" content="https://casasprefabricadascanarias.es/guias/materiales-segun-clima-canario">
     
     <!-- Favicon - CORREGIDO: rutas relativas a assets -->
     <link rel="icon" type="image/x-icon" href="../favicon.ico">
@@ -565,27 +567,49 @@
     <!-- ============================================ -->
     <script src="../assets/js/script.js"></script>
     <script>
-    // Resalta la sección activa en el menú al hacer scroll
-    window.addEventListener('scroll', function() {
-        const sections = document.querySelectorAll('h2[id]');
-        const menuLinks = document.querySelectorAll('.article-menu-link');
-        
-        let current = '';
-        
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop - 100;
-            if (window.scrollY >= sectionTop) {
-                current = section.getAttribute('id');
-            }
-        });
-        
-        menuLinks.forEach(link => {
-            link.classList.remove('active');
-            if (link.getAttribute('href') === `#${current}`) {
-                link.classList.add('active');
-            }
-        });
+
+const sections = document.querySelectorAll("h2[id]");
+const menuLinks = document.querySelectorAll(".article-menu-link");
+
+/* Scroll spy */
+window.addEventListener("scroll", () => {
+
+    let current = "";
+
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop - 120;
+
+        if (window.scrollY >= sectionTop) {
+            current = section.getAttribute("id");
+        }
     });
+
+    menuLinks.forEach(link => {
+        link.classList.remove("active");
+
+        if (link.getAttribute("href") === "#" + current) {
+            link.classList.add("active");
+        }
+    });
+
+});
+
+
+/* Quitar estado activo en móvil */
+menuLinks.forEach(link => {
+
+    link.addEventListener("click", function(){
+
+        menuLinks.forEach(l => l.classList.remove("active"));
+
+        setTimeout(() => {
+            this.blur();
+        }, 150);
+
+    });
+
+});
+
 </script>
 
 </body>

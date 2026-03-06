@@ -7,11 +7,17 @@
     <meta name="description" content="Guía completa sobre la normativa de casas prefabricadas en Canarias. Licencias de obra, suelo rústico vs urbano, plazos reales y cómo evitar sanciones. Actualizado 2026.">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="Guías sobre casas prefabricadas en Canarias">
-    <meta property="og:description" content="¿Es legal tu casa prefabricada en Canarias? Te explicamos toda la normativa: licencias, diferencias entre suelo rústico y urbano, y plazos reales de tramitación.">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="https://casasprefabricadascanarias.es/assets/images/hero-canarias.webp">
-    
+   <meta name="description" content="¿Se puede construir una casa prefabricada en suelo rústico en Canarias? Descubre la normativa, licencias necesarias y diferencias entre suelo urbano y rústico.">
+
+<meta property="og:title" content="Casas prefabricadas en suelo rústico en Canarias: normativa y licencias">
+
+<meta property="og:description" content="¿Se puede construir una casa prefabricada en suelo rústico en Canarias? Descubre la normativa, licencias necesarias y diferencias entre suelo urbano y rústico.">
+
+<meta property="og:type" content="article">
+
+<meta property="og:image" content="https://casasprefabricadascanarias.es/assets/images/hero-canarias.webp">
+
+<meta property="og:url" content="https://casasprefabricadascanarias.es/guias/normativa-permisos-casas-prefabricadas-canarias">    
     <!-- Favicon - CORREGIDO: rutas relativas a assets -->
     <link rel="icon" type="image/x-icon" href="../favicon.ico">
     <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
@@ -634,29 +640,50 @@ Si el terreno es adecuado y se tramitan las licencias correctamente, es una de l
     <!-- ============================================ -->
     <!-- SCRIPT (ENLACE A TU JS) -->
     <!-- ============================================ -->
-    <script src="../assets/js/script.js"></script>
-    <script>
-    // Resalta la sección activa en el menú al hacer scroll
-    window.addEventListener('scroll', function() {
-        const sections = document.querySelectorAll('h2[id]');
-        const menuLinks = document.querySelectorAll('.article-menu-link');
-        
-        let current = '';
-        
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop - 100;
-            if (window.scrollY >= sectionTop) {
-                current = section.getAttribute('id');
-            }
-        });
-        
-        menuLinks.forEach(link => {
-            link.classList.remove('active');
-            if (link.getAttribute('href') === `#${current}`) {
-                link.classList.add('active');
-            }
-        });
+   <script>
+
+const sections = document.querySelectorAll("h2[id]");
+const menuLinks = document.querySelectorAll(".article-menu-link");
+
+/* Scroll spy */
+window.addEventListener("scroll", () => {
+
+    let current = "";
+
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop - 120;
+
+        if (window.scrollY >= sectionTop) {
+            current = section.getAttribute("id");
+        }
     });
+
+    menuLinks.forEach(link => {
+        link.classList.remove("active");
+
+        if (link.getAttribute("href") === "#" + current) {
+            link.classList.add("active");
+        }
+    });
+
+});
+
+
+/* Quitar estado activo en móvil */
+menuLinks.forEach(link => {
+
+    link.addEventListener("click", function(){
+
+        menuLinks.forEach(l => l.classList.remove("active"));
+
+        setTimeout(() => {
+            this.blur();
+        }, 150);
+
+    });
+
+});
+
 </script>
 
 </body>
