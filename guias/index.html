@@ -14,7 +14,7 @@
     
     <!-- Favicon - CORREGIDO: rutas relativas a assets -->
     <link rel="icon" type="image/x-icon" href="../favicon.ico">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
     <link rel="manifest" href="../site.webmanifest">
@@ -26,10 +26,7 @@
     <!-- Tailwind (opcional, para utilidades adicionales) -->
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- Cookiebot (si lo usas) -->
-    <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="dd87c81a-15b8-4787-b17c-a690de30bef1" data-blockingmode="auto" type="text/javascript"></script>
     <link rel="stylesheet" href="../assets/css/style.css">
-    <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="dd87c81a-15b8-4787-b17c-a690de30bef1" data-blockingmode="auto" type="text/javascript"></script>
 
 </head>
 <body>
@@ -41,7 +38,7 @@
         <nav class="section-container flex items-center justify-between h-16 lg:h-20">
             <a href="../index.html" class="flex items-center gap-3 group">
                 <div class="logo-box">
-                    <img src="../assets/images/icono-logo.png" alt="icono-logo">
+                    <img src="../assets/images/icono-logo.webp" alt="icono-logo">
                 </div>
                 <div>
                     <div class="brand-title">Casas Prefabricadas</div>
@@ -76,7 +73,7 @@
             <div class="mobile-menu-header">
                 <div class="mobile-menu-logo">
                     <div class="logo-box">
-                        <img src="../assets/images/icono-logo.png" alt="icono-logo">
+                        <img src="../assets/images/icono-logo.webp" alt="icono-logo">
                     </div>
                     <div>
                         <div class="brand-title">Casas Prefabricadas</div>
@@ -122,170 +119,116 @@
         </div>
     </div>
 
-   <!-- ============================================ -->
-<!-- HERO - GUÍAS PRÁCTICAS (MEJORADO) -->
-<!-- ============================================ -->
-<section class="hero-section hero-guias guias-hero">
-    <!-- Overlay con imagen -->
-    <div class="hero-overlay" 
-         style="background-image: url('../assets/images/hero-guias.webp');">
+    <!-- ============================================ -->
+    <!-- HERO -->
+    <!-- ============================================ -->
+    <!-- Hero Section Resumida - Guías -->
+<section class="hero-section guias-hero relative flex items-center min-h-[70vh]">
+
+  <!-- Fondo -->
+  <div class="hero-overlay absolute inset-0 bg-center bg-cover opacity-40"
+       style="background-image: url('../assets/images/hero-guias.webp')"></div>
+
+  <!-- Contenedor centrado -->
+  <div class="relative z-10 w-full max-w-5xl mx-auto px-6 lg:px-0">
+
+    <div class="animate-fade-up">
+
+      <!-- Título -->
+      <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-5 leading-tight text-left">
+        Guía de <span class="text-green-400">casas prefabricadas</span> en Canarias
+      </h1>
+
+      <!-- Subtítulo -->
+      <p class="text-base md:text-lg lg:text-xl text-white/90 mb-7 max-w-2xl text-left">
+        Normativa, permisos y materiales para construir en el archipiélago.
+      </p>
+
+      <!-- Meta info -->
+      <div class="flex flex-wrap gap-3 justify-start">
+        <span class="badge-floating inline-flex items-center gap-2">
+          <i class="fas fa-clock"></i> Lectura rápida
+        </span>
+
+        <span class="badge-floating inline-flex items-center gap-2">
+          <i class="fas fa-tag"></i> Normativa · Permisos · Materiales
+        </span>
+      </div>
+
     </div>
 
+  </div>
+
+</section>
+
+    <section class="section-padding bg-white">
     <div class="section-container">
-        <div class="hero-content">
-            <!-- Badge principal -->
-            <div class="badge-floating hero-badge">
-                <i class="fas fa-book-open mr-2"></i>
-                📚 GUÍAS PRÁCTICAS · CANARIAS
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
+
+            <!-- GUÍA 1: NORMATIVA -->
+            <div class="relative rounded-2xl overflow-hidden group hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
+                <!-- Background -->
+                <div class="absolute inset-0 bg-cover bg-center"
+     style="background-image: url('../assets/images/hero-normativa.webp'); opacity:0.7;"></div>
+
+                <!-- Contenido -->
+                <div class="relative p-6 lg:p-8 text-white bg-black/30 rounded-2xl">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="w-12 h-12 bg-amber-600 rounded-xl flex items-center justify-center shadow-lg shadow-amber-200">
+                            <i class="fas fa-file-signature text-2xl text-white"></i>
+                        </div>
+                        <span class="px-3 py-1 bg-amber-100 text-amber-700 text-xs font-bold rounded-full border border-amber-200">
+                            🏛️ Normativa
+                        </span>
+                    </div>
+
+                    <h2 class="text-xl font-bold mb-3">
+                        Permisos y licencias en Canarias
+                    </h2>
+
+                    <p class="text-sm mb-6">
+                        Todo lo que necesitas saber sobre suelo, licencias y plazos en las islas.
+                    </p>
+
+                    <a href="normativa-permisos-casas-prefabricadas-canarias.html" class="btn-cta w-full justify-center text-sm py-3">
+                        Leer guía completa <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
             </div>
 
-            <!-- Título principal -->
-            <h1 class="hero-title">
-                Tu guía definitiva de 
-                <span class="hero-highlight">casas prefabricadas</span> 
-                en Canarias
-            </h1>
+            <!-- GUÍA 2: MATERIALES -->
+            <div class="relative rounded-2xl overflow-hidden group hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
+                <!-- Background -->
+                <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('../assets/images/hero-materiales.webp'); opacity:0.7;"></div>
 
-            <!-- Subtítulo -->
-            <p class="hero-subtitle">
-                Normativa, permisos, materiales y clima. Información actualizada para el archipiélago.
-            </p>
+                <!-- Contenido -->
+                <div class="relative p-6 lg:p-8 text-white bg-black/30 rounded-2xl">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center shadow-lg shadow-blue-200">
+                            <i class="fas fa-temperature-high text-2xl text-white"></i>
+                        </div>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-700 text-xs font-bold rounded-full border border-blue-200">
+                            🌡️ Materiales
+                        </span>
+                    </div>
 
-            <!-- Metadatos (opcional, puedes mantenerlo o quitarlo) -->
-            <div class="hero-meta">
-                <span class="badge-floating">
-                    <i class="fas fa-file-contract mr-2"></i>Normativa
-                </span>
-                <span class="badge-floating">
-                    <i class="fas fa-tree mr-2"></i>Materiales
-                </span>
-                <span class="badge-floating">
-                    <i class="fas fa-umbrella mr-2"></i>Clima
-                </span>
+                    <h2 class="text-xl font-bold mb-3">
+                        ¿Madera, hormigón o modular?
+                    </h2>
+
+                    <p class="text-sm mb-6">
+                        Descubre cuál material funciona mejor según la zona de Canarias.
+                    </p>
+
+                    <a href="materiales-segun-clima-canarias.html" class="btn-cta w-full justify-center text-sm py-3">
+                        Leer guía completa <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
             </div>
+
         </div>
     </div>
 </section>
-
-    <!-- ============================================ -->
-    <!-- TARJETAS DE GUÍAS -->
-    <!-- ============================================ -->
-    <section class="section-padding bg-white">
-        <div class="section-container">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
-                
-                <!-- GUÍA 1: NORMATIVA -->
-                <div class="bg-white rounded-2xl border border-slate-200 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 group relative overflow-hidden">
-                    <div class="absolute -right-4 -top-4 w-32 h-32 bg-amber-50 rounded-full opacity-50 group-hover:scale-150 transition-transform duration-700"></div>
-                    
-                    <div class="relative p-8">
-                        <div class="flex items-start justify-between mb-6">
-                            <div class="w-16 h-16 bg-amber-600 rounded-xl flex items-center justify-center shadow-lg shadow-amber-200 group-hover:rotate-6 transition-transform">
-                                <i class="fas fa-file-signature text-3xl text-white"></i>
-                            </div>
-                            <span class="px-3 py-1 bg-amber-100 text-amber-700 text-xs font-bold uppercase tracking-wider rounded-full border border-amber-200">
-                                🏛️ NORMATIVA
-                            </span>
-                        </div>
-                        
-                        <h2 class="text-2xl font-bold text-slate-900 mb-3 tracking-tight">
-                            Normativa y permisos para <span class="text-amber-600">casas prefabricadas</span> en Canarias
-                        </h2>
-                        
-                        <p class="text-slate-600 mb-6 text-lg leading-relaxed">
-                            Todo sobre licencias municipales, suelo rústico vs urbano, y plazos de tramitación en las islas Canarias. 
-                            <span class="font-medium text-slate-900">Lo que nadie te cuenta hasta que es demasiado tarde.</span>
-                        </p>
-                        
-                        <div class="space-y-3 mb-8">
-                            <div class="flex items-start gap-3">
-                                <i class="fas fa-check-circle text-green-500 mt-1"></i>
-                                <p class="text-sm text-slate-500"><strong class="text-slate-700">Licencia de obra:</strong> ¿Cuándo es necesaria y cómo conseguirla.</p>
-                            </div>
-                            <div class="flex items-start gap-3">
-                                <i class="fas fa-check-circle text-green-500 mt-1"></i>
-                                <p class="text-sm text-slate-500"><strong class="text-slate-700">Suelo rústico:</strong> Lo que permite y prohíbe la ley canaria.</p>
-                            </div>
-                            <div class="flex items-start gap-3">
-                                <i class="fas fa-check-circle text-green-500 mt-1"></i>
-                                <p class="text-sm text-slate-500"><strong class="text-slate-700">Plazos reales:</strong> De 6 a 12 meses, según el municipio.</p>
-                            </div>
-                        </div>
-                        
-                        <div class="flex flex-wrap gap-2 mb-8">
-                            <span class="px-3 py-1 bg-slate-100 text-slate-600 text-xs font-bold uppercase tracking-wider rounded-md border border-slate-200">
-                                📋 Licencias
-                            </span>
-                            <span class="px-3 py-1 bg-amber-50 text-amber-700 text-xs font-bold uppercase tracking-wider rounded-md border border-amber-100">
-                                🏛️ Ayuntamientos
-                            </span>
-                            <span class="px-3 py-1 bg-blue-50 text-blue-700 text-xs font-bold uppercase tracking-wider rounded-md border border-blue-100">
-                                ⏱️ Plazos
-                            </span>
-                        </div>
-                        
-                        <a href="normativa-permisos-casas-prefabricadas-canarias.html" class="btn-cta w-full justify-center">
-                            Leer guía completa <i class="fas fa-arrow-right ml-2"></i>
-                        </a>
-                    </div>
-                </div>
-                
-                <!-- GUÍA 2: MATERIALES -->
-                <div class="bg-white rounded-2xl border border-slate-200 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 group relative overflow-hidden">
-                    <div class="absolute -right-4 -top-4 w-32 h-32 bg-blue-50 rounded-full opacity-50 group-hover:scale-150 transition-transform duration-700"></div>
-                    
-                    <div class="relative p-8">
-                        <div class="flex items-start justify-between mb-6">
-                            <div class="w-16 h-16 bg-blue-600 rounded-xl flex items-center justify-center shadow-lg shadow-blue-200 group-hover:rotate-6 transition-transform">
-                                <i class="fas fa-temperature-high text-3xl text-white"></i>
-                            </div>
-                            <span class="px-3 py-1 bg-blue-100 text-blue-700 text-xs font-bold uppercase tracking-wider rounded-full border border-blue-200">
-                                🌡️ CLIMA
-                            </span>
-                        </div>
-                        
-                        <h2 class="text-2xl font-bold text-slate-900 mb-3 tracking-tight">
-                            ¿Madera, hormigón o modular? <span class="text-blue-600">Elige según el clima canario</span>
-                        </h2>
-                        
-                        <p class="text-slate-600 mb-6 text-lg leading-relaxed">
-                            Análisis completo de materiales para el norte, sur y medianías de Canarias. 
-                            <span class="font-medium text-slate-900">Ventajas térmicas, humedad y mantenimiento en cada zona.</span>
-                        </p>
-                        
-                        <div class="space-y-3 mb-8">
-                            <div class="flex items-start gap-3">
-                                <i class="fas fa-check-circle text-green-500 mt-1"></i>
-                                <p class="text-sm text-slate-500"><strong class="text-slate-700">Madera:</strong> Ideal para medianías, transpirabilidad y confort.</p>
-                            </div>
-                            <div class="flex items-start gap-3">
-                                <i class="fas fa-check-circle text-green-500 mt-1"></i>
-                                <p class="text-sm text-slate-500"><strong class="text-slate-700">Hormigón:</strong> Mejor para costa, inercia térmica y durabilidad.</p>
-                            </div>
-                            <div class="flex items-start gap-3">
-                                <i class="fas fa-check-circle text-green-500 mt-1"></i>
-                                <p class="text-sm text-slate-500"><strong class="text-slate-700">Modular:</strong> Versatilidad y rapidez, pero con matices.</p>
-                            </div>
-                        </div>
-                        
-                        <div class="flex flex-wrap gap-2 mb-8">
-                            <span class="px-3 py-1 bg-slate-100 text-slate-600 text-xs font-bold uppercase tracking-wider rounded-md border border-slate-200">
-                                🌲 Madera
-                            </span>
-                            <span class="px-3 py-1 bg-blue-50 text-blue-700 text-xs font-bold uppercase tracking-wider rounded-md border border-blue-100">
-                                🏗️ Hormigón
-                            </span>
-                            <span class="px-3 py-1 bg-green-50 text-green-700 text-xs font-bold uppercase tracking-wider rounded-md border border-green-100">
-                                📦 Modular
-                            </span>
-                        </div>
-                        
-                        <a href="materiales-segun-clima-canarias.html" class="btn-cta w-full justify-center">
-                            Leer guía completa <i class="fas fa-arrow-right ml-2"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
             
             <!-- PRÓXIMAS GUÍAS -->
             <div class="text-center mt-20 pt-8 border-t border-slate-200">
@@ -332,7 +275,7 @@
                     <div class="flex items-center gap-3 mb-4">
                         <a href="../index.html" class="flex items-center gap-3 hover:opacity-80 transition-opacity">
                             <div class="logo-box">
-                                <img src="../assets/images/icono-logo.png" alt="icono-logo">
+                                <img src="../assets/images/icono-logo.webp" alt="icono-logo">
                             </div>
                             <div>
                                 <div class="brand-title">Casas Prefabricadas</div>
@@ -384,7 +327,7 @@
                 <div class="flex gap-6 text-slate-500 text-sm">
                     <a href="../aviso-legal.html" class="hover:text-white transition-colors">Aviso Legal</a>
                     <a href="../privacidad.html" class="hover:text-white transition-colors">Política de Privacidad</a>
-                    <a href="../cookies.html" class="hover:text-white transition-colors">Cookies</a>
+                    
                 </div>
             </div>
         </div>
@@ -396,7 +339,4 @@
     <script src="../assets/js/script.js"></script>
     
 </body>
-
 </html>
-
-

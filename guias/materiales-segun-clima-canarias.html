@@ -14,7 +14,7 @@
     
     <!-- Favicon - CORREGIDO: rutas relativas a assets -->
     <link rel="icon" type="image/x-icon" href="../favicon.ico">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
     <link rel="manifest" href="../site.webmanifest">
@@ -26,12 +26,8 @@
     <!-- Tailwind (opcional, para utilidades adicionales) -->
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- Cookiebot (si lo usas) -->
-    <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="dd87c81a-15b8-4787-b17c-a690de30bef1" data-blockingmode="auto" type="text/javascript"></script>
-    <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/articulos.css">
-    <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="dd87c81a-15b8-4787-b17c-a690de30bef1" data-blockingmode="auto" type="text/javascript"></script>
 
 </head>
 <body>
@@ -42,7 +38,7 @@
         <nav class="section-container flex items-center justify-between h-16 lg:h-20">
             <a href="../index.html" class="flex items-center gap-3 group">
                 <div class="logo-box">
-                    <img src="../assets/images/icono-logo.png" alt="icono-logo">
+                    <img src="../assets/images/icono-logo.webp" alt="icono-logo">
                 </div>
                 <div>
                     <div class="brand-title">Casas Prefabricadas</div>
@@ -77,7 +73,7 @@
             <div class="mobile-menu-header">
                 <div class="mobile-menu-logo">
                     <div class="logo-box">
-                        <img src="../assets/images/icono-logo.png" alt="icono-logo">
+                        <img src="../assets/images/icono-logo.webp" alt="icono-logo">
                     </div>
                     <div>
                         <div class="brand-title">Casas Prefabricadas</div>
@@ -124,41 +120,46 @@
     </div>
 
     
-    <!-- HERO MATERIALES -->
-<section class="hero-section hero-materiales guias-hero">
-  <div
-    class="hero-overlay"
-    style="background-image: url('../assets/images/hero-materiales.webp');"
-  ></div>
+    <!-- HERO MATERIALES - CON CLASES GLOBALES -->
+<!-- Hero Section Optimizada - Materiales -->
+<section class="hero-section guias-hero relative flex items-center min-h-[70vh]">
 
-  <div class="section-container">
-    <div class="hero-content">
-      <div class="badge-floating hero-badge">
-        <i class="fas fa-thermometer-half mr-2"></i>
-        CANARIAS · MATERIALES · CLIMA
-      </div>
+  <!-- Fondo -->
+  <div class="hero-overlay absolute inset-0 bg-center bg-cover opacity-40"
+       style="background-image: url('../assets/images/hero-materiales.webp')"></div>
 
-      <h1 class="hero-title">
-        ¿<span class="hero-highlight">Casa prefabricada</span> de madera,
-        hormigón o modular? Elige la mejor opción
+  <!-- Contenedor centrado -->
+  <div class="relative z-10 w-full max-w-5xl mx-auto px-6 lg:px-0">
+
+    <div class="animate-fade-up">
+
+      <!-- Título -->
+      <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-5 leading-tight text-left">
+        ¿<span class="text-green-400">Casa prefabricada</span> de madera, hormigón o modular?
       </h1>
 
-      <p class="hero-subtitle">
-        Análisis completo de materiales para el norte, sur y medianías de
-        Canarias. Ventajas térmicas, humedad y mantenimiento.
+      <!-- Subtítulo -->
+      <p class="text-base md:text-lg lg:text-xl text-white/90 mb-7 max-w-2xl text-left">
+        Qué material funciona mejor según el clima de Canarias.
       </p>
 
-      <div class="hero-meta">
-        <span class="badge-floating">
-          <i class="fas fa-clock mr-2"></i>12 min lectura
+      <!-- Meta info -->
+      <div class="flex flex-wrap gap-3 justify-start">
+        <span class="badge-floating inline-flex items-center gap-2">
+          <i class="fas fa-clock"></i> 12 min
         </span>
-        <span class="badge-floating">
-          <i class="fas fa-tag mr-2"></i>Madera · Hormigón · Modular
+
+        <span class="badge-floating inline-flex items-center gap-2">
+          <i class="fas fa-tag"></i> Madera · Hormigón · Modular
         </span>
       </div>
+
     </div>
+
   </div>
+
 </section>
+
     <main class="article-wrapper">
 
     <!-- ============================================ -->
@@ -177,7 +178,7 @@
             <li><a href="#modular-rapidez" class="article-menu-link"><span class="amn">5</span><span>Modular: rapidez con matices</span><i class="fas fa-chevron-right" aria-hidden="true"></i></a></li>
             <li><a href="#tabla-comparativa" class="article-menu-link"><span class="amn">6</span><span>Tabla comparativa</span><i class="fas fa-chevron-right" aria-hidden="true"></i></a></li>
             <li><a href="#tu-caso-concreto" class="article-menu-link"><span class="amn">7</span><span>Tu caso concreto</span><i class="fas fa-chevron-right" aria-hidden="true"></i></a></li>
-            <li><a href="#solicita-presupuesto" class="article-menu-link"><span class="amn">8</span><span>Solicita tu presupuesto adaptado al clima de tu isla</span><i class="fas fa-chevron-right" aria-hidden="true"></i></a></li>
+            <li><a href="#solicita-presupuesto" class="article-menu-link"><span class="amn">8</span><span>Solicitar presupuesto</span><i class="fas fa-chevron-right" aria-hidden="true"></i></a></li>
         </ol>
     </nav>
 
@@ -469,12 +470,10 @@
             </div>
         </div>
         
-      <a href="../index.html#contacto" 
-   class="presupuesto-button-simple" 
-   onclick="window.location.href='../index.html#contacto'; location.reload();">
-    <i class="fas fa-paper-plane"></i>
-    Solicitar presupuesto personalizado
-</a>
+        <a href="../index.html#contacto" class="presupuesto-button-simple" onclick="window.location.href='../index.html#contacto'; location.reload();">
+            <i class="fas fa-paper-plane"></i>
+            Solicitar presupuesto
+        </a>
         
     </div>
 </section>
@@ -504,7 +503,7 @@
                     <div class="flex items-center gap-3 mb-4">
                         <a href="../index.html" class="flex items-center gap-3 hover:opacity-80 transition-opacity">
                             <div class="logo-box">
-                                <img src="../assets/images/icono-logo.png" alt="icono-logo">
+                                <img src="../assets/images/icono-logo.webp" alt="icono-logo">
                             </div>
                             <div>
                                 <div class="brand-title">Casas Prefabricadas</div>
@@ -556,7 +555,7 @@
                 <div class="flex gap-6 text-slate-500 text-sm">
                     <a href="../aviso-legal.html" class="hover:text-white transition-colors">Aviso Legal</a>
                     <a href="../privacidad.html" class="hover:text-white transition-colors">Política de Privacidad</a>
-                    <a href="../cookies.html" class="hover:text-white transition-colors">Cookies</a>
+                   
                 </div>
             </div>
         </div>
@@ -590,11 +589,4 @@
 </script>
 
 </body>
-
 </html>
-
-
-
-
-
-

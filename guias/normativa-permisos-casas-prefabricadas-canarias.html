@@ -14,7 +14,7 @@
     
     <!-- Favicon - CORREGIDO: rutas relativas a assets -->
     <link rel="icon" type="image/x-icon" href="../favicon.ico">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
     <link rel="manifest" href="../site.webmanifest">
@@ -23,15 +23,11 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
-    <!-- Tailwind (opcional, para utilidades adicionales) -->
     <script src="https://cdn.tailwindcss.com"></script>
     
     <!-- Cookiebot (si lo usas) -->
-    <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="dd87c81a-15b8-4787-b17c-a690de30bef1" data-blockingmode="auto" type="text/javascript"></script>
-    <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/articulos.css">
-    <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="dd87c81a-15b8-4787-b17c-a690de30bef1" data-blockingmode="auto" type="text/javascript"></script>
 
 </head>
 <body>
@@ -42,7 +38,7 @@
         <nav class="section-container flex items-center justify-between h-16 lg:h-20">
             <a href="../index.html" class="flex items-center gap-3 group">
                 <div class="logo-box">
-                    <img src="../assets/images/icono-logo.png" alt="icono-logo">
+                    <img src="../assets/images/icono-logo.webp" alt="icono-logo">
                 </div>
                 <div>
                     <div class="brand-title">Casas Prefabricadas</div>
@@ -77,7 +73,7 @@
             <div class="mobile-menu-header">
                 <div class="mobile-menu-logo">
                     <div class="logo-box">
-                        <img src="../assets/images/icono-logo.png" alt="icono-logo">
+                        <img src="../assets/images/icono-logo.webp" alt="icono-logo">
                     </div>
                     <div>
                         <div class="brand-title">Casas Prefabricadas</div>
@@ -126,424 +122,398 @@
 
     
        <!-- HERO NORMATIVA - CON CLASES GLOBALES -->
-<section class="hero-section guias-hero">
-    <div class="hero-overlay" style="background-image: url('../assets/images/hero-normativa.webp')"></div>
-    <div class="section-container relative z-10 py-24 lg:py-32 text-white">
-        <div class="max-w-3xl mx-auto text-center animate-fade-up">
-            <div class="badge-floating mb-6 animate-fade-up delay-100">
-                <i class="fas fa-map-marker-alt mr-2"></i> CANARIAS · GUÍA LEGAL 2026
-            </div>
-            <h1 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">
-                Normativa y permisos para <span class="text-green-400">casas prefabricadas</span> en Canarias
-            </h1>
-            <p class="text-xl text-white/90 mb-8 animate-fade-up delay-300">
-                Todo lo que necesitas saber sobre licencias, suelo rústico y urbano, y plazos reales de tramitación en las islas.
-            </p>
-            <div class="flex flex-wrap gap-4 justify-center animate-fade-up delay-400">
-                <span class="badge-floating"><i class="fas fa-clock mr-2"></i>14 min lectura</span>
-                <span class="badge-floating"><i class="fas fa-tag mr-2"></i>Licencias · Suelo · Trámites</span>
-            </div>
-        </div>
+<section class="hero-section guias-hero relative flex items-center min-h-[70vh]">
+
+  <!-- Fondo -->
+  <div class="hero-overlay absolute inset-0 bg-center bg-cover opacity-40"
+       style="background-image: url('../assets/images/hero-normativa.webp')"></div>
+
+  <!-- Contenedor centrado -->
+  <div class="relative z-10 w-full max-w-5xl mx-auto px-6 lg:px-0">
+
+    <div class="animate-fade-up">
+
+      <!-- Título -->
+      <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-5 leading-tight text-left">
+        Normativa y permisos para <span class="text-green-400">casas prefabricadas</span> en Canarias
+      </h1>
+
+      <!-- Subtítulo -->
+      <p class="text-base md:text-lg lg:text-xl text-white/90 mb-7 max-w-2xl text-left">
+        Todo lo que necesitas saber sobre licencias, suelo rústico y urbano y plazos reales de tramitación en las islas.
+      </p>
+
+      <!-- Meta -->
+      <div class="flex flex-wrap gap-3 justify-start">
+        <span class="badge-floating inline-flex items-center gap-2">
+          <i class="fas fa-clock"></i> 14 min
+        </span>
+
+        <span class="badge-floating inline-flex items-center gap-2">
+          <i class="fas fa-tag"></i> Licencias · Suelo · Trámites
+        </span>
+      </div>
+
     </div>
+
+  </div>
+
 </section>
 
 
-        <main class="article-wrapper">
+<main class="article-wrapper">
 
-        <!-- MENÚ ÍNDICE -->
-        <nav class="article-menu" aria-label="Índice del artículo">
-            <div class="article-menu-header">
-                <h2><i class="fas fa-list-ul" aria-hidden="true"></i> En este artículo</h2>
-                <p>Haz clic en cualquier sección para ir directamente</p>
-            </div>
-            <ol class="article-menu-list" role="list">
-                <li><a href="#que-es-casa-prefabricada" class="article-menu-link"><span class="amn">1</span><span>Qué entiende la Administración por "casa prefabricada"</span><i class="fas fa-chevron-right" aria-hidden="true"></i></a></li>
-                <li><a href="#licencia-obra" class="article-menu-link"><span class="amn">2</span><span>Cuándo necesitas licencia de obra (y por qué casi siempre)</span><i class="fas fa-chevron-right" aria-hidden="true"></i></a></li>
-                <li><a href="#urbano-rustico" class="article-menu-link"><span class="amn">3</span><span>Diferencias entre suelo urbano y suelo rústico</span><i class="fas fa-chevron-right" aria-hidden="true"></i></a></li>
-                <li><a href="#mitos-atajos" class="article-menu-link"><span class="amn">4</span><span>Suelo rústico: mitos, "atajos" y sus riesgos</span><i class="fas fa-chevron-right" aria-hidden="true"></i></a></li>
-                <li><a href="#casos-especiales-rustico" class="article-menu-link"><span class="amn">5</span><span>Recalificar a urbano o usar figuras especiales</span><i class="fas fa-chevron-right" aria-hidden="true"></i></a></li>
-                <li><a href="#plazos-canarias" class="article-menu-link"><span class="amn">6</span><span>Plazos reales de licencias en Canarias (6–12 meses)</span><i class="fas fa-chevron-right" aria-hidden="true"></i></a></li>
-                <li><a href="#errores-tipos" class="article-menu-link"><span class="amn">7</span><span>Errores típicos que comete la gente (y cómo evitarlos)</span><i class="fas fa-chevron-right" aria-hidden="true"></i></a></li>
-                <li><a href="#conclusion-ventajas" class="article-menu-link"><span class="amn">8</span><span>Conclusión: por qué la casa prefabricada sigue siendo una gran idea</span><i class="fas fa-chevron-right" aria-hidden="true"></i></a></li>
-                <li><a href="#solicita-presupuesto" class="article-menu-link"><span class="amn">9</span><span>Solicita tu presupuesto con gestión legal</span><i class="fas fa-chevron-right" aria-hidden="true"></i></a></li>
-              </ol>
-        </nav>
+<!-- MENÚ ÍNDICE -->
+<nav class="article-menu" aria-label="Índice del artículo">
+<div class="article-menu-header">
+<h2><i class="fas fa-list-ul"></i> En este artículo</h2>
+<p>Ir directamente a cada sección</p>
+</div>
 
-   
+<ol class="article-menu-list">
 
+<li>
+<a href="#que-es-casa-prefabricada" class="article-menu-link">
+<span class="amn">1</span>
+<span>Qué es una casa prefabricada para la ley</span>
+<i class="fas fa-chevron-right"></i>
+</a>
+</li>
 
-<!-- ============================================================
-     ARTICLE HTML  —  v2 (rediseño editorial)
-     ============================================================
-     Dependencias:
-       1. article-sections.css  (junto a este archivo)
-       2. Google Font "Lora":
-          <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet">
-       3. Los iconos son SVG inline (Lucide Icons). No necesitas Font Awesome.
-     ============================================================ -->
+<li>
+<a href="#licencia-obra" class="article-menu-link">
+<span class="amn">2</span>
+<span>Licencia de obra</span>
+<i class="fas fa-chevron-right"></i>
+</a>
+</li>
+
+<li>
+<a href="#urbano-rustico" class="article-menu-link">
+<span class="amn">3</span>
+<span>Suelo urbano vs rústico</span>
+<i class="fas fa-chevron-right"></i>
+</a>
+</li>
+
+<li>
+<a href="#mitos-atajos" class="article-menu-link">
+<span class="amn">4</span>
+<span>Mitos del suelo rústico</span>
+<i class="fas fa-chevron-right"></i>
+</a>
+</li>
+
+<li>
+<a href="#casos-especiales-rustico" class="article-menu-link">
+<span class="amn">5</span>
+<span>Casos donde sí se puede</span>
+<i class="fas fa-chevron-right"></i>
+</a>
+</li>
+
+<li>
+<a href="#plazos-canarias" class="article-menu-link">
+<span class="amn">6</span>
+<span>Plazos de licencia en Canarias</span>
+<i class="fas fa-chevron-right"></i>
+</a>
+</li>
+
+<li>
+<a href="#errores-tipos" class="article-menu-link">
+<span class="amn">7</span>
+<span>Errores comunes</span>
+<i class="fas fa-chevron-right"></i>
+</a>
+</li>
+
+<li>
+<a href="#conclusion-ventajas" class="article-menu-link">
+<span class="amn">8</span>
+<span>Por qué elegir una prefabricada</span>
+<i class="fas fa-chevron-right"></i>
+</a>
+</li>
+
+<li>
+<a href="#solicita-presupuesto" class="article-menu-link">
+<span class="amn">9</span>
+<span>Solicitar presupuesto</span>
+<i class="fas fa-chevron-right"></i>
+</a>
+</li>
+
+</ol>
+</nav>
 
 <article class="article-body">
 
-  <!-- ── §1 ──────────────────────────────────────────────── -->
-  <section id="que-es-casa-prefabricada" class="article-section">
-    <h2>
-      <span class="h2-icon" aria-hidden="true">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="M7 21h10"/><path d="M12 3v18"/><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"/></svg>
-      </span>
-      <span class="h2-num">1.</span>
-      Qué entiende la Administración por "casa prefabricada"
-    </h2>
+<!-- 1 -->
+<section id="que-es-casa-prefabricada" class="article-section">
 
-    <p>
-      Aunque el catálogo hable de casas modulares, móviles o tiny houses, para el Ayuntamiento y el resto de
-      administraciones lo importante es algo mucho más sencillo: cómo la vas a usar en la vida real.
-    </p>
+<h2>
+<span class="h2-num">1.</span>
+Qué es una casa prefabricada para la ley
+</h2>
 
-    <p>En la práctica, tu casa prefabricada se considera una vivienda si:</p>
+<p>
+Aunque se llamen modulares, móviles o prefabricadas, para la Administración lo importante es su uso real.
+</p>
 
-    <ul>
-      <li>La vas a usar para vivir en ella (todo el año o fines de semana de forma habitual).</li>
-      <li>Está colocada de forma fija o semipermanente en la parcela.</li>
-      <li>Tiene baño, cocina, dormitorios y está conectada a agua y luz.</li>
-    </ul>
+<p>
+Si una casa se utiliza para vivir y permanece instalada en un terreno, legalmente se considera una vivienda.
+</p>
 
-    <p>Si se dan esas condiciones, a efectos legales es una vivienda más. Y eso implica tres cosas muy claras:</p>
+<p>Esto ocurre cuando:</p>
 
-    <ul>
-      <li>Debe cumplir la normativa de construcción (estructura, incendios, aislamiento, eficiencia energética…).</li>
-      <li>Necesita un proyecto redactado y firmado por un arquitecto o arquitecta.</li>
-      <li>Requiere una licencia de obra del Ayuntamiento antes de construirla o instalarla en tu terreno.</li>
-    </ul>
+<ul>
+<li>Se usa para vivir de forma habitual o frecuente.</li>
+<li>Está colocada de forma fija en la parcela.</li>
+<li>Tiene baño, cocina y conexiones de agua y electricidad.</li>
+</ul>
 
-    <div class="article-note" role="note">
-      <span class="note-icon" aria-hidden="true">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/><path d="M9 18h6"/><path d="M10 22h4"/></svg>
-      </span>
-      <div>
-        <strong>Idea clave:</strong> la palabra "prefabricada" te da ventajas de rapidez y control de costes, pero
-        no te permite saltarte las reglas urbanísticas. Para la Administración, sigue siendo una vivienda.
-      </div>
-    </div>
-  </section>
+<p>
+En ese caso debe cumplir exactamente las mismas normas que una vivienda tradicional.
+</p>
 
-  <!-- ── §2 ──────────────────────────────────────────────── -->
-  <section id="licencia-obra" class="article-section">
-    <h2>
-      <span class="h2-icon" aria-hidden="true">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg>
-      </span>
-      <span class="h2-num">2.</span>
-      Licencia de obra: cuándo es necesaria y qué implica
-    </h2>
+<ul>
+<li>Proyecto técnico firmado por un arquitecto.</li>
+<li>Cumplimiento del Código Técnico de Edificación.</li>
+<li>Licencia de obra del Ayuntamiento.</li>
+</ul>
 
-    <h3>2.1. ¿De verdad hace falta licencia para una casa prefabricada?</h3>
+<div class="article-note">
+<strong>Idea clave:</strong> una casa prefabricada no evita la normativa urbanística. Para la Administración sigue siendo una vivienda.
+</div>
 
-    <p>
-      Si hablamos de una casa donde vas a dormir, ducharte, cocinar y vivir, la respuesta es clara:
-      <strong>casi siempre vas a necesitar una licencia de obra mayor.</strong>
-    </p>
+</section>
 
-    <p>Normalmente hace falta licencia cuando:</p>
+<!-- 2 -->
+<section id="licencia-obra" class="article-section">
 
-    <ul>
-      <li>Haces cimentación (zapatas, losa, pilotes) o muros de contención.</li>
-      <li>Realizas movimientos de tierras o preparas la parcela para la casa.</li>
-      <li>La vivienda se queda instalada de forma permanente, aunque el fabricante diga que "se puede mover".</li>
-    </ul>
+<h2>
+<span class="h2-num">2.</span>
+Licencia de obra
+</h2>
 
-    <p>
-      Si en tu cabeza es "mi casa" y no una caseta provisional, para la Administración también lo es,
-      y se activa el mismo paquete de permisos que para una vivienda tradicional.
-    </p>
+<p>
+Si vas a instalar una casa prefabricada para vivir, casi siempre necesitarás una licencia de obra mayor.
+</p>
 
-    <h3>2.2. Pasos básicos para conseguir la licencia</h3>
+<p>Normalmente es obligatoria cuando:</p>
 
-    <p>El proceso real, simplificado, suele funcionar así:</p>
+<ul>
+<li>Se construye una cimentación.</li>
+<li>Se realizan movimientos de tierra.</li>
+<li>La vivienda queda instalada de forma permanente.</li>
+</ul>
 
-    <ul>
-      <li><strong>1. Comprobar qué suelo tienes.</strong> No basta con ser propietario. Hay que ver si el suelo es urbano, rústico, urbanizable o protegido, y qué usos permite exactamente.</li>
-      <li><strong>2. Levantamiento topográfico.</strong> Sirve para que el arquitecto sepa cómo es de verdad la parcela: medidas, pendientes, límites y accesos.</li>
-      <li><strong>3. Estudio geotécnico.</strong> Analiza qué hay debajo de la superficie y ayuda a diseñar una cimentación segura y adaptada a tu terreno.</li>
-      <li><strong>4. Proyecto de arquitectura.</strong> El arquitecto adapta la casa prefabricada a tu parcela y a la normativa local: estructura, instalaciones, aislamiento, eficiencia energética.</li>
-      <li><strong>5. Presentación en el Ayuntamiento.</strong> Se entrega el proyecto con los formularios necesarios y se pagan tasas y tributos municipales.</li>
-      <li><strong>6. Concesión de la licencia.</strong> Hasta que no tengas la licencia por escrito, lo recomendable es no empezar ni la cimentación ni el montaje.</li>
-    </ul>
+<h3>Pasos habituales</h3>
 
-    <div class="article-note article-note--info" role="note">
-      <span class="note-icon" aria-hidden="true">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
-      </span>
-      <div>
-        Puedes ver la licencia como el <strong>"OK oficial"</strong> que te dice: en este terreno, de esta manera, puedes
-        construir esta vivienda sin miedo a que te la tiren abajo más adelante.
-      </div>
-    </div>
-  </section>
+<ul>
 
-  <!-- ── §3 ──────────────────────────────────────────────── -->
-  <section id="urbano-rustico" class="article-section">
-    <h2>
-      <span class="h2-icon" aria-hidden="true">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.106 5.553a2 2 0 0 0 1.788 0l3.659-1.83A1 1 0 0 1 21 4.619v12.764a1 1 0 0 1-.553.894l-4.553 2.277a2 2 0 0 1-1.788 0l-4.212-2.106a2 2 0 0 0-1.788 0l-3.659 1.83A1 1 0 0 1 3 19.381V6.618a1 1 0 0 1 .553-.894l4.553-2.277a2 2 0 0 1 1.788 0z"/><path d="M15 5.764v15"/><path d="M9 3.236v15"/></svg>
-      </span>
-      <span class="h2-num">3.</span>
-      Diferencias entre suelo urbano y suelo rústico
-    </h2>
+<li><strong>1. Comprobar el tipo de suelo.</strong></li>
 
-    <h3>3.1. Suelo urbano: el hábitat natural de la casa prefabricada</h3>
+<li><strong>2. Levantamiento topográfico.</strong></li>
 
-    <p>
-      El suelo urbano es el que está dentro de pueblos y ciudades: calles, aceras, farolas, redes de agua y luz,
-      vecinos alrededor. En una parcela urbana con uso residencial permitido, la casa prefabricada encaja muy bien:
-    </p>
+<li><strong>3. Estudio geotécnico.</strong></li>
 
-    <ul>
-      <li>Te ahorra meses de obra tradicional: gran parte se fabrica en taller y solo se monta en la parcela.</li>
-      <li>Los costes suelen ser más previsibles, con menos improvisación de última hora.</li>
-      <li>Hay menos tiempo de camiones, ruidos y molestias en el barrio.</li>
-    </ul>
+<li><strong>4. Proyecto del arquitecto.</strong></li>
 
-    <p>
-      Eso sí, también en suelo urbano debes respetar las reglas del plan: metros que puedes construir,
-      alturas máximas, retranqueos a lindes, ocupación de parcela, etc.
-    </p>
+<li><strong>5. Solicitud de licencia.</strong></li>
 
-    <div class="article-note" role="note">
-      <span class="note-icon" aria-hidden="true">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/><path d="M9 18h6"/><path d="M10 22h4"/></svg>
-      </span>
-      <div>
-        Si tu suelo es urbano y sigues el proceso bien, <strong>la casa prefabricada es una opción muy potente.</strong>
-      </div>
-    </div>
+<li><strong>6. Aprobación del Ayuntamiento.</strong></li>
 
-    <h3>3.2. Suelo rústico: el campo minado de la normativa</h3>
+</ul>
 
-    <p>
-      El suelo rústico está pensado para actividades agrícolas, ganaderas, forestales y para proteger paisajes y
-      zonas naturales. No está diseñado para que cualquiera ponga su chalet prefabricado "porque hay espacio".
-    </p>
+<div class="article-note">
+La licencia es la garantía de que puedes construir legalmente en ese terreno.
+</div>
 
-    <div class="article-note article-note--warn" role="alert">
-      <span class="note-icon" aria-hidden="true">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg>
-      </span>
-      <div>
-        En la mayoría de casos, <strong>no se permite instalar una vivienda prefabricada de uso residencial en suelo
-        rústico.</strong> Cuando se hace sin permisos, no es algo "alegal": es una infracción urbanística que puede
-        terminar en sanciones muy elevadas y órdenes de demolición.
-      </div>
-    </div>
-  </section>
+</section>
 
-  <!-- ── §4 ──────────────────────────────────────────────── -->
-  <section id="mitos-atajos" class="article-section">
-    <h2>
-      <span class="h2-icon" aria-hidden="true">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg>
-      </span>
-      <span class="h2-num">4.</span>
-      Suelo rústico: mitos, "atajos" y por qué suelen salir caros
-    </h2>
+<!-- 3 -->
+<section id="urbano-rustico" class="article-section">
 
-    <h3>4.1. "No es vivienda habitual, es solo de fin de semana"</h3>
+<h2>
+<span class="h2-num">3.</span>
+Suelo urbano vs rústico
+</h2>
 
-    <p>Frase muy típica cuando alguien quiere justificar una casa en rústico:</p>
-    <p><em>"Solo vengo algunos fines de semana, no vivo aquí todo el año."</em></p>
+<h3>Suelo urbano</h3>
 
-    <p>
-      El problema es que, si duermes allí, tienes baño, cocina y la usas de forma recurrente,
-      el uso es claramente residencial, aunque tú lo llames de otra manera. La normativa no tiene un
-      "modo finde": se aplican las mismas reglas que a una residencia habitual.
-    </p>
+<p>
+Es el terreno dentro de pueblos o ciudades con acceso a servicios básicos.
+</p>
 
-    <h3>4.2. "Es una casa móvil, no una construcción"</h3>
+<p>
+Aquí es donde normalmente se construyen las casas prefabricadas.
+</p>
 
-    <p><em>"Va sobre ruedas o apoyos, así que no cuenta como obra."</em></p>
+<ul>
+<li>Instalación más rápida.</li>
+<li>Costes más controlados.</li>
+<li>Menos tiempo de obra.</li>
+</ul>
 
-    <p>
-      A efectos prácticos, lo que importa es la vocación de permanencia. Si la casa lleva allí meses o años,
-      está conectada a agua y luz y has arreglado el entorno (solera, terraza, vallado…), es muy difícil
-      defender que es algo meramente "móvil". Si en la práctica es tu vivienda, la Administración la tratará
-      como construcción residencial sin permisos.
-    </p>
+<h3>Suelo rústico</h3>
 
-    <h3>4.3. "La pongo ya y algún día se recalificará"</h3>
+<p>
+El suelo rústico está destinado principalmente a agricultura o protección del territorio.
+</p>
 
-    <p>
-      Recalificar suelo no es un trámite individual que puedas forzar tú solo: depende de planes generales,
-      procesos largos y decisiones técnicas y políticas. Puede pasar… o no. Mientras tanto, la vivienda sigue
-      en un suelo que no la permite y es sancionable.
-    </p>
+<div class="article-note">
+En la mayoría de casos no está permitido instalar viviendas prefabricadas para uso residencial.
+</div>
 
-    <div class="article-note article-note--warn" role="alert">
-      <span class="note-icon" aria-hidden="true">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg>
-      </span>
-      <div>
-        <strong>Resumen:</strong> muchos atajos pueden parecer que funcionan mientras nadie mire, pero en cuanto
-        llega una denuncia o un expediente, la factura puede ser muy alta: multas, abogados y, en el peor
-        escenario, tener que retirar o demoler la vivienda.
-      </div>
-    </div>
-  </section>
+</section>
 
-  <!-- ── §5 ──────────────────────────────────────────────── -->
-  <section id="casos-especiales-rustico" class="article-section">
-    <h2>
-      <span class="h2-icon" aria-hidden="true">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v3"/><path d="M18.5 13h-13L2 8l10-5 10 5Z"/><path d="M2 8v5"/><path d="M22 8v5"/><path d="m4 11 .5 6.5"/><path d="m19.5 11 .5 6.5"/><path d="M6 18h12"/><path d="M12 15v7"/></svg>
-      </span>
-      <span class="h2-num">5.</span>
-      ¿Hay algo que se pueda hacer en suelo rústico?
-    </h2>
+<!-- 4 -->
+<section id="mitos-atajos" class="article-section">
 
-    <p>
-      Que el suelo rústico esté muy limitado no significa que no se pueda construir nada, pero lo que se permite
-      es muy concreto y no sirve para cualquier tipo de proyecto.
-    </p>
+<h2>
+<span class="h2-num">4.</span>
+Mitos del suelo rústico
+</h2>
 
-    <h3>5.1. Vivienda agrícola ligada a una explotación real</h3>
+<h3>"Solo la uso los fines de semana"</h3>
 
-    <p>En algunos casos se permite una vivienda asociada a una explotación agrícola o ganadera real. Eso implica:</p>
+<p>
+Si la vivienda tiene cocina, baño y se usa para dormir, la Administración la considera vivienda igualmente.
+</p>
 
-    <ul>
-      <li>Actividad agraria demostrable, no solo un pequeño huerto de aficionado.</li>
-      <li>Vivienda vinculada a esa explotación, con límites claros de tamaño y condiciones de uso.</li>
-      <li>Controles y autorizaciones por parte del Ayuntamiento y del Cabildo.</li>
-    </ul>
+<h3>"Es móvil"</h3>
 
-    <p>
-      Es un camino legal, pero está pensado para quien realmente quiere desarrollar una actividad agraria
-      profesional, no para disfrazar un chalet vacacional de "casita de campo".
-    </p>
+<p>
+Si permanece instalada en la parcela durante largos periodos, se considera construcción permanente.
+</p>
 
-    <h3>5.2. Asentamientos rurales y otras figuras</h3>
+<h3>"Algún día se recalificará"</h3>
 
-    <p>
-      Existen figuras como los asentamientos rurales donde puede haber ciertas posibilidades de vivienda,
-      pero cada caso depende del plan del municipio y de la clasificación concreta de tu parcela.
-      <strong>Es imprescindible que un técnico revise la normativa aplicable</strong> con tu referencia
-      catastral delante y te diga exactamente qué se puede y qué no.
-    </p>
+<p>
+La recalificación del suelo depende de planes urbanísticos y puede tardar años o no producirse.
+</p>
 
-    <h3>5.3. Intentar recalificar de rústico a urbano</h3>
+<div class="article-note">
+Construir sin permisos puede acabar en sanciones o demolición.
+</div>
 
-    <p>
-      En algunos contextos puede tener sentido estudiarlo, pero hablamos de años de tramitación, inversión
-      en estudios y cero garantías de que salga adelante. No es una herramienta para justificar una casa
-      prefabricada que ya has instalado.
-    </p>
+</section>
 
-    <div class="article-note article-note--info" role="note">
-      <span class="note-icon" aria-hidden="true">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
-      </span>
-      <div>
-        Como estrategia especulativa a largo plazo puede tener sentido. Como excusa para poner ya la casa
-        y "que el futuro arregle el pasado"… <strong>es muy arriesgado.</strong>
-      </div>
-    </div>
-  </section>
+<!-- 5 -->
+<section id="casos-especiales-rustico" class="article-section">
 
-  <!-- ── §6 ──────────────────────────────────────────────── -->
-  <section id="plazos-canarias" class="article-section">
-    <h2>
-      <span class="h2-icon" aria-hidden="true">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 22h14"/><path d="M5 2h14"/><path d="M17 22v-4.172a2 2 0 0 0-.586-1.414L12 12l-4.414 4.414A2 2 0 0 0 7 17.828V22"/><path d="M7 2v4.172a2 2 0 0 0 .586 1.414L12 12l4.414-4.414A2 2 0 0 0 17 6.172V2"/></svg>
-      </span>
-      <span class="h2-num">6.</span>
-      Plazos reales de licencias en Canarias: de 6 a 12 meses
-    </h2>
+<h2>
+<span class="h2-num">5.</span>
+Casos donde sí se puede
+</h2>
 
-    <p>
-      Sobre el papel, las leyes hablan de plazos relativamente cortos para resolver licencias. En la realidad
-      del día a día, muchos Ayuntamientos tardan bastante más.
-    </p>
+<p>
+En algunos casos concretos se permiten construcciones en suelo rústico, pero con muchas limitaciones.
+</p>
 
-    <div class="article-note" role="note">
-      <span class="note-icon" aria-hidden="true">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/><path d="M9 18h6"/><path d="M10 22h4"/></svg>
-      </span>
-      <div>
-        Lo más habitual para una vivienda unifamiliar es moverse en una horquilla de
-        <strong>6 a 12 meses</strong> desde que presentas correctamente el proyecto.
-      </div>
-    </div>
+<h3>Vivienda agrícola</h3>
 
-    <p>Para gestionar todo esto sin volverte loco, te ayudará:</p>
+<ul>
+<li>Debe existir una actividad agrícola real.</li>
+<li>La vivienda debe estar vinculada a esa explotación.</li>
+<li>Requiere autorizaciones adicionales.</li>
+</ul>
 
-    <ul>
-      <li><strong>Planifica con ese horizonte de 6–12 meses.</strong> Si llega antes, fantástico; si tarda más, al menos no te pilla por sorpresa.</li>
-      <li><strong>No encargues la fabricación ni el transporte</strong> de la casa sin tener la licencia concedida.</li>
-      <li><strong>Presenta la documentación completa</strong> para evitar requerimientos que suman semanas o meses.</li>
-      <li><strong>Pregunta tiempos orientativos en tu Ayuntamiento</strong> o a técnicos que trabajan allí con frecuencia.</li>
-    </ul>
+<h3>Asentamientos rurales</h3>
 
-    <p>
-      La parte positiva es que, una vez tienes la licencia, la fase de obra de una casa prefabricada
-      suele ser mucho más rápida que la de una construcción tradicional.
-    </p>
-  </section>
+<p>
+Algunas zonas rurales permiten viviendas, pero depende del planeamiento municipal.
+</p>
 
-  <!-- ── §7 ──────────────────────────────────────────────── -->
-  <section id="errores-tipos" class="article-section">
-    <h2>
-      <span class="h2-icon" aria-hidden="true">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" x2="12" y1="8" y2="12"/><line x1="12" x2="12.01" y1="16" y2="16"/></svg>
-      </span>
-      <span class="h2-num">7.</span>
-      Errores típicos y cómo evitarlos
-    </h2>
+<h3>Recalificación</h3>
 
-    <h3>7.1. Fallos que se repiten constantemente</h3>
+<p>
+Es un proceso largo y sin garantías.
+</p>
 
-    <ul>
-      <li><strong>Comprar la casa antes de mirar el suelo.</strong> Enamorarte del catálogo, pagar señal y luego descubrir que en tu terreno no se puede legalizar lo que acabas de comprar.</li>
-      <li><strong>Pensar que el rústico es "menos estricto".</strong> En realidad es donde más inspecciones y sanciones hay ahora mismo por abusos con viviendas no autorizadas.</li>
-      <li><strong>Confiar en matices de nombre.</strong> Llamarla "móvil", "no habitual" o "bungalow" no cambia que, si la usas como vivienda, la normativa la va a tratar como vivienda.</li>
-      <li><strong>Subestimar la burocracia.</strong> Creer que es cosa de "un par de papeles" y luego encontrarte con meses de espera sin haberlo previsto.</li>
-    </ul>
+</section>
 
-    <h3>7.2. Buenas prácticas mínimas para ir sobre seguro</h3>
+<!-- 6 -->
+<section id="plazos-canarias" class="article-section">
 
-    <ul>
-      <li>Verificar por escrito qué se puede hacer en tu parcela antes de invertir en la casa.</li>
-      <li>Contar desde el principio con un arquitecto o arquitecto técnico que conozca la normativa de Canarias.</li>
-      <li>Pedir a las empresas ejemplos reales de casas prefabricadas legalizadas en las islas.</li>
-      <li>Diseñar tu calendario asumiendo que la licencia llevará su tiempo: mejor hacerlo bien que correr riesgos.</li>
-    </ul>
-  </section>
+<h2>
+<span class="h2-num">6.</span>
+Plazos de licencia en Canarias
+</h2>
 
-  <!-- ── §8 ──────────────────────────────────────────────── -->
-  <section id="conclusion-ventajas" class="article-section">
-    <h2>
-      <span class="h2-icon" aria-hidden="true">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
-      </span>
-      <span class="h2-num">8.</span>
-      Conclusión: por qué una casa prefabricada sigue siendo una gran idea
-    </h2>
+<p>
+En muchos ayuntamientos el proceso suele tardar entre 6 y 12 meses.
+</p>
 
-    <p>
-      Después de leer todo esto puede parecer que solo hay normas, plazos y papeleo, pero en realidad pasa
-      justo lo contrario: cuando entiendes las reglas del juego y las asumes desde el principio, una casa
-      prefabricada en Canarias puede darte exactamente lo que estabas buscando.
-    </p>
+<ul>
 
-    <ul>
-      <li><strong>Más rapidez y menos imprevistos.</strong> Una vez superada la fase de licencias, la prefabricada va mucho más ágil que la obra tradicional: se fabrica en taller con plazos ajustados y el montaje en tu parcela suele resolverse en días o pocas semanas.</li>
-      <li><strong>Calidad más controlada para el clima de las islas.</strong> La fabricación en entorno controlado permite cuidar mejor el aislamiento, la estanqueidad y los acabados frente a humedad, viento y salitre.</li>
-      <li><strong>Tranquilidad jurídica y patrimonial.</strong> Si combinas suelo adecuado, proyecto y licencias, tienes una vivienda legal, financiable, vendible y heredable sin sobresaltos.</li>
-      <li><strong>Menos carga de gestiones para ti.</strong> La mayoría de empresas serias trabajan con un modelo "llave en mano": coordinan proyecto, licencias, fabricación y montaje, y se encargan de gran parte de las gestiones en tu lugar.</li>
-    </ul>
+<li>Presenta toda la documentación completa.</li>
 
-    <p>
-      En resumen: sí, hay normas y burocracia, pero si las afrontas de frente, una casa prefabricada te da una
-      vivienda más rápida, más controlada y mejor adaptada a las islas,
-      <strong>sin vivir con el miedo permanente a inspecciones o sanciones.</strong>
-    </p>
-  </section>
+<li>No encargues la casa antes de tener licencia.</li>
+
+<li>Consulta plazos orientativos en tu municipio.</li>
+
+</ul>
+
+<p>
+Una vez aprobada la licencia, la construcción de una casa prefabricada suele ser mucho más rápida que la obra tradicional.
+</p>
+
+</section>
+
+<!-- 7 -->
+<section id="errores-tipos" class="article-section">
+
+<h2>
+<span class="h2-num">7.</span>
+Errores comunes
+</h2>
+
+<ul>
+
+<li>Comprar la casa antes de estudiar el terreno.</li>
+
+<li>Creer que en suelo rústico es más fácil construir.</li>
+
+<li>Pensar que cambiar el nombre de la vivienda evita la normativa.</li>
+
+<li>No prever los tiempos de licencia.</li>
+
+</ul>
+
+</section>
+
+<!-- 8 -->
+<section id="conclusion-ventajas" class="article-section">
+
+<h2>
+<span class="h2-num">8.</span>
+Por qué elegir una casa prefabricada
+</h2>
+
+<p>
+Cuando el proyecto se hace correctamente, una casa prefabricada ofrece muchas ventajas.
+</p>
+
+<ul>
+
+<li>Construcción más rápida.</li>
+
+<li>Costes más controlados.</li>
+
+<li>Mayor eficiencia energética.</li>
+
+<li>Menos tiempo de obra en la parcela.</li>
+
+</ul>
+
+<p>
+Si el terreno es adecuado y se tramitan las licencias correctamente, es una de las formas más eficientes de construir vivienda hoy en día.
+</p>
+
+</section>
 
   <!-- ============================================ -->
 <!-- SECCIÓN 8: SOLICITA TU PRESUPUESTO - VERSIÓN SIMPLE -->
@@ -576,12 +546,10 @@
             </div>
         </div>
         
-      <a href="../index.html#contacto" 
-   class="presupuesto-button-simple" 
-   onclick="window.location.href='../index.html#contacto'; location.reload();">
-    <i class="fas fa-paper-plane"></i>
-    Solicitar presupuesto personalizado
-</a>
+        <a href="../index.html#contacto" class="presupuesto-button-simple" onclick="window.location.href='../index.html#contacto'; location.reload();">
+            <i class="fas fa-paper-plane"></i>
+            Solicitar presupuesto
+        </a>
         
     </div>
 </section>
@@ -607,7 +575,7 @@
                     <div class="flex items-center gap-3 mb-4">
                         <a href="../index.html" class="flex items-center gap-3 hover:opacity-80 transition-opacity">
                             <div class="logo-box">
-                                <img src="../assets/images/icono-logo.png" alt="icono-logo">
+                                <img src="../assets/images/icono-logo.webp" alt="icono-logo">
                             </div>
                             <div>
                                 <div class="brand-title">Casas Prefabricadas</div>
@@ -659,7 +627,6 @@
                 <div class="flex gap-6 text-slate-500 text-sm">
                     <a href="../aviso-legal.html" class="hover:text-white transition-colors">Aviso Legal</a>
                     <a href="../privacidad.html" class="hover:text-white transition-colors">Política de Privacidad</a>
-                    <a href="../cookies.html" class="hover:text-white transition-colors">Cookies</a>
                 </div>
             </div>
         </div>
@@ -693,10 +660,4 @@
 </script>
 
 </body>
-
 </html>
-
-
-
-
-
