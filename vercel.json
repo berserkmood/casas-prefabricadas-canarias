@@ -1,10 +1,13 @@
 {
-  "cleanUrls": true,
-  "redirects": [
+  "rewrites": [
     {
-      "source": "/:path*.html",
-      "destination": "/:path*",
-      "permanent": true
+      "source": "/guias/:path*/",
+      "destination": "/guias/index.html"
+    },
+    {
+      "source": "/guias/:path*",
+      "destination": "/guias/:path*.html"
     }
-  ]
+  ],
+  "cleanUrls": true
 }
