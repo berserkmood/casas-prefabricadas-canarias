@@ -3,6 +3,10 @@
 /* VERSIÓN OPTIMIZADA - GLOBAL */
 /* ========================================= */
 
+html {
+    scroll-behavior: smooth;
+}
+
 :root {
     --primary: 205 65% 35%;
     --accent: 155 55% 38%;
