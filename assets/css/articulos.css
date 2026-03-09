@@ -630,3 +630,39 @@ padding:.75rem .9rem;
     }
 
 }
+
+/* =========================================================
+   INTRODUCCIÓN DEL ARTÍCULO (SIN HERO)
+   ========================================================= */
+
+.article-intro-block {
+    max-width: 48rem;
+    margin: 0 auto 2rem auto;
+    padding: 0 1rem;
+}
+
+.article-main-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    font-weight: 700;
+    color: var(--article-text-strong, #0f172a);
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.article-intro-text {
+    font-family: var(--article-font-sans, system-ui);
+    font-size: clamp(1rem, 2vw, 1.1rem);
+    line-height: 1.6;
+    color: var(--article-text, #475569);
+    margin-bottom: 1rem;
+    text-align: center;
+    max-width: 36rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.article-intro-text:last-of-type {
+    margin-bottom: 2rem;
+}
