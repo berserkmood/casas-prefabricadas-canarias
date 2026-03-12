@@ -471,7 +471,7 @@ if (typeof window !== 'undefined') {
     if (!backToTopBtn || !menuElement) return;
     
     function toggleButton() {
-        if (window.scrollY > 400) {
+        if (window.scrollY > 800) {  // ← CAMBIADO DE 400 A 800
             backToTopBtn.classList.add('visible');
         } else {
             backToTopBtn.classList.remove('visible');
