@@ -20,7 +20,7 @@
 
   <!-- PÁGINA DE TENERIFE -->
   <url>
-    <loc>https://casasprefabricadascanarias.es/tenerife.html</loc>
+    <loc>https://casasprefabricadascanarias.es/tenerife</loc>
     <lastmod>2026-03-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -28,7 +28,7 @@
 
   <!-- PÁGINA DE GRAN CANARIA -->
   <url>
-    <loc>https://casasprefabricadascanarias.es/gran-canaria.html</loc>
+    <loc>https://casasprefabricadascanarias.es/gran-canaria</loc>
     <lastmod>2026-03-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -40,7 +40,7 @@
 
   <!-- PÁGINA PRINCIPAL DE GUÍAS -->
   <url>
-    <loc>https://casasprefabricadascanarias.es/guias.html</loc>
+    <loc>https://casasprefabricadascanarias.es/guias/</loc>
     <lastmod>2026-03-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -48,7 +48,7 @@
 
   <!-- GUÍA DE NORMATIVA Y PERMISOS -->
   <url>
-    <loc>https://casasprefabricadascanarias.es/guias/normativa-permisos-casas-prefabricadas-canarias.html</loc>
+    <loc>https://casasprefabricadascanarias.es/guias/permisos-casa-prefabricada-canarias</loc>
     <lastmod>2026-03-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -56,7 +56,31 @@
 
   <!-- GUÍA DE MATERIALES SEGÚN CLIMA -->
   <url>
-    <loc>https://casasprefabricadascanarias.es/guias/materiales-segun-clima-canarias.html</loc>
+    <loc>https://casasprefabricadascanarias.es/guias/materiales-casa-prefabricada-canarias.html</loc>
+    <lastmod>2026-03-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+<!-- GUÍA DE PRECIOS REALES -->
+  <url>
+    <loc>https://casasprefabricadascanarias.es/guias/precio-casa-prefabricada-canarias</loc>
+    <lastmod>2026-03-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- GUÍA DE COMPARATIVA -->
+  <url>
+    <loc>https://casasprefabricadascanarias.es/guias/casa-prefabricada-vs-construccion-tradicional</loc>
+    <lastmod>2026-03-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- GUÍA DE AYUDAS -->
+  <url>
+    <loc>https://casasprefabricadascanarias.es/guias/ayudas-casa-prefabricada-canarias</loc>
     <lastmod>2026-03-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
