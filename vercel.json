@@ -2,6 +2,16 @@
   "cleanUrls": true,
   "redirects": [
     {
+      "source": "/guias/normativa-permisos-casas-prefabricadas-canarias",
+      "destination": "/guias/permisos-casa-prefabricada-canarias",
+      "permanent": true
+    },
+    {
+      "source": "/guias/materiales-segun-clima-canarias",
+      "destination": "/guias/materiales-casa-prefabricada-canarias",
+      "permanent": true
+    },
+    {
       "source": "/:path*.html",
       "destination": "/:path*",
       "permanent": true
