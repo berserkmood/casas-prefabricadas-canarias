@@ -521,51 +521,7 @@
     <!-- SCRIPT (ENLACE A TU JS) -->
     <!-- ============================================ -->
     <script src="../assets/js/script.js"></script>
-    <script>
-
-const sections = document.querySelectorAll("h2[id]");
-const menuLinks = document.querySelectorAll(".article-menu-link");
-
-/* Scroll spy */
-window.addEventListener("scroll", () => {
-
-    let current = "";
-
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop - 120;
-
-        if (window.scrollY >= sectionTop) {
-            current = section.getAttribute("id");
-        }
-    });
-
-    menuLinks.forEach(link => {
-        link.classList.remove("active");
-
-        if (link.getAttribute("href") === "#" + current) {
-            link.classList.add("active");
-        }
-    });
-
-});
-
-
-/* Quitar estado activo en móvil */
-menuLinks.forEach(link => {
-
-    link.addEventListener("click", function(){
-
-        menuLinks.forEach(l => l.classList.remove("active"));
-
-        setTimeout(() => {
-            this.blur();
-        }, 150);
-
-    });
-
-});
-
-</script>
+  
 
 </body>
 </html>

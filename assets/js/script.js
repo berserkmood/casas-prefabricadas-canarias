@@ -231,6 +231,111 @@ function setupScrollAnimations() {
 }
 
 // =========================================
+// ÍNDICE INTERACTIVO MEJORADO (móvil + escritorio)
+// =========================================
+function setupInteractiveIndex() {
+    const sections = document.querySelectorAll("h2[id]");
+    const menuLinks = document.querySelectorAll(".article-menu-link");
+
+    if (!sections.length || !menuLinks.length) return;
+
+    let clickTimeout = null;
+
+    // Función para actualizar estado activo en escritorio
+    function updateActiveLinkOnScroll() {
+        // Solo en escritorio
+        if (window.innerWidth <= 768) return;
+
+        let current = "";
+        const scrollPosition = window.scrollY + 150;
+
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop - 120;
+            const sectionBottom = sectionTop + section.offsetHeight;
+
+            if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+                current = section.getAttribute("id");
+            }
+        });
+
+        menuLinks.forEach(link => {
+            link.classList.remove("active");
+            if (link.getAttribute("href") === "#" + current) {
+                link.classList.add("active");
+            }
+        });
+    }
+
+    // Manejador de clics para móvil
+    menuLinks.forEach(link => {
+        link.addEventListener("click", function(e) {
+            const isMobile = window.innerWidth <= 768;
+            
+            if (isMobile) {
+                e.preventDefault();
+                
+                const href = this.getAttribute("href");
+                if (href && href.startsWith("#")) {
+                    const targetId = href.substring(1);
+                    const targetSection = document.getElementById(targetId);
+                    
+                    if (targetSection) {
+                        // Cerrar menú móvil si existe
+                        if (typeof closeMobileMenu === 'function') {
+                            closeMobileMenu();
+                        }
+                        
+                        targetSection.scrollIntoView({ 
+                            behavior: 'smooth', 
+                            block: 'start' 
+                        });
+                        
+                        if (clickTimeout) clearTimeout(clickTimeout);
+                        
+                        menuLinks.forEach(l => l.classList.remove("active"));
+                        this.classList.add("active");
+                        
+                        clickTimeout = setTimeout(() => {
+                            menuLinks.forEach(l => l.classList.remove("active"));
+                            this.blur();
+                            clickTimeout = null;
+                        }, 1500);
+                    }
+                }
+            }
+        });
+    });
+
+    // Scroll con throttle para escritorio
+    let ticking = false;
+    window.addEventListener('scroll', function() {
+        if (!ticking) {
+            window.requestAnimationFrame(function() {
+                updateActiveLinkOnScroll();
+                ticking = false;
+            });
+            ticking = true;
+        }
+    });
+
+    // Cancelar timeout al hacer scroll
+    window.addEventListener('scroll', function() {
+        if (clickTimeout) {
+            clearTimeout(clickTimeout);
+            clickTimeout = null;
+        }
+    }, { passive: true });
+
+    // Actualizar al redimensionar
+    window.addEventListener('resize', updateActiveLinkOnScroll);
+    
+    // Ejecutar una vez al inicio
+    setTimeout(updateActiveLinkOnScroll, 100);
+    
+    console.log('✅ Índice interactivo configurado');
+}
+
+// =========================================
 // VALIDACIÓN DE FORMULARIOS
 // =========================================
 
@@ -279,11 +384,6 @@ function setupFormValidation() {
     });
 }
 
-// =========================================
-// REDIRECCIÓN AUTOMÁTICA PARA PÁGINAS DE AGRADECIMIENTO
-// =========================================
-
-// Configurar redirección automática después de 15 segundos en páginas de agradecimiento
 // =========================================
 // REDIRECCIÓN AUTOMÁTICA PARA PÁGINAS DE AGRADECIMIENTO
 // =========================================
@@ -339,6 +439,9 @@ function init() {
     
     // Configurar animaciones al scroll
     setupScrollAnimations();
+    
+    // ✅ NUEVO: Configurar índice interactivo
+    setupInteractiveIndex();
     
     // Configurar validación de formularios (opcional)
     // setupFormValidation();
@@ -455,9 +558,9 @@ if (typeof window !== 'undefined') {
         setupFaqAccordion,
         setupScrollAnimations,
         setupSmoothScroll,
-        setupThankYouRedirect
+        setupThankYouRedirect,
+        setupInteractiveIndex // ✅ Añadida la nueva función
     };
-
 }
 
 // ============================================ //
