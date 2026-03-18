@@ -34,8 +34,8 @@
     <priority>0.9</priority>
   </url>
 
-  <!-- ============================================= -->
-  <!-- NUEVAS GUÍAS (AÑADIDAS)                      -->
+    <!-- ============================================= -->
+  <!-- NUEVAS GUÍAS (CORREGIDAS Y UNIFICADAS)       -->
   <!-- ============================================= -->
 
   <!-- PÁGINA PRINCIPAL DE GUÍAS -->
@@ -46,7 +46,7 @@
     <priority>0.8</priority>
   </url>
 
-  <!-- GUÍA DE NORMATIVA Y PERMISOS -->
+  <!-- GUÍA DE PERMISOS -->
   <url>
     <loc>https://casasprefabricadascanarias.es/guias/permisos-casa-prefabricada-canarias</loc>
     <lastmod>2026-03-05</lastmod>
@@ -54,15 +54,15 @@
     <priority>0.8</priority>
   </url>
 
-  <!-- GUÍA DE MATERIALES SEGÚN CLIMA -->
+  <!-- GUÍA DE MATERIALES (SIN .HTML) -->
   <url>
-    <loc>https://casasprefabricadascanarias.es/guias/materiales-casa-prefabricada-canarias.html</loc>
+    <loc>https://casasprefabricadascanarias.es/guias/materiales-casa-prefabricada-canarias</loc>
     <lastmod>2026-03-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
-<!-- GUÍA DE PRECIOS REALES -->
+  <!-- GUÍA DE PRECIOS REALES -->
   <url>
     <loc>https://casasprefabricadascanarias.es/guias/precio-casa-prefabricada-canarias</loc>
     <lastmod>2026-10-05</lastmod>
@@ -70,8 +70,9 @@
     <priority>0.8</priority>
   </url>
 
-  <!-- GUÍA DE COMPARATIVA -->
+  <!-- GUÍA DE COMPARATIVA (VERSIÓN CORREGIDA) -->
   <url>
+
     <loc>https://casasprefabricadascanarias.es/guias/casa-prefabricada-vs-construccion-tradicional</loc>
     <lastmod>2026-10-05</lastmod>
     <changefreq>monthly</changefreq>
@@ -85,5 +86,6 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
+
 
 </urlset>
