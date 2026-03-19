@@ -594,3 +594,5 @@ if (typeof window !== 'undefined') {
     toggleButton();
     console.log('✅ Botón volver al menú inicializado');
 })();
+
+
