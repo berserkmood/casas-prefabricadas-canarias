@@ -327,7 +327,7 @@ img { max-width: 100%; height: auto; display: block; }
 .carousel-modern-image { 
     position: relative; 
     width: 100%; 
-    aspect-ratio: 4 / 3;
+    aspect-ratio: 16 / 9;
     background: #0f172a; 
     overflow: hidden; 
     cursor: pointer; 
@@ -383,7 +383,7 @@ img { max-width: 100%; height: auto; display: block; }
 /* BOTONES MÁS PEQUEÑOS */
 .carousel-modern-btn {
     position: absolute; 
-    top: 35%;
+    top: 50%;
     transform: translateY(-50%); 
     background: white; 
     border: none;
@@ -466,7 +466,7 @@ img { max-width: 100%; height: auto; display: block; }
 }
 
 /* ============================================ */
-/* RESPONSIVE - MÓVIL                          */
+/* RESPONSIVE - MÓVIL CORREGIDO                 */
 /* ============================================ */
 
 @media (max-width: 768px) {
@@ -482,7 +482,7 @@ img { max-width: 100%; height: auto; display: block; }
         box-shadow: none;
     }
     
-    /* Imagen más panorámica */
+    /* Imagen */
     .carousel-modern-image { 
         aspect-ratio: 16 / 9; 
     }
@@ -493,33 +493,33 @@ img { max-width: 100%; height: auto; display: block; }
         padding: 1.5rem 1rem 1rem; 
     }
     
-    /* BOTONES MÁS PEQUEÑOS EN MÓVIL */
+    /* BOTONES EN MÓVIL - POSICIÓN CORREGIDA */
     .carousel-modern-btn { 
-        width: 32px; 
-        height: 32px; 
+        width: 36px; 
+        height: 36px; 
         background: rgba(255,255,255,0.95);
-        top: 35% !important;
+        top: 40% !important;
         transform: translateY(-50%) !important;
     }
     
     .carousel-modern-btn.prev { 
-        left: 8px !important; 
+        left: 10px !important; 
     }
     
     .carousel-modern-btn.next { 
-        right: 8px !important; 
+        right: 10px !important; 
     }
     
     .carousel-modern-btn i { 
-        font-size: 0.8rem; 
+        font-size: 0.85rem; 
     }
     
     .carousel-modern-caption h4 { 
-        font-size: 1.1rem; 
+        font-size: 1rem; 
     }
     
     .carousel-modern-caption p { 
-        font-size: 0.8rem; 
+        font-size: 0.75rem; 
     }
     
     .carousel-modern-note { 
@@ -531,29 +531,29 @@ img { max-width: 100%; height: auto; display: block; }
 /* Móviles pequeños */
 @media (max-width: 480px) {
     .carousel-modern-btn { 
-        width: 28px !important; 
-        height: 28px !important; 
-        top: 35% !important;
+        width: 32px !important; 
+        height: 32px !important; 
+        top: 40% !important;
     }
     
     .carousel-modern-btn i { 
-        font-size: 0.7rem !important; 
+        font-size: 0.75rem !important; 
     }
     
     .carousel-modern-caption h4 { 
-        font-size: 1rem; 
+        font-size: 0.9rem; 
     }
     
     .carousel-modern-caption p { 
-        font-size: 0.7rem; 
+        font-size: 0.65rem; 
     }
     
     .carousel-modern-btn.prev { 
-        left: 6px !important; 
+        left: 8px !important; 
     }
     
     .carousel-modern-btn.next { 
-        right: 6px !important; 
+        right: 8px !important; 
     }
     
     .carousel-modern-overlay { 
@@ -569,17 +569,17 @@ img { max-width: 100%; height: auto; display: block; }
     }
     
     .carousel-modern-btn { 
-        width: 32px; 
-        height: 32px; 
-        top: 35%;
+        width: 34px; 
+        height: 34px; 
+        top: 50%;
     }
     
     .carousel-modern-btn.prev { 
-        left: -10px; 
+        left: -12px; 
     }
     
     .carousel-modern-btn.next { 
-        right: -10px; 
+        right: -12px; 
     }
     
     .carousel-modern-btn i { 
@@ -587,24 +587,24 @@ img { max-width: 100%; height: auto; display: block; }
     }
     
     .carousel-modern-image { 
-        aspect-ratio: 21 / 9; 
+        aspect-ratio: 16 / 9; 
     }
 }
 
 /* Escritorio */
 @media (min-width: 1025px) {
     .carousel-modern-container { 
-        max-width: 1400px; 
+        max-width: 1200px; 
     }
     
     .carousel-modern-image { 
-        aspect-ratio: 21 / 9; 
+        aspect-ratio: 16 / 9; 
     }
     
     .carousel-modern-btn { 
         width: 38px; 
         height: 38px; 
-        top: 35%;
+        top: 50%;
     }
     
     .carousel-modern-btn.prev { 
@@ -620,11 +620,11 @@ img { max-width: 100%; height: auto; display: block; }
     }
     
     .carousel-modern-caption h4 { 
-        font-size: 1.5rem; 
+        font-size: 1.35rem; 
     }
     
     .carousel-modern-caption p { 
-        font-size: 1rem; 
+        font-size: 0.9rem; 
     }
 }
 /* CTA SIMPLE */
