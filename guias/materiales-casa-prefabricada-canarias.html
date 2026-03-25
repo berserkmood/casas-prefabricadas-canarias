@@ -2,26 +2,26 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Materiales para casas prefabricadas en Canarias: guía según clima 2026</title>
+    <title>Materiales para casas prefabricadas en Canarias: guía según clima 2026</title>
 
-<meta name="description" content="Guía completa de materiales para casas prefabricadas en Canarias. Madera tratada, hormigón o paneles SIP: cuál elegir según el clima de tu isla. Durabilidad y mantenimiento.">
+    <meta name="description" content="Guía completa de materiales para casas prefabricadas en Canarias. Madera tratada, hormigón o paneles SIP: cuál elegir según el clima de tu isla. Durabilidad y mantenimiento.">
 
-<!-- Open Graph -->
-<meta property="og:title" content="Materiales para casas prefabricadas en Canarias: guía según clima 2026">
-<meta property="og:description" content="Guía completa de materiales para casas prefabricadas en Canarias. Madera tratada, hormigón o paneles SIP: cuál elegir según el clima de tu isla. Durabilidad y mantenimiento.">
-<meta property="og:type" content="article">
-<meta property="og:image" content="https://casasprefabricadascanarias.es/assets/images/hero-materiales.webp">
-<meta property="og:url" content="https://casasprefabricadascanarias.es/guias/materiales-casas-prefabricadas-canarias">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Materiales para casas prefabricadas en Canarias: guía según clima 2026">
+    <meta property="og:description" content="Guía completa de materiales para casas prefabricadas en Canarias. Madera tratada, hormigón o paneles SIP: cuál elegir según el clima de tu isla. Durabilidad y mantenimiento.">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="https://casasprefabricadascanarias.es/assets/images/hero-materiales.webp">
+    <meta property="og:url" content="https://casasprefabricadascanarias.es/guias/materiales-casas-prefabricadas-canarias">
 
-<!-- Twitter Card -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Materiales para casas prefabricadas en Canarias: guía según clima 2026">
-<meta name="twitter:description" content="Madera tratada, hormigón o paneles SIP: qué material elegir para tu casa prefabricada en Canarias según el clima de tu isla.">
-<meta name="twitter:image" content="https://casasprefabricadascanarias.es/assets/images/hero-materiales.webp">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Materiales para casas prefabricadas en Canarias: guía según clima 2026">
+    <meta name="twitter:description" content="Madera tratada, hormigón o paneles SIP: qué material elegir para tu casa prefabricada en Canarias según el clima de tu isla.">
+    <meta name="twitter:image" content="https://casasprefabricadascanarias.es/assets/images/hero-materiales.webp">
     
-    <!-- Favicon - CORREGIDO: rutas relativas a assets -->
+    <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="../favicon.ico">
     <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
@@ -32,7 +32,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
-    <!-- Tailwind (opcional, para utilidades adicionales) -->
+    <!-- Tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
     
     <link rel="stylesheet" href="../assets/css/style.css">
@@ -41,7 +41,7 @@
 </head>
 <body>
     <!-- ============================================ -->
-    <!-- HEADER -->
+    <!-- HEADER ACTUALIZADO CON DROPDOWN ISLAS -->
     <!-- ============================================ -->
     <header class="header-fixed" id="header">
         <nav class="section-container flex items-center justify-between h-16 lg:h-20">
@@ -55,14 +55,27 @@
                 </div>
             </a>
             
-            <!-- Menú Desktop -->
+            <!-- MENÚ DESKTOP CON DROPDOWN CLICK -->
             <div class="hidden md:flex items-center gap-8">
                 <a href="../index.html" class="nav-link">Inicio</a>
-                <a href="../tenerife.html" class="nav-link">Tenerife</a>
-                <a href="../gran-canaria.html" class="nav-link">Gran Canaria</a>
-                <a href="index.html" class="nav-link">Guías</a>
                 
-                <a href="../index.html#contacto" class="btn-cta text-sm" onclick="window.location.href='../index.html#contacto'; location.reload();">
+                <div class="dropdown-islas" id="dropdownIslas">
+                    <button class="nav-link flex items-center gap-1" id="dropdownIslasBtn">
+                        Islas <i class="fas fa-chevron-down text-xs"></i>
+                    </button>
+                    <div class="dropdown-menu">
+                        <a href="../tenerife.html">Tenerife</a>
+                        <a href="../gran-canaria.html">Gran Canaria</a>
+                        <a href="../lanzarote.html">Lanzarote</a>
+                        <a href="../fuerteventura.html">Fuerteventura</a>
+                        <a href="../la-palma.html">La Palma</a>
+                        <a href="../la-gomera.html">La Gomera</a>
+                        <a href="../el-hierro.html">El Hierro</a>
+                    </div>
+                </div>
+                
+                <a href="index.html" class="nav-link">Guías</a>
+                <a href="../index.html#contacto" class="btn-cta text-sm" onclick="window.location.href='../index.html#contacto';">
                     Solicitar información
                 </a>
             </div>
@@ -75,7 +88,7 @@
     </header>
 
     <!-- ============================================ -->
-    <!-- MENÚ MÓVIL -->
+    <!-- MENÚ MÓVIL ACTUALIZADO CON DROPDOWN ISLAS -->
     <!-- ============================================ -->
     <div id="mobile-menu-container" class="mobile-menu-container">
         <div class="mobile-menu-content">
@@ -98,12 +111,22 @@
                 <a href="../index.html" class="mobile-menu-item">
                     <i class="fas fa-home mobile-menu-icon"></i> Inicio
                 </a>
-                <a href="../tenerife.html" class="mobile-menu-item">
-                    <i class="fas fa-map-marker-alt mobile-menu-icon"></i> Tenerife
-                </a>
-                <a href="../gran-canaria.html" class="mobile-menu-item">
-                    <i class="fas fa-map-marker-alt mobile-menu-icon"></i> Gran Canaria
-                </a>
+                
+                <!-- Trigger Islas móvil (click) -->
+                <div class="mobile-islas-trigger" id="mobileIslasTrigger">
+                    <span><i class="fas fa-map-marker-alt mobile-menu-icon"></i>Islas</span>
+                    <i class="fas fa-chevron-down text-xs" id="mobileIslasIcon"></i>
+                </div>
+                <div class="mobile-islas-submenu" id="mobileIslasSubmenu">
+                    <a href="../tenerife.html">Tenerife</a>
+                    <a href="../gran-canaria.html">Gran Canaria</a>
+                    <a href="../lanzarote.html">Lanzarote</a>
+                    <a href="../fuerteventura.html">Fuerteventura</a>
+                    <a href="../la-palma.html">La Palma</a>
+                    <a href="../la-gomera.html">La Gomera</a>
+                    <a href="../el-hierro.html">El Hierro</a>
+                </div>
+                
                 <a href="index.html" class="mobile-menu-item">
                     <i class="fas fa-book-open mobile-menu-icon"></i> Guías
                 </a>
@@ -128,48 +151,32 @@
         </div>
     </div>
 
-    
-    <!-- HERO MATERIALES - CON CLASES GLOBALES -->
-<!-- Hero Section Optimizada - Materiales -->
-<section class="hero-section guias-hero relative flex items-center min-h-[70vh]">
+    <!-- HERO MATERIALES -->
+    <section class="hero-section guias-hero relative flex items-center min-h-[70vh]">
+        <div class="hero-overlay absolute inset-0 bg-center bg-cover opacity-40"
+             style="background-image: url('../assets/images/hero-materiales.webp')"></div>
+        <div class="relative z-10 w-full max-w-5xl mx-auto px-6 lg:px-0">
+            <div class="animate-fade-up">
+                <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-5 leading-tight text-left">
+                    ¿<span class="text-green-400">Casa prefabricada</span> de madera, hormigón o acero?
+                </h1>
+                <p class="text-base md:text-lg lg:text-xl text-white/90 mb-7 max-w-2xl text-left">
+                    Qué material funciona mejor según el clima de Canarias.
+                </p>
+                <div class="flex flex-wrap gap-3 justify-start">
+                    <span class="badge-floating inline-flex items-center gap-2">
+                        <i class="fas fa-clock"></i> 12 min
+                    </span>
+                    <span class="badge-floating inline-flex items-center gap-2">
+                        <i class="fas fa-tag"></i> Madera · Hormigón · Modular
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <!-- Fondo -->
-  <div class="hero-overlay absolute inset-0 bg-center bg-cover opacity-40"
-       style="background-image: url('../assets/images/hero-materiales.webp')"></div>
-
-  <!-- Contenedor centrado -->
-  <div class="relative z-10 w-full max-w-5xl mx-auto px-6 lg:px-0">
-
-    <div class="animate-fade-up">
-
-      <!-- Título -->
-      <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-5 leading-tight text-left">
-        ¿<span class="text-green-400">Casa prefabricada</span> de madera, hormigón o acero?
-      </h1>
-
-      <!-- Subtítulo -->
-      <p class="text-base md:text-lg lg:text-xl text-white/90 mb-7 max-w-2xl text-left">
-        Qué material funciona mejor según el clima de Canarias.
-      </p>
-
-      <!-- Meta info -->
-      <div class="flex flex-wrap gap-3 justify-start">
-        <span class="badge-floating inline-flex items-center gap-2">
-          <i class="fas fa-clock"></i> 12 min
-        </span>
-
-        <span class="badge-floating inline-flex items-center gap-2">
-          <i class="fas fa-tag"></i> Madera · Hormigón · Modular
-        </span>
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-     <div class="article-wrapper">
+    <!-- CONTENIDO DEL ARTÍCULO (SE MANTIENE IGUAL) -->
+    <div class="article-wrapper">
         <!-- INTRO -->
         <div class="article-intro">
             <h2 class="article-main-title">
@@ -186,60 +193,74 @@
             </div>
         </div>
 
-        <!-- IMAGEN 1: ESPACIO EN BLANCO - Casa madera típica Canarias -->
+        <!-- IMAGEN 1 -->
         <div class="article-image-container">
-    <img class="article-image" src="/assets/images/guias/casa-madera.webp" 
-         alt="Casa prefabricada moderna de madera">
-    <div class="img-caption">
-        <i class="fas fa-camera" style="margin-right: 0.5rem; color: var(--color-accent);"></i>
-        Ejemplo de casa prefabricada moderna de madera.
-    </div>
-</div>
+            <img class="article-image" src="/assets/images/guias-casas-prefabricadas/casa-madera.webp" 
+                 alt="Casa prefabricada moderna de madera">
+            <div class="img-caption">
+                <i class="fas fa-camera" style="margin-right: 0.5rem; color: var(--color-accent);"></i>
+                Ejemplo de casa prefabricada moderna de madera.
+            </div>
+        </div>
 
         <!-- ÍNDICE MEJORADO -->
         <div class="article-menu">
             <div class="article-menu-header">
-                <h2><i class="fas fa-list-ul"></i> Índice de la guía</h2>
-                
+                <h2><i class="fas fa-list-ul"></i> Índice de materiales</h2>
             </div>
             <div class="article-menu-grid">
                 <div class="article-menu-item">
-                    <span class="article-menu-number">1</span>
-                    <a href="#materiales-principales" class="article-menu-link">Materiales principales</a>
+                    <a href="#materiales-principales" class="article-menu-link-wrapper">
+                        <span class="article-menu-number">1</span>
+                        <span class="article-menu-link">Materiales principales</span>
+                    </a>
                 </div>
                 <div class="article-menu-item">
-                    <span class="article-menu-number">2</span>
-                    <a href="#madera" class="article-menu-link">Madera tratada</a>
+                    <a href="#madera" class="article-menu-link-wrapper">
+                        <span class="article-menu-number">2</span>
+                        <span class="article-menu-link">Madera tratada</span>
+                    </a>
                 </div>
                 <div class="article-menu-item">
-                    <span class="article-menu-number">3</span>
-                    <a href="#hormigon" class="article-menu-link">Hormigón/acero</a>
+                    <a href="#hormigon" class="article-menu-link-wrapper">
+                        <span class="article-menu-number">3</span>
+                        <span class="article-menu-link">Hormigón / acero</span>
+                    </a>
                 </div>
                 <div class="article-menu-item">
-                    <span class="article-menu-number">4</span>
-                    <a href="#paneles-sip" class="article-menu-link">Paneles SIP</a>
+                    <a href="#paneles-sip" class="article-menu-link-wrapper">
+                        <span class="article-menu-number">4</span>
+                        <span class="article-menu-link">Paneles SIP</span>
+                    </a>
                 </div>
                 <div class="article-menu-item">
-                    <span class="article-menu-number">5</span>
-                    <a href="#acabados" class="article-menu-link">Acabados exteriores</a>
+                    <a href="#acabados" class="article-menu-link-wrapper">
+                        <span class="article-menu-number">5</span>
+                        <span class="article-menu-link">Acabados exteriores</span>
+                    </a>
                 </div>
                 <div class="article-menu-item">
-                    <span class="article-menu-number">6</span>
-                    <a href="#errores-materiales" class="article-menu-link">Errores materiales</a>
+                    <a href="#errores-materiales" class="article-menu-link-wrapper">
+                        <span class="article-menu-number">6</span>
+                        <span class="article-menu-link">Errores materiales</span>
+                    </a>
                 </div>
                 <div class="article-menu-item">
-                    <span class="article-menu-number">7</span>
-                    <a href="#guias-faqs" class="article-menu-link">Guías y FAQs</a>
+                    <a href="#guias-faqs" class="article-menu-link-wrapper">
+                        <span class="article-menu-number">7</span>
+                        <span class="article-menu-link">Guías y FAQs</span>
+                    </a>
                 </div>
                 <div class="article-menu-item">
-                    <span class="article-menu-number">8</span>
-                    <a href="#presupuesto" class="article-menu-link">Solicita presupuesto</a>
+                    <a href="#presupuesto" class="article-menu-link-wrapper">
+                        <span class="article-menu-number">8</span>
+                        <span class="article-menu-link">Solicita presupuesto</span>
+                    </a>
                 </div>
             </div>
         </div>
 
         <div class="article-body">
-            <!-- INTRO SECCIONES -->
             <p style="margin-bottom: 2rem; font-size: 1.1rem;">Aquí te explicamos cada material para casas prefabricadas en Canarias y cómo elegir según tu isla y presupuesto.</p>
 
             <!-- SECCIÓN 1: Materiales principales -->
@@ -250,12 +271,7 @@
                 <div class="table-responsive">
                     <table class="article-table">
                         <thead>
-                            <tr>
-                                <th>Material</th>
-                                <th>Durabilidad</th>
-                                <th>Coste m²</th>
-                                <th>Mejor para</th>
-                            </tr>
+                            <tr><th>Material</th><th>Durabilidad</th><th>Coste m²</th><th>Mejor para</th></tr>
                         </thead>
                         <tbody>
                             <tr><td>Madera tratada</td><td>40 años</td><td>850-1.200€</td><td>Clima húmedo, ventilada</td></tr>
@@ -264,33 +280,28 @@
                         </tbody>
                     </table>
                 </div>
-
-                
-                </div>
             </section>
 
-            <!-- IMAGEN 2: ESPACIO EN BLANCO - Paneles SIP -->
+            <!-- IMAGEN 2 -->
             <div class="article-image-container">
-            <img class="article-image" src="/assets/images/guias/casa-hormigon.webp" 
-                 alt="Casa prefabricada moderna de hormigón">
-            <div class="img-caption">
-                <i class="fas fa-camera" style="margin-right: 0.5rem; color: var(--color-accent);"></i>
-                Ejemplo de casa prefabricada moderna de hormigón.
+                <img class="article-image" src="/assets/images/guias-casas-prefabricadas/casa-hormigon.webp" 
+                     alt="Casa prefabricada moderna de hormigón">
+                <div class="img-caption">
+                    <i class="fas fa-camera" style="margin-right: 0.5rem; color: var(--color-accent);"></i>
+                    Ejemplo de casa prefabricada moderna de hormigón.
+                </div>
             </div>
-        </div>
 
             <!-- SECCIÓN 2: Madera tratada -->
             <section id="madera" class="article-section">
                 <h2><i class="fas fa-tree"></i> 2. Madera tratada</h2>
                 <p>La madera es <strong>REINA en Canarias</strong> (85% casas prefabricadas). ¿Por qué? Ventilación natural subtropical, ligera (menos cimentación), tratamiento autoclave anti-termite/humedad.</p>
-                
                 <h3>Proceso simple:</h3>
                 <ul class="styled-list">
                     <li><strong>Tratamiento al autoclave</strong> (inmersión presión sal marina + fungicida)</li>
                     <li><strong>Impregnación anti-UV</strong> (mantiene color 15 años)</li>
                     <li><strong>Ventilación cruzada</strong> (3cm aire entre madera y cerramiento)</li>
                 </ul>
-
                 <p>Ejemplo: Casas nórdicas en Maspalomas pueden durar hasta 35 años sin necesidad de pasar otra capa de pintura.</p>
             </section>
 
@@ -298,73 +309,66 @@
             <section id="hormigon" class="article-section">
                 <h2><i class="fas fa-dharmachakra"></i> 3. Hormigón/acero</h2>
                 <p>Para costas expuestas al salitre o vientos fuertes (>80 km/h), elige hormigón celular ligero combinado con acero galvanizado 275 g/m² que resiste la oxidación por sal marina sin mantenimiento durante décadas.</p>
-                
                 <h3>Ventajas claras:</h3>
                 <ul class="styled-list">
                     <li><strong>Peso estable</strong> (no se mueve con alisios)</li>
                     <li><strong>Incombustible</strong> (bomberos aprueban rápido)</li>
                     <li><strong>Aislamiento acústico</strong> (cero ruido carretera)</li>
                 </ul>
-
-                <p>Ejemplo real: Viviendas costeras en Lanzarote y Fuerteventura que duran 60 años sin un solo mantenimiento, aunque el coste inicial es un 20% superior.</a>.</p>
+                <p>Ejemplo real: Viviendas costeras en Lanzarote y Fuerteventura que duran 60 años sin un solo mantenimiento, aunque el coste inicial es un 20% superior.</p>
 
                 <div class="article-note-cta">
-    <i class="fas fa-calculator"></i>
-    <div class="article-note-cta-content">
-        <div>
-            <strong>¿Quieres un presupuesto con los materiales ideales para tu isla?</strong>
-            <p>Te conectamos con las empresas adecuadas</p>
-        </div>
-        <a href="../index.html#contacto" class="presupuesto-button">
-            <i class="fas fa-rocket"></i> Solicitar info
-        </a>
-    </div>
-</div>
+                    <i class="fas fa-calculator"></i>
+                    <div class="article-note-cta-content">
+                        <div>
+                            <strong>¿Quieres un presupuesto con los materiales ideales para tu isla?</strong>
+                            <p>Te conectamos con las empresas adecuadas</p>
+                        </div>
+                        <a href="../index.html#contacto" class="presupuesto-button">
+                            <i class="fas fa-rocket"></i> Solicitar info
+                        </a>
+                    </div>
+                </div>
             </section>
 
             <!-- SECCIÓN 4: Paneles SIP -->
             <section id="paneles-sip" class="article-section">
                 <h2><i class="fas fa-th"></i> 4. Paneles SIP</h2>
                 <p><strong>Los paneles SIP</strong> (Sistema Insulated Panels) son sándwiches de aislamiento: <em>dos capas de madera/OSB con poliestireno expandido en medio (15 cm total)</em>, que aíslan como un termo.</p>
-
-<p><strong>Montaje récord:</strong> 100 m² en <strong>7 días</strong> con aislamiento R-38 perfecto para noches frías de Tenerife.</p>
-
-<p><strong>Desventaja:</strong> Menos personalizable que madera maciza (cambios estructurales complicados).</p>
-
-<p><strong>Caso real:</strong> Chalet 140 m² en La Orotava montado en 10 días, habitado Navidad siguiente.</p>
-
+                <p><strong>Montaje récord:</strong> 100 m² en <strong>7 días</strong> con aislamiento R-38 perfecto para noches frías de Tenerife.</p>
+                <p><strong>Desventaja:</strong> Menos personalizable que madera maciza (cambios estructurales complicados).</p>
+                <p><strong>Caso real:</strong> Chalet 140 m² en La Orotava montado en 10 días, habitado Navidad siguiente.</p>
             </section>
 
-            <!-- IMAGEN 3: ESPACIO EN BLANCO - Casa SIP con piscina -->
+            <!-- IMAGEN 3 -->
             <div class="article-image-container">
-            <img class="article-image" src="/assets/images/guias/paneles-sip.webp" 
-                 alt="Montaje de paneles SIP ensamblados.">
-            <div class="img-caption">
-                <i class="fas fa-camera" style="margin-right: 0.5rem; color: var(--color-accent);"></i>
-                Montaje de paneles SIP ensamblados.
+                <img class="article-image" src="/assets/images/guias-casas-prefabricadas/paneles-sip.webp" 
+                     alt="Montaje de paneles SIP ensamblados.">
+                <div class="img-caption">
+                    <i class="fas fa-camera" style="margin-right: 0.5rem; color: var(--color-accent);"></i>
+                    Montaje de paneles SIP ensamblados.
+                </div>
             </div>
-        </div>
 
             <!-- SECCIÓN 5: Acabados exteriores -->
             <section id="acabados" class="article-section">
                 <h2><i class="fas fa-paint-roller"></i> 5. Acabados exteriores</h2>
                 <p>El <strong>70% de fallos</strong> en casas prefabricadas canarias vienen de <strong>acabados exteriores mal elegidos</strong>:</p>
-<ul class="styled-list">
-    <li><strong>Revestimiento sísmico</strong> (fibra-cemento anti-UV que resiste terremotos y sol canario)</li>
-    <li><strong>Ventilación 3D</strong> (espacio de aire que circula y evita hongos por humedad subtropical)</li>
-    <li><strong>Pintura naval</strong> (especial anti-salitre marino, mantiene brillo 10 años sin repintar)</li>
-    <li><strong>Canalones perimetrales</strong> (lluvias raras en Canarias pero cuando caen son fuertes)</li>
-</ul>
-<p>Ejemplo real: Casas Moya (Gran Canaria) con yeso marino exterior = <em>0 mantenimiento durante 20 años</em>.</p>
-<br>
-<p>Si también quieres evitar fallos en la <strong>normativa y los permisos</strong> de Canarias<a href="/guias/permisos-casa-prefabricada-canarias.html" style="color: var(--color-accent); text-decoration: underline; font-weight: 600;"> consulta nuestra guía completa</a>.</p>
+                <ul class="styled-list">
+                    <li><strong>Revestimiento sísmico</strong> (fibra-cemento anti-UV que resiste terremotos y sol canario)</li>
+                    <li><strong>Ventilación 3D</strong> (espacio de aire que circula y evita hongos por humedad subtropical)</li>
+                    <li><strong>Pintura naval</strong> (especial anti-salitre marino, mantiene brillo 10 años sin repintar)</li>
+                    <li><strong>Canalones perimetrales</strong> (lluvias raras en Canarias pero cuando caen son fuertes)</li>
+                </ul>
+                <p>Ejemplo real: Casas Moya (Gran Canaria) con yeso marino exterior = <em>0 mantenimiento durante 20 años</em>.</p>
+                <br>
+                <p>Si también quieres evitar fallos en la <strong>normativa y los permisos</strong> de Canarias <a href="/guias/permisos-casa-prefabricada-canarias.html" style="color: var(--color-accent); text-decoration: underline; font-weight: 600;">consulta nuestra guía completa</a>.</p>
             </section>
 
             <!-- SECCIÓN 6: Errores materiales -->
             <section id="errores-materiales" class="article-section">
                 <h2><i class="fas fa-exclamation-triangle"></i> 6. Errores materiales</h2>
                 <p>Los errores más caros al elegir materiales en Canarias:</p>
-                
                 <ul class="error-list">
                     <li><strong>✅ Evita:</strong> Madera sin autoclave (termite come en 2 años)</li>
                     <li><strong>✅ Evita:</strong> Acero sin galvanizado (óxido salitre año 1)</li>
@@ -372,23 +376,21 @@
                     <li><strong>✅ Evita:</strong> Sin ventilación cruzada (hongos subtropical)</li>
                     <li><strong>✅ Evita:</strong> Colores oscuros (UV quema en 3 años)</li>
                 </ul>
-                
             </section>
 
-            <!-- IMAGEN 4: ESPACIO EN BLANCO - Comparativa acabados -->
+            <!-- IMAGEN 4 -->
             <div class="article-image-container">
-            <img class="article-image" src="/assets/images/guias/casa-acero.webp" 
-                 alt="Casa prefabricada moderna de acero">
-            <div class="img-caption">
-                <i class="fas fa-camera" style="margin-right: 0.5rem; color: var(--color-accent);"></i>
-                Ejemplo de casas prefabricadas modernas de hormigón y acero.
+                <img class="article-image" src="/assets/images/guias/casa-acero.webp" 
+                     alt="Casa prefabricada moderna de acero">
+                <div class="img-caption">
+                    <i class="fas fa-camera" style="margin-right: 0.5rem; color: var(--color-accent);"></i>
+                    Ejemplo de casas prefabricadas modernas de hormigón y acero.
+                </div>
             </div>
-        </div>
 
             <!-- SECCIÓN 7: Guías y FAQs -->
             <section id="guias-faqs" class="article-section">
                 <h2><i class="fas fa-book-open"></i> 7. Guías y FAQs</h2>
-                
                 <h3>Explora más temas:</h3>
                 <ul class="styled-list" style="margin-bottom: 2rem;">
                     <li><a href="/guias/permisos-casa-prefabricada-canarias.html" style="color: var(--color-accent);">Permisos y normativa en Canarias</a></li>
@@ -399,61 +401,43 @@
 
                 <h3 style="margin-top: 2rem;">Preguntas Frecuentes</h3>
                 <div class="faq-grid">
-                    <div class="faq-item">
-                        <strong>¿Madera o hormigón para Gran Canaria?</strong>
-                        <p>Madera tratada. Clima húmedo sur + vientos alisios = ventilación natural gana. Hormigón solo costa expuesta.</p>
-                    </div>
-                    <div class="faq-item">
-                        <strong>¿Cuánto dura madera tratada Canarias?</strong>
-                        <p>40 años mínimo con autoclave + ventilación. Ejemplo: Maspalomas 1985 aún perfecta.</p>
-                    </div>
-                    <div class="faq-item">
-                        <strong>¿Paneles SIP resisten salitre?</strong>
-                        <p>Sí, con osb marino + pintura naval. Montaje 7 días vs 30 madera tradicional.</p>
-                    </div>
-                    <div class="faq-item">
-                        <strong>¿Qué material más barato?</strong>
-                        <p>Madera básica 850€/m² vs hormigón 1.100€/m². Ahorro 25% + montaje rápido.</p>
-                    </div>
+                    <div class="faq-item"><strong>¿Madera o hormigón para Gran Canaria?</strong><p>Madera tratada. Clima húmedo sur + vientos alisios = ventilación natural gana. Hormigón solo costa expuesta.</p></div>
+                    <div class="faq-item"><strong>¿Cuánto dura madera tratada Canarias?</strong><p>40 años mínimo con autoclave + ventilación. Ejemplo: Maspalomas 1985 aún perfecta.</p></div>
+                    <div class="faq-item"><strong>¿Paneles SIP resisten salitre?</strong><p>Sí, con osb marino + pintura naval. Montaje 7 días vs 30 madera tradicional.</p></div>
+                    <div class="faq-item"><strong>¿Qué material más barato?</strong><p>Madera básica 850€/m² vs hormigón 1.100€/m². Ahorro 25% + montaje rápido.</p></div>
                 </div>
             </section>
         </div>
 
-        <!-- SECCIÓN 8: PRESUPUESTO - TARJETA ESPECTACULAR -->
-<section id="presupuesto">
-    <div class="presupuesto-card-simple">
-        <div class="presupuesto-icon">
-            <i class="fas fa-file-invoice"></i>
-        </div>
-        <h3>Solicita presupuesto</h3>
-        <p class="presupuesto-text">Ya sabes qué materiales funcionan en Canarias. Ahora toca encontrar la empresa adecuada para tu proyecto.</p>
-        
-        <!-- BOTÓN CON ENLACE -->
-        <a href="../index.html#contacto" class="presupuesto-button-simple">
-            <i class="fas fa-paper-plane"></i> Solicitar info
-        </a>
-        
-        <div class="presupuesto-features-simple">
-            <span><i class="fas fa-check-circle"></i> 100% gratuito</span>
-            <span><i class="fas fa-handshake"></i> Sin compromiso</span>
-            <span><i class="fas fa-building"></i> Empresa adecuada</span>
-        </div>
-    </div>
-</section>
+        <!-- SECCIÓN 8: PRESUPUESTO -->
+        <section id="presupuesto">
+            <div class="presupuesto-card-simple">
+                <div class="presupuesto-icon">
+                    <i class="fas fa-file-invoice"></i>
+                </div>
+                <h3>Solicita presupuesto</h3>
+                <p class="presupuesto-text">Ya sabes qué materiales funcionan en Canarias. Ahora toca encontrar la empresa adecuada para tu proyecto.</p>
+                <a href="../index.html#contacto" class="presupuesto-button-simple">
+                    <i class="fas fa-paper-plane"></i> Solicitar info
+                </a>
+                <div class="presupuesto-features-simple">
+                    <span><i class="fas fa-check-circle"></i> 100% gratuito</span>
+                    <span><i class="fas fa-handshake"></i> Sin compromiso</span>
+                    <span><i class="fas fa-building"></i> Empresa adecuada</span>
+                </div>
+            </div>
+        </section>
     </div>
 
-
+    <!-- BOTÓN VOLVER ARRIBA -->
+    <button id="backToTop" class="back-to-top" aria-label="Volver arriba">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 
     <!-- ============================================ -->
-<!-- BOTÓN VOLVER ARRIBA -->
-<!-- Coloca esto justo antes de cerrar el <body> -->
-<!-- ============================================ -->
-
-        <button id="backToTop" class="back-to-top" aria-label="Volver arriba">
-            <i class="fas fa-arrow-up"></i>
-        </button>
-
-     <footer class="bg-slate-900 text-white py-16">
+    <!-- FOOTER ACTUALIZADO CON TODAS LAS ISLAS -->
+    <!-- ============================================ -->
+    <footer class="bg-slate-900 text-white py-16">
         <div class="section-container">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-10 pb-12 border-b border-slate-800">
                 <div>
@@ -477,10 +461,8 @@
                     <h4 class="font-bold text-lg mb-5">Navegación</h4>
                     <div class="flex flex-col gap-3 text-slate-400 text-sm">
                         <a href="../index.html" class="hover:text-green-400 transition-colors">Inicio</a>
-                        <a href="../tenerife.html" class="hover:text-green-400 transition-colors">Tenerife</a>
-                        <a href="../gran-canaria.html" class="hover:text-green-400 transition-colors">Gran Canaria</a>
                         <a href="index.html" class="hover:text-green-400 transition-colors">Guías</a>
-                        <a href="../index.html#contacto" class="hover:text-green-400 transition-colors" onclick="window.location.href='../index.html#contacto'; location.reload();">Contacto</a>
+                        <a href="../index.html#contacto" class="hover:text-green-400 transition-colors">Solicitar información</a>
                     </div>
                 </div>
                 
@@ -489,8 +471,11 @@
                     <div class="flex flex-col gap-3 text-slate-400 text-sm">
                         <a href="../tenerife.html" class="hover:text-green-400 transition-colors">Tenerife</a>
                         <a href="../gran-canaria.html" class="hover:text-green-400 transition-colors">Gran Canaria</a>
-                        <span class="text-slate-600">Lanzarote (próximamente)</span>
-                        <span class="text-slate-600">Fuerteventura (próximamente)</span>
+                        <a href="../lanzarote.html" class="hover:text-green-400 transition-colors">Lanzarote</a>
+                        <a href="../fuerteventura.html" class="hover:text-green-400 transition-colors">Fuerteventura</a>
+                        <a href="../la-palma.html" class="hover:text-green-400 transition-colors">La Palma</a>
+                        <a href="../la-gomera.html" class="hover:text-green-400 transition-colors">La Gomera</a>
+                        <a href="../el-hierro.html" class="hover:text-green-400 transition-colors">El Hierro</a>
                     </div>
                 </div>
                 
@@ -512,16 +497,11 @@
                 <div class="flex gap-6 text-slate-500 text-sm">
                     <a href="../aviso-legal.html" class="hover:text-white transition-colors">Aviso Legal</a>
                     <a href="../privacidad.html" class="hover:text-white transition-colors">Política de Privacidad</a>
-                   
                 </div>
             </div>
         </div>
     </footer>
-    <!-- ============================================ -->
-    <!-- SCRIPT (ENLACE A TU JS) -->
-    <!-- ============================================ -->
-    <script src="../assets/js/script.js"></script>
-  
 
+    <script src="../assets/js/script.js"></script>
 </body>
 </html>

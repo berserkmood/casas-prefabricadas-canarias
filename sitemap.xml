@@ -7,41 +7,89 @@
   <!-- ============================================= -->
   <!-- SITEMAP para Casas Prefabricadas Canarias    -->
   <!-- Dominio: casasprefabricadascanarias.es       -->
-  <!-- Fecha: 2026-03-05 (ACTUALIZADA)              -->
+  <!-- Fecha: 2026-03-25 (ACTUALIZADA)              -->
+  <!-- ============================================= -->
+
+  <!-- ============================================= -->
+  <!-- PÁGINAS PRINCIPALES                          -->
   <!-- ============================================= -->
 
   <!-- PÁGINA PRINCIPAL -->
   <url>
     <loc>https://casasprefabricadascanarias.es/</loc>
-    <lastmod>2026-03-05</lastmod>
+    <lastmod>2026-03-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
-  <!-- PÁGINA DE TENERIFE -->
+  <!-- ============================================= -->
+  <!-- PÁGINAS DE ISLAS                             -->
+  <!-- ============================================= -->
+
+  <!-- TENERIFE -->
   <url>
     <loc>https://casasprefabricadascanarias.es/tenerife</loc>
-    <lastmod>2026-03-05</lastmod>
+    <lastmod>2026-03-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
-  <!-- PÁGINA DE GRAN CANARIA -->
+  <!-- GRAN CANARIA -->
   <url>
     <loc>https://casasprefabricadascanarias.es/gran-canaria</loc>
-    <lastmod>2026-03-05</lastmod>
+    <lastmod>2026-03-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
-    <!-- ============================================= -->
-  <!-- NUEVAS GUÍAS (CORREGIDAS Y UNIFICADAS)       -->
+  <!-- LANZAROTE -->
+  <url>
+    <loc>https://casasprefabricadascanarias.es/lanzarote</loc>
+    <lastmod>2026-03-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- FUERTEVENTURA -->
+  <url>
+    <loc>https://casasprefabricadascanarias.es/fuerteventura</loc>
+    <lastmod>2026-03-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- LA PALMA -->
+  <url>
+    <loc>https://casasprefabricadascanarias.es/la-palma</loc>
+    <lastmod>2026-03-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- LA GOMERA -->
+  <url>
+    <loc>https://casasprefabricadascanarias.es/la-gomera</loc>
+    <lastmod>2026-03-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- EL HIERRO -->
+  <url>
+    <loc>https://casasprefabricadascanarias.es/el-hierro</loc>
+    <lastmod>2026-03-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- ============================================= -->
+  <!-- GUÍAS                                        -->
   <!-- ============================================= -->
 
   <!-- PÁGINA PRINCIPAL DE GUÍAS -->
   <url>
     <loc>https://casasprefabricadascanarias.es/guias/</loc>
-    <lastmod>2026-03-05</lastmod>
+    <lastmod>2026-03-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -49,15 +97,15 @@
   <!-- GUÍA DE PERMISOS -->
   <url>
     <loc>https://casasprefabricadascanarias.es/guias/permisos-casa-prefabricada-canarias</loc>
-    <lastmod>2026-03-05</lastmod>
+    <lastmod>2026-03-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <!-- GUÍA DE MATERIALES (SIN .HTML) -->
+  <!-- GUÍA DE MATERIALES -->
   <url>
     <loc>https://casasprefabricadascanarias.es/guias/materiales-casa-prefabricada-canarias</loc>
-    <lastmod>2026-03-05</lastmod>
+    <lastmod>2026-03-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -65,16 +113,15 @@
   <!-- GUÍA DE PRECIOS REALES -->
   <url>
     <loc>https://casasprefabricadascanarias.es/guias/precio-casa-prefabricada-canarias</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-03-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <!-- GUÍA DE COMPARATIVA (VERSIÓN CORREGIDA) -->
+  <!-- GUÍA DE COMPARATIVA -->
   <url>
-
     <loc>https://casasprefabricadascanarias.es/guias/casa-prefabricada-vs-construccion-tradicional</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-03-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -82,10 +129,37 @@
   <!-- GUÍA DE AYUDAS -->
   <url>
     <loc>https://casasprefabricadascanarias.es/guias/ayudas-casa-prefabricada-canarias</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-03-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
+  <!-- ============================================= -->
+  <!-- PÁGINAS LEGALES                              -->
+  <!-- ============================================= -->
+
+  <!-- AVISO LEGAL -->
+  <url>
+    <loc>https://casasprefabricadascanarias.es/aviso-legal</loc>
+    <lastmod>2026-03-25</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <!-- POLÍTICA DE PRIVACIDAD -->
+  <url>
+    <loc>https://casasprefabricadascanarias.es/privacidad</loc>
+    <lastmod>2026-03-25</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <!-- PÁGINA DE AGRADECIMIENTO (no indexar, pero por si acaso) -->
+  <url>
+    <loc>https://casasprefabricadascanarias.es/gracias</loc>
+    <lastmod>2026-03-25</lastmod>
+    <changefreq>never</changefreq>
+    <priority>0.1</priority>
+  </url>
 
 </urlset>

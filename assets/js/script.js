@@ -1,196 +1,243 @@
 /* ========================================= */
 /* SCRIPT PRINCIPAL - Casas Prefabricadas Canarias */
+/* VERSIÓN SIMPLIFICADA Y CORREGIDA */
 /* ========================================= */
 
 // =========================================
-// HEADER SCROLL EFFECT
+// FUNCIONES DE UTILIDAD
 // =========================================
-window.addEventListener('scroll', function() {
+function throttle(func, limit) {
+    let inThrottle;
+    return function(...args) {
+        if (!inThrottle) {
+            func.apply(this, args);
+            inThrottle = true;
+            setTimeout(() => inThrottle = false, limit);
+        }
+    };
+}
+
+function smoothScroll(element, offset = 80) {
+    if (element) {
+        const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+        window.scrollTo({
+            top: elementPosition - offset,
+            behavior: 'smooth'
+        });
+    }
+}
+
+// =========================================
+// HEADER SCROLL
+// =========================================
+function initHeaderScroll() {
     const header = document.getElementById('header');
-    if (window.scrollY > 50) {
-        header.classList.add('scrolled');
-    } else {
-        header.classList.remove('scrolled');
-    }
-});
+    if (!header) return;
+    
+    window.addEventListener('scroll', throttle(() => {
+        if (window.scrollY > 50) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+    }, 100));
+}
 
 // =========================================
-// FUNCIONES PARA EL MENÚ MÓVIL MEJORADO
+// DROPDOWN ISLAS DESKTOP - VERSIÓN MEJORADA
 // =========================================
-
-// Variables globales para el menú móvil
-let mobileMenuContainer, mobileMenuButton, mobileMenuClose;
-
-// Inicializar elementos del menú móvil
-function initMobileMenu() {
-    mobileMenuContainer = document.getElementById('mobile-menu-container');
-    mobileMenuButton = document.getElementById('mobile-menu-button');
-    mobileMenuClose = document.getElementById('mobile-menu-close');
-}
-
-// Función para abrir el menú móvil
-function openMobileMenu() {
-    if (mobileMenuContainer) {
-        mobileMenuContainer.classList.add('open');
-        document.body.style.overflow = 'hidden'; // Evitar scroll del body
+function initDropdownIslas() {
+    console.log('🔧 Inicializando dropdown desktop...');
+    
+    const dropdown = document.getElementById('dropdownIslas');
+    const dropdownBtn = document.getElementById('dropdownIslasBtn');
+    
+    if (!dropdown) {
+        console.warn('⚠️ No se encontró #dropdownIslas');
+        return;
     }
-}
-
-// Función para cerrar el menú móvil
-function closeMobileMenu() {
-    if (mobileMenuContainer) {
-        mobileMenuContainer.classList.remove('open');
-        document.body.style.overflow = ''; // Restaurar scroll del body
+    
+    if (!dropdownBtn) {
+        console.warn('⚠️ No se encontró #dropdownIslasBtn');
+        return;
     }
-}
-
-// Configurar event listeners del menú móvil
-function setupMobileMenu() {
-    // Abrir menú móvil
-    if (mobileMenuButton) {
-        mobileMenuButton.addEventListener('click', function(e) {
-            e.stopPropagation();
-            openMobileMenu();
-        });
+    
+    console.log('✅ Elementos encontrados:', { dropdown, dropdownBtn });
+    
+    // Eliminar event listeners previos para evitar duplicados
+    const newBtn = dropdownBtn.cloneNode(true);
+    dropdownBtn.parentNode.replaceChild(newBtn, dropdownBtn);
+    const newDropdownBtn = newBtn;
+    
+    // Función para abrir/cerrar
+    function toggleDropdown(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        dropdown.classList.toggle('open');
+        console.log('Dropdown toggled, clase open:', dropdown.classList.contains('open'));
     }
-
-    // Cerrar menú móvil con botón X
-    if (mobileMenuClose) {
-        mobileMenuClose.addEventListener('click', function(e) {
-            e.stopPropagation();
-            closeMobileMenu();
-        });
-    }
-
-    // Cerrar menú móvil al hacer clic fuera
-    if (mobileMenuContainer) {
-        mobileMenuContainer.addEventListener('click', function(e) {
-            if (e.target === mobileMenuContainer) {
-                closeMobileMenu();
+    
+    newDropdownBtn.addEventListener('click', toggleDropdown);
+    
+    // Cerrar al hacer click fuera
+    document.addEventListener('click', function(e) {
+        if (!dropdown.contains(e.target)) {
+            if (dropdown.classList.contains('open')) {
+                dropdown.classList.remove('open');
+                console.log('Dropdown cerrado por click fuera');
             }
-        });
-    }
-
-    // Cerrar menú móvil al hacer clic en enlaces
-    document.querySelectorAll('.mobile-menu-item, .mobile-menu-cta a').forEach(link => {
-        link.addEventListener('click', function() {
-            closeMobileMenu();
-        });
-    });
-
-    // Cerrar menú móvil con tecla ESC
-    document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape' && mobileMenuContainer && mobileMenuContainer.classList.contains('open')) {
-            closeMobileMenu();
         }
     });
-
-    // ELIMINADO: Evento que cerraba el menú al hacer scroll (mala UX en móviles)
-    // Ahora el menú permanece abierto aunque el usuario haga scroll accidental
+    
+    // Prevenir que el click en el dropdown cierre
+    dropdown.addEventListener('click', function(e) {
+        e.stopPropagation();
+    });
+    
+    console.log('✅ Dropdown inicializado correctamente');
+}
+// =========================================
+// MENÚ MÓVIL
+// =========================================
+function initMobileMenu() {
+    const menuBtn = document.getElementById('mobile-menu-button');
+    const menuContainer = document.getElementById('mobile-menu-container');
+    const menuClose = document.getElementById('mobile-menu-close');
+    
+    if (!menuBtn || !menuContainer || !menuClose) return;
+    
+    function openMenu() {
+        menuContainer.classList.add('open');
+        document.body.style.overflow = 'hidden';
+    }
+    
+    function closeMenu() {
+        menuContainer.classList.remove('open');
+        document.body.style.overflow = '';
+        
+        // Resetear submenú de islas
+        const submenu = document.getElementById('mobileIslasSubmenu');
+        const icon = document.getElementById('mobileIslasIcon');
+        if (submenu && icon) {
+            submenu.classList.remove('show');
+            icon.style.transform = 'rotate(0deg)';
+        }
+    }
+    
+    menuBtn.addEventListener('click', openMenu);
+    menuClose.addEventListener('click', closeMenu);
+    menuContainer.addEventListener('click', (e) => {
+        if (e.target === menuContainer) closeMenu();
+    });
+    
+    // Cerrar con ESC
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && menuContainer.classList.contains('open')) closeMenu();
+    });
 }
 
 // =========================================
-// FORMULARIO FORMSPREE
+// ISLAS MÓVIL (TOGGLE)
 // =========================================
-
-// Función para manejar el envío de formularios
-function handleFormSubmit(formId, successMessageId) {
-    const contactFormFiltered = document.getElementById(formId);
+function initMobileIslasToggle() {
+    const trigger = document.getElementById('mobileIslasTrigger');
+    const submenu = document.getElementById('mobileIslasSubmenu');
+    const icon = document.getElementById('mobileIslasIcon');
     
-    if (contactFormFiltered) {
-        contactFormFiltered.addEventListener('submit', async function(e) {
-            e.preventDefault();
-            
-            const formData = new FormData(this);
-            const submitButton = this.querySelector('button[type="submit"]');
-            const successMessage = document.getElementById(successMessageId);
-            
-            // Deshabilitar botón durante el envío
-            submitButton.disabled = true;
-            submitButton.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i> Enviando...';
-            
-            try {
-                const response = await fetch(this.action, {
-                    method: 'POST',
-                    body: formData,
-                    headers: {
-                        'Accept': 'application/json'
-                    }
-                });
-                
-                if (response.ok) {
-                    // Mostrar mensaje de éxito
-                    if (successMessage) {
-                        successMessage.classList.remove('hidden');
-                    }
-                    
-                    this.reset();
-                    
-                    // Scroll al mensaje de éxito
-                    if (successMessage) {
-                        successMessage.scrollIntoView({ 
-                            behavior: 'smooth', 
-                            block: 'center' 
-                        });
-                    }
-                    
-                    // 🔴 NUEVO: Redirigir a gracias.html después de 1.5 segundos
-                    setTimeout(function() {
-                        window.location.href = 'https://casasprefabricadascanarias.es/gracias.html';
-                    }, 1500);
-                    
-                    // Restaurar botón después de 3 segundos (por si acaso)
-                    setTimeout(() => {
-                        submitButton.disabled = false;
-                        submitButton.innerHTML = 'Enviar solicitud <i class="fas fa-paper-plane ml-2"></i>';
-                    }, 3000);
-                } else {
-                    alert('Hubo un error al enviar el formulario. Por favor, intenta de nuevo.');
-                    submitButton.disabled = false;
-                    submitButton.innerHTML = 'Enviar solicitud <i class="fas fa-paper-plane ml-2"></i>';
-                }
-            } catch (error) {
-                alert('Error de conexión. Por favor, intenta de nuevo.');
-                submitButton.disabled = false;
-                submitButton.innerHTML = 'Enviar solicitud <i class="fas fa-paper-plane ml-2"></i>';
-            }
+    if (!trigger || !submenu || !icon) return;
+    
+    trigger.addEventListener('click', function(e) {
+        e.stopPropagation();
+        const isOpen = submenu.classList.contains('show');
+        if (isOpen) {
+            submenu.classList.remove('show');
+            icon.style.transform = 'rotate(0deg)';
+        } else {
+            submenu.classList.add('show');
+            icon.style.transform = 'rotate(180deg)';
+        }
+    });
+}
+
+// =========================================
+// CARRUSEL MODERNO
+// =========================================
+function initCarousel() {
+    const track = document.getElementById('carouselModernTrack');
+    const slides = document.querySelectorAll('.carousel-modern-slide');
+    const dotsContainer = document.getElementById('carouselModernDots');
+    const prevBtn = document.getElementById('carouselPrevBtn');
+    const nextBtn = document.getElementById('carouselNextBtn');
+    
+    if (!track || !slides.length || !dotsContainer || !prevBtn || !nextBtn) return;
+    
+    let currentIndex = 0;
+    const totalSlides = slides.length;
+    
+    function createDots() {
+        dotsContainer.innerHTML = '';
+        for (let i = 0; i < totalSlides; i++) {
+            const dot = document.createElement('span');
+            dot.classList.add('dot');
+            if (i === currentIndex) dot.classList.add('active');
+            dot.addEventListener('click', () => goToSlide(i));
+            dotsContainer.appendChild(dot);
+        }
+    }
+    
+    function updateCarousel() {
+        track.style.transform = `translateX(-${currentIndex * 100}%)`;
+        document.querySelectorAll('.carousel-modern-dots .dot').forEach((dot, i) => {
+            dot.classList.toggle('active', i === currentIndex);
         });
     }
+    
+    function goToSlide(index) {
+        currentIndex = (index + totalSlides) % totalSlides;
+        updateCarousel();
+    }
+    
+    prevBtn.addEventListener('click', () => goToSlide(currentIndex - 1));
+    nextBtn.addEventListener('click', () => goToSlide(currentIndex + 1));
+    
+    createDots();
 }
 
-// Configurar todos los formularios de la página
-function setupForms() {
-    // Formulario principal (común en todas las páginas)
-    handleFormSubmit('contact-form-filtered', 'success-message-filtered');
+// =========================================
+// BOTÓN VOLVER ARRIBA
+// =========================================
+function initBackToTop() {
+    const button = document.getElementById('backToTop');
+    if (!button) return;
     
-    // Puedes añadir más formularios aquí si los tienes
-    // handleFormSubmit('otro-formulario', 'otro-mensaje-exito');
+    const indexElement = document.querySelector('.article-menu') || document.querySelector('#indice');
+    
+    window.addEventListener('scroll', throttle(() => {
+        if (window.scrollY > 500) {
+            button.classList.add('visible');
+        } else {
+            button.classList.remove('visible');
+        }
+    }, 100));
+    
+    button.addEventListener('click', () => {
+        if (indexElement) {
+            smoothScroll(indexElement, 80);
+        } else {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    });
 }
 
 // =========================================
 // FAQ ACCORDION
 // =========================================
-
-// Función para configurar el accordion de FAQ
-function setupFaqAccordion() {
+function initFaqAccordion() {
     document.querySelectorAll('details.faq-item').forEach(details => {
         const summary = details.querySelector('summary');
-        
         if (summary) {
             summary.addEventListener('click', (e) => {
                 e.preventDefault();
-                
-                // Si es un FAQ exclusivo (solo uno abierto a la vez)
-                if (details.classList.contains('faq-exclusive')) {
-                    // Cerrar todos los demás elementos FAQ
-                    document.querySelectorAll('details.faq-item').forEach(otherDetails => {
-                        if (otherDetails !== details) {
-                            otherDetails.removeAttribute('open');
-                        }
-                    });
-                }
-                
-                // Alternar elemento actual
                 if (details.hasAttribute('open')) {
                     details.removeAttribute('open');
                 } else {
@@ -202,16 +249,9 @@ function setupFaqAccordion() {
 }
 
 // =========================================
-// ANIMACIONES AL SCROLL
+// ANIMACIONES SCROLL
 // =========================================
-
-// Configurar animaciones de elementos al hacer scroll
-function setupScrollAnimations() {
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    };
-
+function initScrollAnimations() {
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -219,9 +259,8 @@ function setupScrollAnimations() {
                 entry.target.style.transform = 'translateY(0)';
             }
         });
-    }, observerOptions);
-
-    // Observar elementos con animate-fade-up class
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+    
     document.querySelectorAll('.animate-fade-up').forEach(el => {
         el.style.opacity = '0';
         el.style.transform = 'translateY(20px)';
@@ -231,368 +270,118 @@ function setupScrollAnimations() {
 }
 
 // =========================================
-// ÍNDICE INTERACTIVO MEJORADO (móvil + escritorio)
+// SMOOTH SCROLL PARA ENLACES INTERNOS
 // =========================================
-function setupInteractiveIndex() {
-    const sections = document.querySelectorAll("h2[id]");
-    const menuLinks = document.querySelectorAll(".article-menu-link");
-
-    if (!sections.length || !menuLinks.length) return;
-
-    let clickTimeout = null;
-
-    // Función para actualizar estado activo en escritorio
-    function updateActiveLinkOnScroll() {
-        // Solo en escritorio
-        if (window.innerWidth <= 768) return;
-
-        let current = "";
-        const scrollPosition = window.scrollY + 150;
-
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop - 120;
-            const sectionBottom = sectionTop + section.offsetHeight;
-
-            if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
-                current = section.getAttribute("id");
-            }
-        });
-
-        menuLinks.forEach(link => {
-            link.classList.remove("active");
-            if (link.getAttribute("href") === "#" + current) {
-                link.classList.add("active");
-            }
-        });
-    }
-
-    // Manejador de clics para móvil
-    menuLinks.forEach(link => {
-        link.addEventListener("click", function(e) {
-            const isMobile = window.innerWidth <= 768;
-            
-            if (isMobile) {
+function initSmoothScroll() {
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', (e) => {
+            const href = anchor.getAttribute('href');
+            if (href !== '#' && href.startsWith('#')) {
                 e.preventDefault();
-                
-                const href = this.getAttribute("href");
-                if (href && href.startsWith("#")) {
-                    const targetId = href.substring(1);
-                    const targetSection = document.getElementById(targetId);
-                    
-                    if (targetSection) {
-                        // Cerrar menú móvil si existe
-                        if (typeof closeMobileMenu === 'function') {
-                            closeMobileMenu();
-                        }
-                        
-                        targetSection.scrollIntoView({ 
-                            behavior: 'smooth', 
-                            block: 'start' 
-                        });
-                        
-                        if (clickTimeout) clearTimeout(clickTimeout);
-                        
-                        menuLinks.forEach(l => l.classList.remove("active"));
-                        this.classList.add("active");
-                        
-                        clickTimeout = setTimeout(() => {
-                            menuLinks.forEach(l => l.classList.remove("active"));
-                            this.blur();
-                            clickTimeout = null;
-                        }, 1500);
-                    }
+                const target = document.querySelector(href);
+                if (target) {
+                    smoothScroll(target, 80);
                 }
             }
         });
     });
+}
 
-    // Scroll con throttle para escritorio
-    let ticking = false;
-    window.addEventListener('scroll', function() {
-        if (!ticking) {
-            window.requestAnimationFrame(function() {
-                updateActiveLinkOnScroll();
-                ticking = false;
+// =========================================
+// FORMULARIO
+// =========================================
+function initForm() {
+    const form = document.getElementById('contact-form-filtered');
+    if (!form) return;
+    
+    form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        
+        const submitBtn = form.querySelector('button[type="submit"]');
+        const originalText = submitBtn.innerHTML;
+        
+        // Validar checkbox
+        const checkbox = form.querySelector('input[type="checkbox"][required]');
+        if (checkbox && !checkbox.checked) {
+            alert('Debes aceptar la política de privacidad para continuar.');
+            checkbox.focus();
+            return;
+        }
+        
+        // Validar teléfono
+        const phone = form.querySelector('input[type="tel"]');
+        if (phone && phone.value && !/^[6-9]\d{8}$/.test(phone.value.replace(/\s/g, ''))) {
+            alert('Por favor, introduce un teléfono móvil español válido (9 dígitos).');
+            phone.focus();
+            return;
+        }
+        
+        // Validar email
+        const email = form.querySelector('input[type="email"]');
+        if (email && email.value && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)) {
+            alert('Por favor, introduce un email válido.');
+            email.focus();
+            return;
+        }
+        
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i> Enviando...';
+        
+        try {
+            const response = await fetch(form.action, {
+                method: 'POST',
+                body: new FormData(form),
+                headers: { 'Accept': 'application/json' }
             });
-            ticking = true;
+            
+            if (response.ok) {
+                const successMsg = document.getElementById('success-message-filtered');
+                if (successMsg) successMsg.classList.remove('hidden');
+                form.reset();
+                
+                setTimeout(() => {
+                    window.location.href = 'https://casasprefabricadascanarias.es/gracias.html';
+                }, 1500);
+            } else {
+                alert('Hubo un error. Por favor, intenta de nuevo.');
+            }
+        } catch (error) {
+            alert('Error de conexión. Por favor, intenta de nuevo.');
+        } finally {
+            setTimeout(() => {
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = originalText;
+            }, 3000);
         }
     });
-
-    // Cancelar timeout al hacer scroll
-    window.addEventListener('scroll', function() {
-        if (clickTimeout) {
-            clearTimeout(clickTimeout);
-            clickTimeout = null;
-        }
-    }, { passive: true });
-
-    // Actualizar al redimensionar
-    window.addEventListener('resize', updateActiveLinkOnScroll);
-    
-    // Ejecutar una vez al inicio
-    setTimeout(updateActiveLinkOnScroll, 100);
-    
-    console.log('✅ Índice interactivo configurado');
 }
 
 // =========================================
-// VALIDACIÓN DE FORMULARIOS
-// =========================================
-
-// Función opcional para validación de formularios
-function setupFormValidation() {
-    const forms = document.querySelectorAll('form[id*="contact-form"]');
-    
-    forms.forEach(form => {
-        form.addEventListener('submit', function(e) {
-            // Validación básica de teléfono español
-            const telefono = this.querySelector('input[type="tel"]');
-            if (telefono && telefono.value) {
-                const phoneRegex = /^[6-9]\d{8}$/;
-                const phoneNumber = telefono.value.replace(/\s/g, '');
-                
-                if (!phoneRegex.test(phoneNumber)) {
-                    alert('Por favor, introduce un teléfono móvil español válido (9 dígitos, empezando por 6, 7, 8 o 9).');
-                    e.preventDefault();
-                    telefono.focus();
-                    return;
-                }
-            }
-            
-            // Validación básica de email
-            const email = this.querySelector('input[type="email"]');
-            if (email && email.value) {
-                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-                
-                if (!emailRegex.test(email.value)) {
-                    alert('Por favor, introduce un email válido.');
-                    e.preventDefault();
-                    email.focus();
-                    return;
-                }
-            }
-            
-            // Validación de checkbox de privacidad
-            const privacyCheckbox = this.querySelector('input[type="checkbox"][required]');
-            if (privacyCheckbox && !privacyCheckbox.checked) {
-                alert('Debes aceptar la política de privacidad para continuar.');
-                e.preventDefault();
-                privacyCheckbox.focus();
-                return;
-            }
-        });
-    });
-}
-
-// =========================================
-// REDIRECCIÓN AUTOMÁTICA PARA PÁGINAS DE AGRADECIMIENTO
-// =========================================
-
-// Configurar redirección automática después de 15 segundos en páginas de agradecimiento
-function setupThankYouRedirect() {
-    // Verificar si estamos en una página de agradecimiento
-    const thankYouContainer = document.querySelector('.thank-you-container');
-    
-    if (thankYouContainer) {
-        let userInteracted = false;
-        
-        // Redirección después de 15 segundos a la página principal
-        setTimeout(function() {
-            if (!userInteracted) {
-                window.location.href = 'https://casasprefabricadascanarias.es';
-            }
-        }, 15000); // 15 segundos
-
-        // Detectar interacción del usuario
-        document.addEventListener('click', function() {
-            userInteracted = true;
-        });
-
-        document.addEventListener('keydown', function() {
-            userInteracted = true;
-        });
-        
-        // Detectar movimiento del mouse (opcional)
-        document.addEventListener('mousemove', function() {
-            userInteracted = true;
-        });
-        
-        console.log('Redirección automática configurada para página de agradecimiento');
-    }
-}
-
-// =========================================
-// FUNCIONES DE INICIALIZACIÓN
+// INICIALIZACIÓN - VERSIÓN MEJORADA
 // =========================================
 
 // Función principal de inicialización
-function init() {
-    // Inicializar menú móvil
+function initAll() {
+    console.log('🚀 Inicializando scripts...');
+    
+    initHeaderScroll();
+    initDropdownIslas();
     initMobileMenu();
-    setupMobileMenu();
+    initMobileIslasToggle();
+    initCarousel();
+    initBackToTop();
+    initFaqAccordion();
+    initScrollAnimations();
+    initSmoothScroll();
+    initForm();
     
-    // Configurar formularios
-    setupForms();
-    
-    // Configurar FAQ accordion
-    setupFaqAccordion();
-    
-    // Configurar animaciones al scroll
-    setupScrollAnimations();
-    
-    // ✅ NUEVO: Configurar índice interactivo
-    setupInteractiveIndex();
-    
-    // Configurar validación de formularios (opcional)
-    // setupFormValidation();
-    
-    // Configurar redirección para páginas de agradecimiento
-    setupThankYouRedirect();
-    
-    // Añadir otras inicializaciones aquí...
+    console.log('✅ Todos los scripts inicializados correctamente');
 }
 
-// =========================================
-// UTILIDADES ADICIONALES
-// =========================================
-
-// Función para hacer smooth scroll a secciones
-function setupSmoothScroll() {
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            const href = this.getAttribute('href');
-            
-            // Solo manejar enlaces que sean IDs en la misma página
-            if (href !== '#' && href.startsWith('#')) {
-                e.preventDefault();
-                const targetElement = document.querySelector(href);
-                
-                if (targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 80, // Ajuste para header fijo
-                        behavior: 'smooth'
-                    });
-                }
-            }
-        });
-    });
+// Ejecutar cuando el DOM esté completamente cargado
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initAll);
+} else {
+    // DOM ya está cargado
+    initAll();
 }
-
-// Función para mejorar accesibilidad del menú móvil
-function improveMobileMenuAccessibility() {
-    // Asegurar que el menú sea accesible por teclado
-    if (mobileMenuButton) {
-        mobileMenuButton.setAttribute('aria-label', 'Abrir menú de navegación');
-        mobileMenuButton.setAttribute('aria-expanded', 'false');
-        mobileMenuButton.setAttribute('aria-controls', 'mobile-menu-container');
-    }
-    
-    if (mobileMenuClose) {
-        mobileMenuClose.setAttribute('aria-label', 'Cerrar menú de navegación');
-    }
-    
-    // Actualizar estado ARIA cuando el menú se abre/cierra
-    const observer = new MutationObserver(function(mutations) {
-        mutations.forEach(function(mutation) {
-            if (mutation.attributeName === 'class') {
-                const isOpen = mobileMenuContainer.classList.contains('open');
-                if (mobileMenuButton) {
-                    mobileMenuButton.setAttribute('aria-expanded', isOpen.toString());
-                }
-                
-                // Mover foco al menú cuando se abre
-                if (isOpen && mobileMenuClose) {
-                    setTimeout(() => {
-                        mobileMenuClose.focus();
-                    }, 100);
-                }
-            }
-        });
-    });
-    
-    if (mobileMenuContainer) {
-        observer.observe(mobileMenuContainer, { attributes: true });
-    }
-}
-
-// =========================================
-// EJECUCIÓN AL CARGAR LA PÁGINA
-// =========================================
-
-// Esperar a que el DOM esté completamente cargado
-document.addEventListener('DOMContentLoaded', function() {
-    // Inicializar todas las funcionalidades
-    init();
-    
-    // Configurar smooth scroll
-    setupSmoothScroll();
-    
-    // Mejorar accesibilidad del menú móvil
-    improveMobileMenuAccessibility();
-    
-    // Añadir clase de JavaScript activo para estilos específicos
-    document.documentElement.classList.add('js-active');
-    
-    console.log('Scripts de Casas Prefabricadas Canarias inicializados correctamente.');
-});
-
-// Manejar cambios de tamaño de ventana
-window.addEventListener('resize', function() {
-    // Si el menú está abierto y la pantalla se hace grande, cerrarlo
-    if (window.innerWidth >= 768 && mobileMenuContainer && mobileMenuContainer.classList.contains('open')) {
-        closeMobileMenu();
-    }
-});
-
-// =========================================
-// EXPORTACIÓN DE FUNCIONES (para uso en consola de desarrollo)
-// =========================================
-
-// Hacer disponibles funciones útiles en la consola de desarrollo
-if (typeof window !== 'undefined') {
-    window.CasasPrefabricadasCanarias = {
-        openMobileMenu,
-        closeMobileMenu,
-        init,
-        setupForms,
-        setupFaqAccordion,
-        setupScrollAnimations,
-        setupSmoothScroll,
-        setupThankYouRedirect,
-        setupInteractiveIndex // ✅ Añadida la nueva función
-    };
-}
-
-// ============================================ //
-// BOTÓN VOLVER AL MENÚ - FUNCIONALIDAD //
-// ============================================ //
-
-(function() {
-    const backToTopBtn = document.getElementById('backToTop');
-    const menuElement = document.querySelector('.article-menu'); // Busca el menú
-    
-    if (!backToTopBtn || !menuElement) return;
-    
-    function toggleButton() {
-        if (window.scrollY > 1200) {  // ← AUMENTADO A 1200 para que aparezca más abajo
-            backToTopBtn.classList.add('visible');
-        } else {
-            backToTopBtn.classList.remove('visible');
-        }
-    }
-    
-    function scrollToMenu() {
-        menuElement.scrollIntoView({ 
-            behavior: 'smooth',
-            block: 'start'
-        });
-    }
-    
-    window.addEventListener('scroll', toggleButton);
-    backToTopBtn.addEventListener('click', scrollToMenu);
-    
-    toggleButton();
-    console.log('✅ Botón volver al menú inicializado');
-})();
-
-
