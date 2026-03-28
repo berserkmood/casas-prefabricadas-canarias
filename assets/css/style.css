@@ -314,9 +314,10 @@ img { max-width: 100%; height: auto; display: block; }
     width: 100%; 
 }
 
-.carousel-modern-track { 
-    display: flex; 
-    transition: transform 0.5s cubic-bezier(0.2,0.9,0.4,1.1); 
+.carousel-modern-track {
+    display: flex;
+    transition: transform 0.5s cubic-bezier(0.2,0.9,0.4,1.1);
+    touch-action: pan-y;
 }
 
 .carousel-modern-slide { 
@@ -414,6 +415,13 @@ img { max-width: 100%; height: auto; display: block; }
     color: #1e293b; 
     transition: color 0.2s ease; 
     pointer-events: none; 
+}
+
+/* Flechas solo en escritorio */
+@media (max-width: 1024px) {
+    .carousel-modern-btn {
+        display: none !important;
+    }
 }
 
 /* Hover escritorio */

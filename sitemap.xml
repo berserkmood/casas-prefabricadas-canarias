@@ -154,12 +154,5 @@
     <priority>0.3</priority>
   </url>
 
-  <!-- PÁGINA DE AGRADECIMIENTO (no indexar, pero por si acaso) -->
-  <url>
-    <loc>https://casasprefabricadascanarias.es/gracias</loc>
-    <lastmod>2026-03-25</lastmod>
-    <changefreq>never</changefreq>
-    <priority>0.1</priority>
-  </url>
 
 </urlset>

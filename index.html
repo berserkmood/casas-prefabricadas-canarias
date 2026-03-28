@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -35,11 +36,42 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="manifest" href="/site.webmanifest">
     
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://cdn.tailwindcss.com">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="canonical" href="https://casasprefabricadascanarias.es/" />
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://casasprefabricadascanarias.es/#organization",
+          "name": "Casas Prefabricadas Canarias",
+          "url": "https://casasprefabricadascanarias.es/",
+          "logo": "https://casasprefabricadascanarias.es/assets/images/icono-logo.webp",
+          "description": "Conectamos a particulares con constructoras verificadas de casas prefabricadas en Canarias.",
+          "areaServed": {
+            "@type": "Place",
+            "name": "Canarias, España"
+          }
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://casasprefabricadascanarias.es/#website",
+          "url": "https://casasprefabricadascanarias.es/",
+          "name": "Casas Prefabricadas Canarias",
+          "publisher": { "@id": "https://casasprefabricadascanarias.es/#organization" }
+        }
+      ]
+    }
+    </script>
 </head>
 <body>
     <header class="header-fixed" id="header">
