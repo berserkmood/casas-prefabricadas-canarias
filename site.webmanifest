@@ -1,6 +1,6 @@
 {
-  "name": "MyWebSite",
-  "short_name": "MySite",
+  "name": "Casas Prefabricadas Canarias",
+  "short_name": "CasasPrefab",
   "icons": [
     {
       "src": "/web-app-manifest-192x192.png",
