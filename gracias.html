@@ -11,8 +11,14 @@
     <meta property="og:description" content="Hemos recibido tu información. Te contactaremos en breve.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://casasprefabricadascanarias.es/gracias.html">
-    <meta property="og:image" content="https://casasprefabricadascanarias.es/assets/image/logo-social.webp">
-    
+    <meta property="og:image" content="https://casasprefabricadascanarias.es/assets/images/logo-social.webp">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="¡Gracias por tu solicitud! - Casas Prefabricadas Canarias">
+    <meta name="twitter:description" content="Hemos recibido tu información. Te contactaremos en breve con el presupuesto solicitado.">
+    <meta name="twitter:image" content="https://casasprefabricadascanarias.es/assets/images/logo-social.webp">
+
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -20,11 +26,13 @@
     <link rel="manifest" href="/site.webmanifest">
     
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></noscript>
     
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:bg-white focus:text-green-700 focus:px-4 focus:py-2 focus:rounded focus:font-semibold">Saltar al contenido principal</a>
     <div class="thank-you-container">
         <div class="success-icon">
             <i class="fas fa-check"></i>
@@ -63,6 +71,6 @@
         </div>
     </div>
 
-    <script src="assets/js/script.js"></script>
+    <script src="assets/js/script.js" defer></script>
 </body>
 </html>
