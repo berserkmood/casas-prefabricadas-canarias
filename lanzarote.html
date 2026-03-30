@@ -288,6 +288,24 @@
                 <div class="carousel-modern-dots" id="carouselModernDots"></div>
                 <p class="carousel-modern-note">Las imágenes son ilustrativas. Cada proyecto se adapta a tus gustos y necesidades.</p>
             </div>
+
+            <!-- STATS DE CONFIANZA -->
+            <div class="trust-stats">
+                <div class="trust-stat">
+                    <span class="trust-stat-number">+500</span>
+                    <span class="trust-stat-label">Proyectos gestionados</span>
+                </div>
+                <div class="trust-stat-divider"></div>
+                <div class="trust-stat">
+                    <span class="trust-stat-number">+15</span>
+                    <span class="trust-stat-label">Empresas verificadas</span>
+                </div>
+                <div class="trust-stat-divider"></div>
+                <div class="trust-stat">
+                    <span class="trust-stat-number">7</span>
+                    <span class="trust-stat-label">Islas cubiertas</span>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -315,132 +333,84 @@
             </p>
         </div>
         
-        <!-- Versión Desktop: Tabla estilo artículo -->
-        <div class="hidden md:block table-responsive">
-            <table class="article-table">
-                <thead>
-                    <tr>
-                        <th>Error común</th>
-                        <th>Consecuencia</th>
-                        <th>Solución</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td class="font-medium">Suelo protegido Yaiza</td>
-                        <td><span class="text-red-600 font-medium">Multa 600.000€ + demolición inmediata</span></td>
-                        <td>Suelo urbanizable certificado</td>
-                    </tr>
-                    <tr>
-                        <td class="font-medium">Viento Famara 120km/h</td>
-                        <td><span class="text-orange-600 font-medium">Montaje cancelado + grúa 25 días parada</span></td>
-                        <td>Anclajes 2m + contraventados</td>
-                    </tr>
-                    <tr>
-                        <td class="font-medium">Terreno Manrique blanco</td>
-                        <td><span class="text-red-600 font-medium">Pintura rechazada Cabildo</span></td>
-                        <td>Blanco volcánico RAL 9010 obligatorio</td>
-                    </tr>
-                    <tr>
-                        <td class="font-medium">Salitre costa Yaiza</td>
-                        <td><span class="text-amber-600 font-medium">Óxido acero 18 meses post-montaje</span></td>
-                        <td>Tratamiento galvanizado + poliuretano</td>
-                    </tr>
-                    <tr>
-                        <td class="font-medium">Agua escasa Tinajo</td>
-                        <td><span class="text-blue-600 font-medium">Tanque insuficiente + restricción uso</span></td>
-                        <td>Depósito 20.000L + cisterna legalizada</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        
-        <!-- Versión Móvil: Tarjetas estilo artículo -->
-        <div class="md:hidden space-y-3">
-            <!-- Error 1 -->
-            <div class="error-card-mobile">
-                <div class="error-card-content">
-                    <div class="error-icon error-icon-red">
-                        <i class="fas fa-exclamation-triangle"></i>
-                    </div>
-                    <div class="error-info">
-                        <div class="error-title">Suelo protegido Yaiza</div>
-                        <div class="error-consequence error-consequence-red">❌ Multa 600.000€ + demolición inmediata</div>
-                        <div class="error-solution">
-                            <span class="solution-check">✅</span>
-                            <span>Suelo urbanizable certificado</span>
-                        </div>
-                    </div>
+        <!-- Grid de errores - unificado desktop y móvil -->
+        <div class="errors-grid">
+
+            <div class="error-card ec--red">
+                <div class="ec-header">
+                    <div class="ec-icon"><i class="fas fa-exclamation-triangle"></i></div>
+                    <div class="ec-title">Suelo protegido Yaiza</div>
+                </div>
+                <div class="ec-consequence">
+                    <span class="ec-badge">Consecuencia</span>
+                    Multa 600.000€ + demolición inmediata
+                </div>
+                <div class="ec-solution">
+                    <i class="fas fa-check-circle"></i>
+                    Suelo urbanizable certificado
                 </div>
             </div>
-            
-            <!-- Error 2 -->
-            <div class="error-card-mobile">
-                <div class="error-card-content">
-                    <div class="error-icon error-icon-orange">
-                        <i class="fas fa-wind"></i>
-                    </div>
-                    <div class="error-info">
-                        <div class="error-title">Viento Famara 120km/h</div>
-                        <div class="error-consequence error-consequence-orange">🌪️ Montaje cancelado + grúa 25 días parada</div>
-                        <div class="error-solution">
-                            <span class="solution-check">✅</span>
-                            <span>Anclajes 2m + contraventados</span>
-                        </div>
-                    </div>
+
+            <div class="error-card ec--orange">
+                <div class="ec-header">
+                    <div class="ec-icon"><i class="fas fa-wind"></i></div>
+                    <div class="ec-title">Viento Famara 120 km/h</div>
+                </div>
+                <div class="ec-consequence">
+                    <span class="ec-badge">Consecuencia</span>
+                    Montaje cancelado + grúa 25 días parada
+                </div>
+                <div class="ec-solution">
+                    <i class="fas fa-check-circle"></i>
+                    Anclajes 2 m + contraventados
                 </div>
             </div>
-            
-            <!-- Error 3 -->
-            <div class="error-card-mobile">
-                <div class="error-card-content">
-                    <div class="error-icon error-icon-red">
-                        <i class="fas fa-palette"></i>
-                    </div>
-                    <div class="error-info">
-                        <div class="error-title">Terreno Manrique blanco</div>
-                        <div class="error-consequence error-consequence-red">🎨 Pintura rechazada Cabildo</div>
-                        <div class="error-solution">
-                            <span class="solution-check">✅</span>
-                            <span>Blanco volcánico RAL 9010 obligatorio</span>
-                        </div>
-                    </div>
+
+            <div class="error-card ec--red">
+                <div class="ec-header">
+                    <div class="ec-icon"><i class="fas fa-palette"></i></div>
+                    <div class="ec-title">Terreno Manrique blanco</div>
+                </div>
+                <div class="ec-consequence">
+                    <span class="ec-badge">Consecuencia</span>
+                    Pintura rechazada Cabildo
+                </div>
+                <div class="ec-solution">
+                    <i class="fas fa-check-circle"></i>
+                    Blanco volcánico RAL 9010 obligatorio
                 </div>
             </div>
-            
-            <!-- Error 4 -->
-            <div class="error-card-mobile">
-                <div class="error-card-content">
-                    <div class="error-icon error-icon-amber">
-                        <i class="fas fa-water"></i>
-                    </div>
-                    <div class="error-info">
-                        <div class="error-title">Salitre costa Yaiza</div>
-                        <div class="error-consequence error-consequence-amber">🧂 Óxido acero 18 meses post-montaje</div>
-                        <div class="error-solution">
-                            <span class="solution-check">✅</span>
-                            <span>Tratamiento galvanizado + poliuretano</span>
-                        </div>
-                    </div>
+
+            <div class="error-card ec--amber">
+                <div class="ec-header">
+                    <div class="ec-icon"><i class="fas fa-water"></i></div>
+                    <div class="ec-title">Salitre costa Yaiza</div>
+                </div>
+                <div class="ec-consequence">
+                    <span class="ec-badge">Consecuencia</span>
+                    Óxido acero 18 meses post-montaje
+                </div>
+                <div class="ec-solution">
+                    <i class="fas fa-check-circle"></i>
+                    Tratamiento galvanizado + poliuretano
                 </div>
             </div>
-            
-            <!-- Error 5 -->
-            <div class="error-card-mobile">
-                <div class="error-card-content">
-                    <div class="error-icon error-icon-blue">
-                        <i class="fas fa-tint"></i>
-                    </div>
-                    <div class="error-info">
-                        <div class="error-title">Agua escasa Tinajo</div>
-                        <div class="error-consequence error-consequence-blue">💧 Tanque insuficiente + restricción uso</div>
-                        <div class="error-solution">
-                            <span class="solution-check">✅</span>
-                            <span>Depósito 20.000L + cisterna legalizada</span>
-                        </div>
-                    </div>
+
+            <div class="error-card ec--blue">
+                <div class="ec-header">
+                    <div class="ec-icon"><i class="fas fa-tint"></i></div>
+                    <div class="ec-title">Agua escasa Tinajo</div>
+                </div>
+                <div class="ec-consequence">
+                    <span class="ec-badge">Consecuencia</span>
+                    Tanque insuficiente + restricción uso
+                </div>
+                <div class="ec-solution">
+                    <i class="fas fa-check-circle"></i>
+                    Depósito 20.000 L + cisterna legalizada
                 </div>
             </div>
+
         </div>
         
         <!-- Nota adicional -->

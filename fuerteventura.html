@@ -289,6 +289,24 @@
                 <div class="carousel-modern-dots" id="carouselModernDots"></div>
                 <p class="carousel-modern-note">Las imágenes son ilustrativas. Cada proyecto se adapta a tus gustos y necesidades.</p>
             </div>
+
+            <!-- STATS DE CONFIANZA -->
+            <div class="trust-stats">
+                <div class="trust-stat">
+                    <span class="trust-stat-number">+500</span>
+                    <span class="trust-stat-label">Proyectos gestionados</span>
+                </div>
+                <div class="trust-stat-divider"></div>
+                <div class="trust-stat">
+                    <span class="trust-stat-number">+15</span>
+                    <span class="trust-stat-label">Empresas verificadas</span>
+                </div>
+                <div class="trust-stat-divider"></div>
+                <div class="trust-stat">
+                    <span class="trust-stat-number">7</span>
+                    <span class="trust-stat-label">Islas cubiertas</span>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -306,131 +324,84 @@
             </p>
         </div>
         
-        <!-- Versión Desktop: Tabla estilo artículo -->
-        <div class="hidden md:block table-responsive">
-            <table class="article-table">
-                <thead>
-                    <tr>
-                        <th>Error común</th>
-                        <th>Consecuencia</th>
-                        <th>Solución</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td class="font-medium">Suelo arena Corralejo</td>
-                        <td><span class="text-red-600 font-medium">Hundimiento zapatas 2 años</span></td>
-                        <td>Pilotaje 3m + estabilizado</td>
-                    </tr>
-                    <td class="font-medium">Viento Costa Calma 110km/h</td>
-                        <td><span class="text-orange-600 font-medium">Montaje imposible 30 días/año</span></td>
-                        <td>Redes antiviento + grúa especial</td>
-                    </tr>
-                    <tr>
-                        <td class="font-medium">Agua salobre Puerto del Rosario</td>
-                        <td><span class="text-red-600 font-medium">Corrosión tuberías 12 meses</span></td>
-                        <td>Osmosis inversa + acero inoxidable</td>
-                    </tr>
-                    <tr>
-                        <td class="font-medium">Terreno protegido Corralejo</td>
-                        <td><span class="text-amber-600 font-medium">Multa 300.000€ dunas naturales</span></td>
-                        <td>Estudio impacto ambiental previo</td>
-                    </tr>
-                    <tr>
-                        <td class="font-medium">Calor 42º Morro Jable</td>
-                        <td><span class="text-blue-600 font-medium">Aire acondicionado 24h insuficiente</span></td>
-                        <td>Aislamiento 100mm + techo ventilado</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        
-        <!-- Versión Móvil: Tarjetas estilo artículo -->
-        <div class="md:hidden space-y-3">
-            <!-- Error 1 -->
-            <div class="error-card-mobile">
-                <div class="error-card-content">
-                    <div class="error-icon error-icon-red">
-                        <i class="fas fa-exclamation-triangle"></i>
-                    </div>
-                    <div class="error-info">
-                        <div class="error-title">Suelo arena Corralejo</div>
-                        <div class="error-consequence error-consequence-red">🏖️ Hundimiento zapatas 2 años</div>
-                        <div class="error-solution">
-                            <span class="solution-check">✅</span>
-                            <span>Pilotaje 3m + estabilizado</span>
-                        </div>
-                    </div>
+        <!-- Grid de errores - unificado desktop y móvil -->
+        <div class="errors-grid">
+
+            <div class="error-card ec--red">
+                <div class="ec-header">
+                    <div class="ec-icon"><i class="fas fa-exclamation-triangle"></i></div>
+                    <div class="ec-title">Suelo arena Corralejo</div>
+                </div>
+                <div class="ec-consequence">
+                    <span class="ec-badge">Consecuencia</span>
+                    Hundimiento zapatas 2 años
+                </div>
+                <div class="ec-solution">
+                    <i class="fas fa-check-circle"></i>
+                    Pilotaje 3 m + estabilizado
                 </div>
             </div>
-            
-            <!-- Error 2 -->
-            <div class="error-card-mobile">
-                <div class="error-card-content">
-                    <div class="error-icon error-icon-orange">
-                        <i class="fas fa-wind"></i>
-                    </div>
-                    <div class="error-info">
-                        <div class="error-title">Viento Costa Calma 110km/h</div>
-                        <div class="error-consequence error-consequence-orange">🌪️ Montaje imposible 30 días/año</div>
-                        <div class="error-solution">
-                            <span class="solution-check">✅</span>
-                            <span>Redes antiviento + grúa especial</span>
-                        </div>
-                    </div>
+
+            <div class="error-card ec--orange">
+                <div class="ec-header">
+                    <div class="ec-icon"><i class="fas fa-wind"></i></div>
+                    <div class="ec-title">Viento Costa Calma 110 km/h</div>
+                </div>
+                <div class="ec-consequence">
+                    <span class="ec-badge">Consecuencia</span>
+                    Montaje imposible 30 días/año
+                </div>
+                <div class="ec-solution">
+                    <i class="fas fa-check-circle"></i>
+                    Redes antiviento + grúa especial
                 </div>
             </div>
-            
-            <!-- Error 3 -->
-            <div class="error-card-mobile">
-                <div class="error-card-content">
-                    <div class="error-icon error-icon-red">
-                        <i class="fas fa-tint-slash"></i>
-                    </div>
-                    <div class="error-info">
-                        <div class="error-title">Agua salobre Puerto del Rosario</div>
-                        <div class="error-consequence error-consequence-red">🧂 Corrosión tuberías 12 meses</div>
-                        <div class="error-solution">
-                            <span class="solution-check">✅</span>
-                            <span>Osmosis inversa + acero inoxidable</span>
-                        </div>
-                    </div>
+
+            <div class="error-card ec--red">
+                <div class="ec-header">
+                    <div class="ec-icon"><i class="fas fa-tint-slash"></i></div>
+                    <div class="ec-title">Agua salobre Puerto del Rosario</div>
+                </div>
+                <div class="ec-consequence">
+                    <span class="ec-badge">Consecuencia</span>
+                    Corrosión tuberías 12 meses
+                </div>
+                <div class="ec-solution">
+                    <i class="fas fa-check-circle"></i>
+                    Osmosis inversa + acero inoxidable
                 </div>
             </div>
-            
-            <!-- Error 4 -->
-            <div class="error-card-mobile">
-    <div class="error-card-content">
-        <div class="error-icon error-icon-amber">
-            <i class="fas fa-tree"></i>
-        </div>
-        <div class="error-info">
-            <div class="error-title">Terreno protegido Corralejo</div>
-            <div class="error-consequence error-consequence-amber">🏜️ Multa 300.000€ dunas naturales</div>
-            <div class="error-solution">
-                <span class="solution-check">✅</span>
-                <span>Estudio impacto ambiental previo</span>
-            </div>
-        </div>
-    </div>
-</div>
-            
-            <!-- Error 5 -->
-            <div class="error-card-mobile">
-                <div class="error-card-content">
-                    <div class="error-icon error-icon-blue">
-                        <i class="fas fa-sun"></i>
-                    </div>
-                    <div class="error-info">
-                        <div class="error-title">Calor 42º Morro Jable</div>
-                        <div class="error-consequence error-consequence-blue">🌡️ Aire acondicionado 24h insuficiente</div>
-                        <div class="error-solution">
-                            <span class="solution-check">✅</span>
-                            <span>Aislamiento 100mm + techo ventilado</span>
-                        </div>
-                    </div>
+
+            <div class="error-card ec--amber">
+                <div class="ec-header">
+                    <div class="ec-icon"><i class="fas fa-tree"></i></div>
+                    <div class="ec-title">Terreno protegido Corralejo</div>
+                </div>
+                <div class="ec-consequence">
+                    <span class="ec-badge">Consecuencia</span>
+                    Multa 300.000€ dunas naturales
+                </div>
+                <div class="ec-solution">
+                    <i class="fas fa-check-circle"></i>
+                    Estudio impacto ambiental previo
                 </div>
             </div>
+
+            <div class="error-card ec--blue">
+                <div class="ec-header">
+                    <div class="ec-icon"><i class="fas fa-sun"></i></div>
+                    <div class="ec-title">Calor 42º Morro Jable</div>
+                </div>
+                <div class="ec-consequence">
+                    <span class="ec-badge">Consecuencia</span>
+                    Aire acondicionado 24 h insuficiente
+                </div>
+                <div class="ec-solution">
+                    <i class="fas fa-check-circle"></i>
+                    Aislamiento 100 mm + techo ventilado
+                </div>
+            </div>
+
         </div>
         
         <!-- Nota adicional -->

@@ -287,6 +287,24 @@
                 <div class="carousel-modern-dots" id="carouselModernDots"></div>
                 <p class="carousel-modern-note">Las imágenes son ilustrativas. Cada proyecto se adapta a tus gustos y necesidades.</p>
             </div>
+
+            <!-- STATS DE CONFIANZA -->
+            <div class="trust-stats">
+                <div class="trust-stat">
+                    <span class="trust-stat-number">+500</span>
+                    <span class="trust-stat-label">Proyectos gestionados</span>
+                </div>
+                <div class="trust-stat-divider"></div>
+                <div class="trust-stat">
+                    <span class="trust-stat-number">+15</span>
+                    <span class="trust-stat-label">Empresas verificadas</span>
+                </div>
+                <div class="trust-stat-divider"></div>
+                <div class="trust-stat">
+                    <span class="trust-stat-number">7</span>
+                    <span class="trust-stat-label">Islas cubiertas</span>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -314,132 +332,84 @@
             </p>
         </div>
         
-        <!-- Versión Desktop: Tabla estilo artículo -->
-        <div class="hidden md:block table-responsive">
-            <table class="article-table">
-                <thead>
-                    <tr>
-                        <th>Error común</th>
-                        <th>Consecuencia</th>
-                        <th>Solución</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td class="font-medium">Suelo rústico en Adeje</td>
-                        <td><span class="text-red-600 font-medium">Multa 600.000€ + demolición</span></td>
-                        <td>Solo suelo urbano consolidado</td>
-                    </tr>
-                    <tr>
-                        <td class="font-medium">Pendiente 35% sin geotécnico</td>
-                        <td><span class="text-orange-600 font-medium">6 meses parado en Cabildo</span></td>
-                        <td>Estudio geotécnico previo obligatorio</td>
-                    </tr>
-                    <tr>
-                        <td class="font-medium">"Es temporal" sin licencia</td>
-                        <td><span class="text-red-600 font-medium">44 expedientes demolidos en 2025</span></td>
-                        <td>Licencia de obras mayores siempre</td>
-                    </tr>
-                    <tr>
-                        <td class="font-medium">Viento en Icod (80km/h)</td>
-                        <td><span class="text-amber-600 font-medium">Grúa bloqueada + 20 días retraso</span></td>
-                        <td>Anclajes 1.5m + paneles 60mm</td>
-                    </tr>
-                    <tr>
-                        <td class="font-medium">Zapatas 0.8m en suelo volcánico</td>
-                        <td><span class="text-blue-600 font-medium">Retrabajo 15.000€ + 25 días parado</span></td>
-                        <td>1.2m mínimo en Arona/Tegueste</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        
-        <!-- Versión Móvil: Tarjetas estilo artículo -->
-        <div class="md:hidden space-y-3">
-            <!-- Error 1 -->
-            <div class="error-card-mobile">
-                <div class="error-card-content">
-                    <div class="error-icon error-icon-red">
-                        <i class="fas fa-exclamation-triangle"></i>
-                    </div>
-                    <div class="error-info">
-                        <div class="error-title">Suelo rústico en Adeje</div>
-                        <div class="error-consequence error-consequence-red">❌ Multa 600.000€ + demolición</div>
-                        <div class="error-solution">
-                            <span class="solution-check">✅</span>
-                            <span>Solo suelo urbano consolidado</span>
-                        </div>
-                    </div>
+        <!-- Grid de errores - unificado desktop y móvil -->
+        <div class="errors-grid">
+
+            <div class="error-card ec--red">
+                <div class="ec-header">
+                    <div class="ec-icon"><i class="fas fa-exclamation-triangle"></i></div>
+                    <div class="ec-title">Suelo rústico en Adeje</div>
+                </div>
+                <div class="ec-consequence">
+                    <span class="ec-badge">Consecuencia</span>
+                    Multa 600.000€ + demolición
+                </div>
+                <div class="ec-solution">
+                    <i class="fas fa-check-circle"></i>
+                    Solo suelo urbano consolidado
                 </div>
             </div>
-            
-            <!-- Error 2 -->
-            <div class="error-card-mobile">
-                <div class="error-card-content">
-                    <div class="error-icon error-icon-orange">
-                        <i class="fas fa-clock"></i>
-                    </div>
-                    <div class="error-info">
-                        <div class="error-title">Pendiente 35% sin geotécnico</div>
-                        <div class="error-consequence error-consequence-orange">⏳ 6 meses parado en Cabildo</div>
-                        <div class="error-solution">
-                            <span class="solution-check">✅</span>
-                            <span>Estudio geotécnico previo obligatorio</span>
-                        </div>
-                    </div>
+
+            <div class="error-card ec--orange">
+                <div class="ec-header">
+                    <div class="ec-icon"><i class="fas fa-clock"></i></div>
+                    <div class="ec-title">Pendiente 35% sin geotécnico</div>
+                </div>
+                <div class="ec-consequence">
+                    <span class="ec-badge">Consecuencia</span>
+                    6 meses parado en Cabildo
+                </div>
+                <div class="ec-solution">
+                    <i class="fas fa-check-circle"></i>
+                    Estudio geotécnico previo obligatorio
                 </div>
             </div>
-            
-            <!-- Error 3 -->
-            <div class="error-card-mobile">
-                <div class="error-card-content">
-                    <div class="error-icon error-icon-red">
-                        <i class="fas fa-gavel"></i>
-                    </div>
-                    <div class="error-info">
-                        <div class="error-title">"Es temporal" sin licencia</div>
-                        <div class="error-consequence error-consequence-red">⚖️ 44 expedientes demolidos en 2025</div>
-                        <div class="error-solution">
-                            <span class="solution-check">✅</span>
-                            <span>Licencia de obras mayores siempre</span>
-                        </div>
-                    </div>
+
+            <div class="error-card ec--red">
+                <div class="ec-header">
+                    <div class="ec-icon"><i class="fas fa-gavel"></i></div>
+                    <div class="ec-title">"Es temporal" sin licencia</div>
+                </div>
+                <div class="ec-consequence">
+                    <span class="ec-badge">Consecuencia</span>
+                    44 expedientes demolidos en 2025
+                </div>
+                <div class="ec-solution">
+                    <i class="fas fa-check-circle"></i>
+                    Licencia de obras mayores siempre
                 </div>
             </div>
-            
-            <!-- Error 4 -->
-            <div class="error-card-mobile">
-                <div class="error-card-content">
-                    <div class="error-icon error-icon-amber">
-                        <i class="fas fa-wind"></i>
-                    </div>
-                    <div class="error-info">
-                        <div class="error-title">Viento en Icod (80km/h)</div>
-                        <div class="error-consequence error-consequence-amber">🌬️ Grúa bloqueada + 20 días retraso</div>
-                        <div class="error-solution">
-                            <span class="solution-check">✅</span>
-                            <span>Anclajes 1.5m + paneles 60mm</span>
-                        </div>
-                    </div>
+
+            <div class="error-card ec--amber">
+                <div class="ec-header">
+                    <div class="ec-icon"><i class="fas fa-wind"></i></div>
+                    <div class="ec-title">Viento en Icod (80 km/h)</div>
+                </div>
+                <div class="ec-consequence">
+                    <span class="ec-badge">Consecuencia</span>
+                    Grúa bloqueada + 20 días de retraso
+                </div>
+                <div class="ec-solution">
+                    <i class="fas fa-check-circle"></i>
+                    Anclajes 1.5 m + paneles 60 mm
                 </div>
             </div>
-            
-            <!-- Error 5 -->
-            <div class="error-card-mobile">
-                <div class="error-card-content">
-                    <div class="error-icon error-icon-blue">
-                        <i class="fas fa-tools"></i>
-                    </div>
-                    <div class="error-info">
-                        <div class="error-title">Zapatas 0.8m en suelo volcánico</div>
-                        <div class="error-consequence error-consequence-blue">🏗️ Retrabajo 15.000€ + 25 días parado</div>
-                        <div class="error-solution">
-                            <span class="solution-check">✅</span>
-                            <span>1.2m mínimo en Arona/Tegueste</span>
-                        </div>
-                    </div>
+
+            <div class="error-card ec--blue">
+                <div class="ec-header">
+                    <div class="ec-icon"><i class="fas fa-tools"></i></div>
+                    <div class="ec-title">Zapatas 0.8 m en suelo volcánico</div>
+                </div>
+                <div class="ec-consequence">
+                    <span class="ec-badge">Consecuencia</span>
+                    Retrabajo 15.000€ + 25 días parado
+                </div>
+                <div class="ec-solution">
+                    <i class="fas fa-check-circle"></i>
+                    1.2 m mínimo en Arona / Tegueste
                 </div>
             </div>
+
         </div>
         
         <!-- Nota adicional -->

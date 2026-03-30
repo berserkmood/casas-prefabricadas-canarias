@@ -287,6 +287,24 @@
                 <div class="carousel-modern-dots" id="carouselModernDots"></div>
                 <p class="carousel-modern-note">Las imágenes son ilustrativas. Cada proyecto se adapta a tus gustos y necesidades.</p>
             </div>
+
+            <!-- STATS DE CONFIANZA -->
+            <div class="trust-stats">
+                <div class="trust-stat">
+                    <span class="trust-stat-number">+500</span>
+                    <span class="trust-stat-label">Proyectos gestionados</span>
+                </div>
+                <div class="trust-stat-divider"></div>
+                <div class="trust-stat">
+                    <span class="trust-stat-number">+15</span>
+                    <span class="trust-stat-label">Empresas verificadas</span>
+                </div>
+                <div class="trust-stat-divider"></div>
+                <div class="trust-stat">
+                    <span class="trust-stat-number">7</span>
+                    <span class="trust-stat-label">Islas cubiertas</span>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -315,131 +333,84 @@
             </p>
         </div>
         
-        <!-- Versión Desktop: Tabla estilo artículo -->
-        <div class="hidden md:block table-responsive">
-            <table class="article-table">
-                <thead>
-                    <tr>
-                        <th>Error común</th>
-                        <th>Consecuencia</th>
-                        <th>Solución</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td class="font-medium">Pendiente Valle Gran Rey 55%</td>
-                        <td><span class="text-red-600 font-medium">Deslizamiento 6 meses post-montaje</span></td>
-                        <td>Pilotaje 5m + contención superior</td>
-                    </tr>
-                    <tr>
-                        <td class="font-medium">Tiny House sin licencia</td>
-                        <td><span class="text-orange-600 font-medium">Demolición Parque Nacional Garajonay</span></td>
-                        <td>Licencia vivienda habitual mínima 36m²</td>
-                    </tr>
-                    <tr>
-                        <td class="font-medium">Suelo forestal Agulo</td>
-                        <td><span class="text-red-600 font-medium">Multa 400.000€ Reserva Natural</span></td>
-                        <td>Suelo rústico común urbanizable</td>
-                    </tr>
-                    <tr>
-                        <td class="font-medium">Humedad barrancos 90%</td>
-                        <td><span class="text-amber-600 font-medium">Condensación estructural continua</span></td>
-                        <td>Doble barrena + deshumidificador</td>
-                    </tr>
-                    <tr>
-                        <td class="font-medium">Acceso Vallehermoso 3km pista</td>
-                        <td><span class="text-blue-600 font-medium">Grúa 12h + sobrecoste transporte 8.000€</span></td>
-                        <td>Paneles desmontables helicóptero</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        
-        <!-- Versión Móvil: Tarjetas estilo artículo -->
-        <div class="md:hidden space-y-3">
-            <!-- Error 1 -->
-            <div class="error-card-mobile">
-    <div class="error-card-content">
-        <div class="error-icon error-icon-red">
-            <i class="fas fa-mountain"></i>
-        </div>
-        <div class="error-info">
-            <div class="error-title">Pendiente Valle Gran Rey 55%</div>
-            <div class="error-consequence error-consequence-red">📉 Deslizamiento 6 meses post-montaje</div>
-            <div class="error-solution">
-                <span class="solution-check">✅</span>
-                <span>Pilotaje 5m + contención superior</span>
-            </div>
-        </div>
-    </div>
-</div>
-            <!-- Error 2 -->
-            <div class="error-card-mobile">
-                <div class="error-card-content">
-                    <div class="error-icon error-icon-orange">
-                        <i class="fas fa-home"></i>
-                    </div>
-                    <div class="error-info">
-                        <div class="error-title">Tiny House sin licencia</div>
-                        <div class="error-consequence error-consequence-orange">🏠 Demolición Parque Nacional Garajonay</div>
-                        <div class="error-solution">
-                            <span class="solution-check">✅</span>
-                            <span>Licencia vivienda habitual mínima 36m²</span>
-                        </div>
-                    </div>
+        <!-- Grid de errores - unificado desktop y móvil -->
+        <div class="errors-grid">
+
+            <div class="error-card ec--red">
+                <div class="ec-header">
+                    <div class="ec-icon"><i class="fas fa-mountain"></i></div>
+                    <div class="ec-title">Pendiente Valle Gran Rey 55%</div>
+                </div>
+                <div class="ec-consequence">
+                    <span class="ec-badge">Consecuencia</span>
+                    Deslizamiento 6 meses post-montaje
+                </div>
+                <div class="ec-solution">
+                    <i class="fas fa-check-circle"></i>
+                    Pilotaje 5 m + contención superior
                 </div>
             </div>
-            
-            <!-- Error 3 -->
-            <div class="error-card-mobile">
-                <div class="error-card-content">
-                    <div class="error-icon error-icon-red">
-                        <i class="fas fa-tree"></i>
-                    </div>
-                    <div class="error-info">
-                        <div class="error-title">Suelo forestal Agulo</div>
-                        <div class="error-consequence error-consequence-red">🌲 Multa 400.000€ Reserva Natural</div>
-                        <div class="error-solution">
-                            <span class="solution-check">✅</span>
-                            <span>Suelo rústico común urbanizable</span>
-                        </div>
-                    </div>
+
+            <div class="error-card ec--orange">
+                <div class="ec-header">
+                    <div class="ec-icon"><i class="fas fa-home"></i></div>
+                    <div class="ec-title">Tiny House sin licencia</div>
+                </div>
+                <div class="ec-consequence">
+                    <span class="ec-badge">Consecuencia</span>
+                    Demolición Parque Nacional Garajonay
+                </div>
+                <div class="ec-solution">
+                    <i class="fas fa-check-circle"></i>
+                    Licencia vivienda habitual mínima 36 m²
                 </div>
             </div>
-            
-            <!-- Error 4 -->
-            <div class="error-card-mobile">
-                <div class="error-card-content">
-                    <div class="error-icon error-icon-amber">
-                        <i class="fas fa-cloud-rain"></i>
-                    </div>
-                    <div class="error-info">
-                        <div class="error-title">Humedad barrancos 90%</div>
-                        <div class="error-consequence error-consequence-amber">💨 Condensación estructural continua</div>
-                        <div class="error-solution">
-                            <span class="solution-check">✅</span>
-                            <span>Doble barrena + deshumidificador</span>
-                        </div>
-                    </div>
+
+            <div class="error-card ec--red">
+                <div class="ec-header">
+                    <div class="ec-icon"><i class="fas fa-tree"></i></div>
+                    <div class="ec-title">Suelo forestal Agulo</div>
+                </div>
+                <div class="ec-consequence">
+                    <span class="ec-badge">Consecuencia</span>
+                    Multa 400.000€ Reserva Natural
+                </div>
+                <div class="ec-solution">
+                    <i class="fas fa-check-circle"></i>
+                    Suelo rústico común urbanizable
                 </div>
             </div>
-            
-            <!-- Error 5 -->
-            <div class="error-card-mobile">
-                <div class="error-card-content">
-                    <div class="error-icon error-icon-blue">
-                        <i class="fas fa-helicopter"></i>
-                    </div>
-                    <div class="error-info">
-                        <div class="error-title">Acceso Vallehermoso 3km pista</div>
-                        <div class="error-consequence error-consequence-blue">🚁 Grúa 12h + sobrecoste 8.000€</div>
-                        <div class="error-solution">
-                            <span class="solution-check">✅</span>
-                            <span>Paneles desmontables helicóptero</span>
-                        </div>
-                    </div>
+
+            <div class="error-card ec--amber">
+                <div class="ec-header">
+                    <div class="ec-icon"><i class="fas fa-cloud-rain"></i></div>
+                    <div class="ec-title">Humedad barrancos 90%</div>
+                </div>
+                <div class="ec-consequence">
+                    <span class="ec-badge">Consecuencia</span>
+                    Condensación estructural continua
+                </div>
+                <div class="ec-solution">
+                    <i class="fas fa-check-circle"></i>
+                    Doble barrena + deshumidificador
                 </div>
             </div>
+
+            <div class="error-card ec--blue">
+                <div class="ec-header">
+                    <div class="ec-icon"><i class="fas fa-helicopter"></i></div>
+                    <div class="ec-title">Acceso Vallehermoso 3 km pista</div>
+                </div>
+                <div class="ec-consequence">
+                    <span class="ec-badge">Consecuencia</span>
+                    Grúa 12 h + sobrecoste transporte 8.000€
+                </div>
+                <div class="ec-solution">
+                    <i class="fas fa-check-circle"></i>
+                    Paneles desmontables helicóptero
+                </div>
+            </div>
+
         </div>
         
         <!-- Nota adicional -->

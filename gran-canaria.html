@@ -288,6 +288,24 @@
                 <div class="carousel-modern-dots" id="carouselModernDots"></div>
                 <p class="carousel-modern-note">Las imágenes son ilustrativas. Cada proyecto se adapta a tus gustos y necesidades.</p>
             </div>
+
+            <!-- STATS DE CONFIANZA -->
+            <div class="trust-stats">
+                <div class="trust-stat">
+                    <span class="trust-stat-number">+500</span>
+                    <span class="trust-stat-label">Proyectos gestionados</span>
+                </div>
+                <div class="trust-stat-divider"></div>
+                <div class="trust-stat">
+                    <span class="trust-stat-number">+15</span>
+                    <span class="trust-stat-label">Empresas verificadas</span>
+                </div>
+                <div class="trust-stat-divider"></div>
+                <div class="trust-stat">
+                    <span class="trust-stat-number">7</span>
+                    <span class="trust-stat-label">Islas cubiertas</span>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -315,132 +333,84 @@
             </p>
         </div>
         
-        <!-- Versión Desktop: Tabla estilo artículo -->
-        <div class="hidden md:block table-responsive">
-            <table class="article-table">
-                <thead>
-                    <tr>
-                        <th>Error común</th>
-                        <th>Consecuencia</th>
-                        <th>Solución</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td class="font-medium">Suelo rústico Tejeda</td>
-                        <td><span class="text-red-600 font-medium">Multa 600.000€ + demolición obligatoria</span></td>
-                        <td>Solo suelo urbano consolidado</td>
-                    </tr>
-                    <tr>
-                        <td class="font-medium">Licencia Las Palmas 2 años</td>
-                        <td><span class="text-orange-600 font-medium">Sobrecoste 9.000€ por retraso</span></td>
-                        <td>Informe técnico colaboración ayuntamiento</td>
-                    </tr>
-                    <tr>
-                        <td class="font-medium">"Casetas aperos" falsa</td>
-                        <td><span class="text-red-600 font-medium">Explotación agraria NO demostrable</span></td>
-                        <td>Licencia vinculada actividad real</td>
-                    </tr>
-                    <tr>
-                        <td class="font-medium">Terreno barranco Gáldar</td>
-                        <td><span class="text-amber-600 font-medium">Estudio geotécnico rechazado + 12 meses</span></td>
-                        <td>Análisis previo suelo volcánico</td>
-                    </tr>
-                    <tr>
-                        <td class="font-medium">Calor Telde 35º sin aislamiento</td>
-                        <td><span class="text-blue-600 font-medium">Factura luz +50% anual</span></td>
-                        <td>Paneles 80mm + ventilación cruzada</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        
-        <!-- Versión Móvil: Tarjetas estilo artículo -->
-        <div class="md:hidden space-y-3">
-            <!-- Error 1 -->
-            <div class="error-card-mobile">
-                <div class="error-card-content">
-                    <div class="error-icon error-icon-red">
-                        <i class="fas fa-exclamation-triangle"></i>
-                    </div>
-                    <div class="error-info">
-                        <div class="error-title">Suelo rústico Tejeda</div>
-                        <div class="error-consequence error-consequence-red">❌ Multa 600.000€ + demolición obligatoria</div>
-                        <div class="error-solution">
-                            <span class="solution-check">✅</span>
-                            <span>Solo suelo urbano consolidado</span>
-                        </div>
-                    </div>
+        <!-- Grid de errores - unificado desktop y móvil -->
+        <div class="errors-grid">
+
+            <div class="error-card ec--red">
+                <div class="ec-header">
+                    <div class="ec-icon"><i class="fas fa-exclamation-triangle"></i></div>
+                    <div class="ec-title">Suelo rústico Tejeda</div>
+                </div>
+                <div class="ec-consequence">
+                    <span class="ec-badge">Consecuencia</span>
+                    Multa 600.000€ + demolición obligatoria
+                </div>
+                <div class="ec-solution">
+                    <i class="fas fa-check-circle"></i>
+                    Solo suelo urbano consolidado
                 </div>
             </div>
-            
-            <!-- Error 2 -->
-            <div class="error-card-mobile">
-                <div class="error-card-content">
-                    <div class="error-icon error-icon-orange">
-                        <i class="fas fa-clock"></i>
-                    </div>
-                    <div class="error-info">
-                        <div class="error-title">Licencia Las Palmas 2 años</div>
-                        <div class="error-consequence error-consequence-orange">⏳ Sobrecoste 9.000€ por retraso</div>
-                        <div class="error-solution">
-                            <span class="solution-check">✅</span>
-                            <span>Informe técnico colaboración ayuntamiento</span>
-                        </div>
-                    </div>
+
+            <div class="error-card ec--orange">
+                <div class="ec-header">
+                    <div class="ec-icon"><i class="fas fa-clock"></i></div>
+                    <div class="ec-title">Licencia Las Palmas 2 años</div>
+                </div>
+                <div class="ec-consequence">
+                    <span class="ec-badge">Consecuencia</span>
+                    Sobrecoste 9.000€ por retraso
+                </div>
+                <div class="ec-solution">
+                    <i class="fas fa-check-circle"></i>
+                    Informe técnico colaboración ayuntamiento
                 </div>
             </div>
-            
-            <!-- Error 3 -->
-            <div class="error-card-mobile">
-                <div class="error-card-content">
-                    <div class="error-icon error-icon-red">
-                        <i class="fas fa-gavel"></i>
-                    </div>
-                    <div class="error-info">
-                        <div class="error-title">"Casetas aperos" falsa</div>
-                        <div class="error-consequence error-consequence-red">⚖️ Explotación agraria NO demostrable</div>
-                        <div class="error-solution">
-                            <span class="solution-check">✅</span>
-                            <span>Licencia vinculada actividad real</span>
-                        </div>
-                    </div>
+
+            <div class="error-card ec--red">
+                <div class="ec-header">
+                    <div class="ec-icon"><i class="fas fa-gavel"></i></div>
+                    <div class="ec-title">"Casetas aperos" falsa</div>
+                </div>
+                <div class="ec-consequence">
+                    <span class="ec-badge">Consecuencia</span>
+                    Explotación agraria NO demostrable
+                </div>
+                <div class="ec-solution">
+                    <i class="fas fa-check-circle"></i>
+                    Licencia vinculada actividad real
                 </div>
             </div>
-            
-            <!-- Error 4 -->
-            <div class="error-card-mobile">
-                <div class="error-card-content">
-                    <div class="error-icon error-icon-amber">
-                        <i class="fas fa-mountain"></i>
-                    </div>
-                    <div class="error-info">
-                        <div class="error-title">Terreno barranco Gáldar</div>
-                        <div class="error-consequence error-consequence-amber">📏 Estudio geotécnico rechazado + 12 meses</div>
-                        <div class="error-solution">
-                            <span class="solution-check">✅</span>
-                            <span>Análisis previo suelo volcánico</span>
-                        </div>
-                    </div>
+
+            <div class="error-card ec--amber">
+                <div class="ec-header">
+                    <div class="ec-icon"><i class="fas fa-mountain"></i></div>
+                    <div class="ec-title">Terreno barranco Gáldar</div>
+                </div>
+                <div class="ec-consequence">
+                    <span class="ec-badge">Consecuencia</span>
+                    Estudio geotécnico rechazado + 12 meses
+                </div>
+                <div class="ec-solution">
+                    <i class="fas fa-check-circle"></i>
+                    Análisis previo suelo volcánico
                 </div>
             </div>
-            
-            <!-- Error 5 -->
-            <div class="error-card-mobile">
-                <div class="error-card-content">
-                    <div class="error-icon error-icon-blue">
-                        <i class="fas fa-thermometer-half"></i>
-                    </div>
-                    <div class="error-info">
-                        <div class="error-title">Calor Telde 35º sin aislamiento</div>
-                        <div class="error-consequence error-consequence-blue">💡 Factura luz +50% anual</div>
-                        <div class="error-solution">
-                            <span class="solution-check">✅</span>
-                            <span>Paneles 80mm + ventilación cruzada</span>
-                        </div>
-                    </div>
+
+            <div class="error-card ec--blue">
+                <div class="ec-header">
+                    <div class="ec-icon"><i class="fas fa-thermometer-half"></i></div>
+                    <div class="ec-title">Calor Telde 35º sin aislamiento</div>
+                </div>
+                <div class="ec-consequence">
+                    <span class="ec-badge">Consecuencia</span>
+                    Factura luz +50% anual
+                </div>
+                <div class="ec-solution">
+                    <i class="fas fa-check-circle"></i>
+                    Paneles 80mm + ventilación cruzada
                 </div>
             </div>
+
         </div>
         
         <!-- Nota adicional -->

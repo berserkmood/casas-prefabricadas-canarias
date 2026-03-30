@@ -287,6 +287,24 @@
                 <div class="carousel-modern-dots" id="carouselModernDots"></div>
                 <p class="carousel-modern-note">Las imágenes son ilustrativas. Cada proyecto se adapta a tus gustos y necesidades.</p>
             </div>
+
+            <!-- STATS DE CONFIANZA -->
+            <div class="trust-stats">
+                <div class="trust-stat">
+                    <span class="trust-stat-number">+500</span>
+                    <span class="trust-stat-label">Proyectos gestionados</span>
+                </div>
+                <div class="trust-stat-divider"></div>
+                <div class="trust-stat">
+                    <span class="trust-stat-number">+15</span>
+                    <span class="trust-stat-label">Empresas verificadas</span>
+                </div>
+                <div class="trust-stat-divider"></div>
+                <div class="trust-stat">
+                    <span class="trust-stat-number">7</span>
+                    <span class="trust-stat-label">Islas cubiertas</span>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -314,132 +332,84 @@
             </p>
         </div>
         
-        <!-- Versión Desktop: Tabla estilo artículo -->
-        <div class="hidden md:block table-responsive">
-            <table class="article-table">
-                <thead>
-                    <tr>
-                        <th>Error común</th>
-                        <th>Consecuencia</th>
-                        <th>Solución</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td class="font-medium">Suelo volcán El Paso</td>
-                        <td><span class="text-red-600 font-medium">Inestabilidad estructural 18 meses</span></td>
-                        <td>Estudio sísmico + zapatas armadas</td>
-                    </tr>
-                    <tr>
-                        <td class="font-medium">Humedad Llanos 85%</td>
-                        <td><span class="text-orange-600 font-medium">Mohos panel sandwich 9 meses</span></td>
-                        <td>Ventilación forzada + barrena exterior</td>
-                    </tr>
-                    <tr>
-                        <td class="font-medium">Licencia "ayudas volcán"</td>
-                        <td><span class="text-red-600 font-medium">Subvención denegada documentación</span></td>
-                        <td>Certificado daños pericial oficial</td>
-                    </tr>
-                    <tr>
-                        <td class="font-medium">Pendiente Los Llanos 40%</td>
-                        <td><span class="text-amber-600 font-medium">Deslizamiento pilotaje insuficiente</span></td>
-                        <td>Micropilotaje 4m + geotextil</td>
-                    </tr>
-                    <tr>
-                        <td class="font-medium">Ceniza volcánica Tejeda</td>
-                        <td><span class="text-blue-600 font-medium">Filtros atascados + avería bombas</span></td>
-                        <td>Filtros ciclónicos + mantenimiento anual</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        
-        <!-- Versión Móvil: Tarjetas estilo artículo -->
-        <div class="md:hidden space-y-3">
-            <!-- Error 1 -->
-            <div class="error-card-mobile">
-                <div class="error-card-content">
-                    <div class="error-icon error-icon-red">
-                        <i class="fas fa-volcano"></i>
-                    </div>
-                    <div class="error-info">
-                        <div class="error-title">Suelo volcán El Paso</div>
-                        <div class="error-consequence error-consequence-red">🌋 Inestabilidad estructural 18 meses</div>
-                        <div class="error-solution">
-                            <span class="solution-check">✅</span>
-                            <span>Estudio sísmico + zapatas armadas</span>
-                        </div>
-                    </div>
+        <!-- Grid de errores - unificado desktop y móvil -->
+        <div class="errors-grid">
+
+            <div class="error-card ec--red">
+                <div class="ec-header">
+                    <div class="ec-icon"><i class="fas fa-volcano"></i></div>
+                    <div class="ec-title">Suelo volcán El Paso</div>
+                </div>
+                <div class="ec-consequence">
+                    <span class="ec-badge">Consecuencia</span>
+                    Inestabilidad estructural 18 meses
+                </div>
+                <div class="ec-solution">
+                    <i class="fas fa-check-circle"></i>
+                    Estudio sísmico + zapatas armadas
                 </div>
             </div>
-            
-            <!-- Error 2 -->
-            <div class="error-card-mobile">
-                <div class="error-card-content">
-                    <div class="error-icon error-icon-orange">
-                        <i class="fas fa-tint"></i>
-                    </div>
-                    <div class="error-info">
-                        <div class="error-title">Humedad Llanos 85%</div>
-                        <div class="error-consequence error-consequence-orange">💧 Mohos panel sandwich 9 meses</div>
-                        <div class="error-solution">
-                            <span class="solution-check">✅</span>
-                            <span>Ventilación forzada + barrena exterior</span>
-                        </div>
-                    </div>
+
+            <div class="error-card ec--orange">
+                <div class="ec-header">
+                    <div class="ec-icon"><i class="fas fa-tint"></i></div>
+                    <div class="ec-title">Humedad Llanos 85%</div>
+                </div>
+                <div class="ec-consequence">
+                    <span class="ec-badge">Consecuencia</span>
+                    Mohos panel sandwich 9 meses
+                </div>
+                <div class="ec-solution">
+                    <i class="fas fa-check-circle"></i>
+                    Ventilación forzada + barrena exterior
                 </div>
             </div>
-            
-            <!-- Error 3 -->
-            <div class="error-card-mobile">
-                <div class="error-card-content">
-                    <div class="error-icon error-icon-red">
-                        <i class="fas fa-euro-sign"></i>
-                    </div>
-                    <div class="error-info">
-                        <div class="error-title">Licencia "ayudas volcán"</div>
-                        <div class="error-consequence error-consequence-red">💰 Subvención denegada documentación</div>
-                        <div class="error-solution">
-                            <span class="solution-check">✅</span>
-                            <span>Certificado daños pericial oficial</span>
-                        </div>
-                    </div>
+
+            <div class="error-card ec--red">
+                <div class="ec-header">
+                    <div class="ec-icon"><i class="fas fa-euro-sign"></i></div>
+                    <div class="ec-title">Licencia "ayudas volcán"</div>
+                </div>
+                <div class="ec-consequence">
+                    <span class="ec-badge">Consecuencia</span>
+                    Subvención denegada por documentación
+                </div>
+                <div class="ec-solution">
+                    <i class="fas fa-check-circle"></i>
+                    Certificado daños pericial oficial
                 </div>
             </div>
-            
-            <!-- Error 4 -->
-            <div class="error-card-mobile">
-                <div class="error-card-content">
-                    <div class="error-icon error-icon-amber">
-                        <i class="fas fa-mountain"></i>
-                    </div>
-                    <div class="error-info">
-                        <div class="error-title">Pendiente Los Llanos 40%</div>
-                        <div class="error-consequence error-consequence-amber">📉 Deslizamiento pilotaje insuficiente</div>
-                        <div class="error-solution">
-                            <span class="solution-check">✅</span>
-                            <span>Micropilotaje 4m + geotextil</span>
-                        </div>
-                    </div>
+
+            <div class="error-card ec--amber">
+                <div class="ec-header">
+                    <div class="ec-icon"><i class="fas fa-mountain"></i></div>
+                    <div class="ec-title">Pendiente Los Llanos 40%</div>
+                </div>
+                <div class="ec-consequence">
+                    <span class="ec-badge">Consecuencia</span>
+                    Deslizamiento por pilotaje insuficiente
+                </div>
+                <div class="ec-solution">
+                    <i class="fas fa-check-circle"></i>
+                    Micropilotaje 4 m + geotextil
                 </div>
             </div>
-            
-            <!-- Error 5 -->
-            <div class="error-card-mobile">
-                <div class="error-card-content">
-                    <div class="error-icon error-icon-blue">
-                        <i class="fas fa-smog"></i>
-                    </div>
-                    <div class="error-info">
-                        <div class="error-title">Ceniza volcánica Tejeda</div>
-                        <div class="error-consequence error-consequence-blue">🌫️ Filtros atascados + avería bombas</div>
-                        <div class="error-solution">
-                            <span class="solution-check">✅</span>
-                            <span>Filtros ciclónicos + mantenimiento anual</span>
-                        </div>
-                    </div>
+
+            <div class="error-card ec--blue">
+                <div class="ec-header">
+                    <div class="ec-icon"><i class="fas fa-smog"></i></div>
+                    <div class="ec-title">Ceniza volcánica Tejeda</div>
+                </div>
+                <div class="ec-consequence">
+                    <span class="ec-badge">Consecuencia</span>
+                    Filtros atascados + avería bombas
+                </div>
+                <div class="ec-solution">
+                    <i class="fas fa-check-circle"></i>
+                    Filtros ciclónicos + mantenimiento anual
                 </div>
             </div>
+
         </div>
         
         <!-- Nota adicional -->
