@@ -230,7 +230,7 @@ function initBackToTop() {
     const indexElement = document.querySelector('.article-menu') || document.querySelector('#indice');
     
     window.addEventListener('scroll', throttle(() => {
-        if (window.scrollY > 500) {
+        if (window.scrollY > 1600) {
             button.classList.add('visible');
         } else {
             button.classList.remove('visible');

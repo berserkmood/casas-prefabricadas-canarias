@@ -993,3 +993,17 @@ body {
     color: #64748b;
     line-height: 1.5;
 }
+
+/* Hero de guías: altura controlada en escritorio, auto en móvil */
+.guias-hero {
+    min-height: 55vh !important;
+    max-height: 65vh;
+}
+
+@media (max-width: 768px) {
+    .guias-hero {
+        min-height: 45vh !important;
+        max-height: none;
+    }
+}
+
