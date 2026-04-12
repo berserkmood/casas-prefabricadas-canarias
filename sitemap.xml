@@ -7,7 +7,7 @@
   <!-- ============================================= -->
   <!-- SITEMAP para Casas Prefabricadas Canarias    -->
   <!-- Dominio: casasprefabricadascanarias.es       -->
-  <!-- Fecha: 2026-03-25 (ACTUALIZADA)              -->
+  <!-- Fecha: 2026-04-12 (ACTUALIZADA)              -->
   <!-- ============================================= -->
 
   <!-- ============================================= -->
@@ -132,6 +132,50 @@
     <lastmod>2026-03-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+
+  <!-- ============================================= -->
+  <!-- TRÁMITES                                     -->
+  <!-- ============================================= -->
+
+  <!-- CÉDULA DE HABITABILIDAD -->
+  <url>
+    <loc>https://casasprefabricadascanarias.es/guias/tramites/cedula-habitabilidad-prefabricada-canarias</loc>
+    <lastmod>2026-04-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- DOCUMENTOS NECESARIOS -->
+  <url>
+    <loc>https://casasprefabricadascanarias.es/guias/tramites/documentos-casa-prefabricada-canarias</loc>
+    <lastmod>2026-04-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- ERRORES FRECUENTES -->
+  <url>
+    <loc>https://casasprefabricadascanarias.es/guias/tramites/errores-casa-prefabricada-canarias</loc>
+    <lastmod>2026-04-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- LICENCIAS -->
+  <url>
+    <loc>https://casasprefabricadascanarias.es/guias/tramites/licencias-casa-prefabricada-canarias</loc>
+    <lastmod>2026-04-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- SUELO RÚSTICO -->
+  <url>
+    <loc>https://casasprefabricadascanarias.es/guias/tramites/suelo-rustico-prefabricada-canarias</loc>
+    <lastmod>2026-04-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 
   <!-- ============================================= -->
