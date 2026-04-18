@@ -1,7 +1,6 @@
 {
-  "name": "Casas Prefabricadas Canarias",
-  "short_name": "CasasPrefab",
-  "description": "Conectamos particulares con constructoras verificadas de casas prefabricadas en Canarias. Presupuesto gratis.",
+  "name": "MyWebSite",
+  "short_name": "MySite",
   "icons": [
     {
       "src": "/web-app-manifest-192x192.png",
