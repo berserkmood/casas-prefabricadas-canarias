@@ -2,6 +2,12 @@
   "cleanUrls": true,
   "redirects": [
     {
+      "source": "/:path*",
+      "has": [{"type": "host", "value": "casasprefabricadascanarias.es"}],
+      "destination": "https://www.casasprefabricadascanarias.es/:path*",
+      "permanent": true
+    },
+    {
       "source": "/guias/normativa-permisos-casas-prefabricadas-canarias",
       "destination": "/guias/permisos-casa-prefabricada-canarias",
       "permanent": true

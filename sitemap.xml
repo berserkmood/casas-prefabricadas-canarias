@@ -16,7 +16,7 @@
 
   <!-- PÁGINA PRINCIPAL -->
   <url>
-    <loc>https://casasprefabricadascanarias.es/</loc>
+    <loc>https://www.casasprefabricadascanarias.es/</loc>
     <lastmod>2026-03-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
@@ -28,7 +28,7 @@
 
   <!-- TENERIFE -->
   <url>
-    <loc>https://casasprefabricadascanarias.es/tenerife</loc>
+    <loc>https://www.casasprefabricadascanarias.es/tenerife</loc>
     <lastmod>2026-03-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -36,7 +36,7 @@
 
   <!-- GRAN CANARIA -->
   <url>
-    <loc>https://casasprefabricadascanarias.es/gran-canaria</loc>
+    <loc>https://www.casasprefabricadascanarias.es/gran-canaria</loc>
     <lastmod>2026-03-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -44,7 +44,7 @@
 
   <!-- LANZAROTE -->
   <url>
-    <loc>https://casasprefabricadascanarias.es/lanzarote</loc>
+    <loc>https://www.casasprefabricadascanarias.es/lanzarote</loc>
     <lastmod>2026-03-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -52,7 +52,7 @@
 
   <!-- FUERTEVENTURA -->
   <url>
-    <loc>https://casasprefabricadascanarias.es/fuerteventura</loc>
+    <loc>https://www.casasprefabricadascanarias.es/fuerteventura</loc>
     <lastmod>2026-03-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -60,7 +60,7 @@
 
   <!-- LA PALMA -->
   <url>
-    <loc>https://casasprefabricadascanarias.es/la-palma</loc>
+    <loc>https://www.casasprefabricadascanarias.es/la-palma</loc>
     <lastmod>2026-03-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -68,7 +68,7 @@
 
   <!-- LA GOMERA -->
   <url>
-    <loc>https://casasprefabricadascanarias.es/la-gomera</loc>
+    <loc>https://www.casasprefabricadascanarias.es/la-gomera</loc>
     <lastmod>2026-03-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -76,7 +76,7 @@
 
   <!-- EL HIERRO -->
   <url>
-    <loc>https://casasprefabricadascanarias.es/el-hierro</loc>
+    <loc>https://www.casasprefabricadascanarias.es/el-hierro</loc>
     <lastmod>2026-03-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -88,7 +88,7 @@
 
   <!-- PÁGINA PRINCIPAL DE GUÍAS -->
   <url>
-    <loc>https://casasprefabricadascanarias.es/guias/</loc>
+    <loc>https://www.casasprefabricadascanarias.es/guias/</loc>
     <lastmod>2026-03-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -96,7 +96,7 @@
 
   <!-- GUÍA DE PERMISOS -->
   <url>
-    <loc>https://casasprefabricadascanarias.es/guias/permisos-casa-prefabricada-canarias</loc>
+    <loc>https://www.casasprefabricadascanarias.es/guias/permisos-casa-prefabricada-canarias</loc>
     <lastmod>2026-03-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -104,7 +104,7 @@
 
   <!-- GUÍA DE MATERIALES -->
   <url>
-    <loc>https://casasprefabricadascanarias.es/guias/materiales-casa-prefabricada-canarias</loc>
+    <loc>https://www.casasprefabricadascanarias.es/guias/materiales-casa-prefabricada-canarias</loc>
     <lastmod>2026-03-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -112,7 +112,7 @@
 
   <!-- GUÍA DE PRECIOS REALES -->
   <url>
-    <loc>https://casasprefabricadascanarias.es/guias/precio-casa-prefabricada-canarias</loc>
+    <loc>https://www.casasprefabricadascanarias.es/guias/precio-casa-prefabricada-canarias</loc>
     <lastmod>2026-03-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -120,7 +120,7 @@
 
   <!-- GUÍA DE COMPARATIVA -->
   <url>
-    <loc>https://casasprefabricadascanarias.es/guias/casa-prefabricada-vs-construccion-tradicional</loc>
+    <loc>https://www.casasprefabricadascanarias.es/guias/casa-prefabricada-vs-construccion-tradicional</loc>
     <lastmod>2026-03-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -128,7 +128,7 @@
 
   <!-- GUÍA DE AYUDAS -->
   <url>
-    <loc>https://casasprefabricadascanarias.es/guias/ayudas-casa-prefabricada-canarias</loc>
+    <loc>https://www.casasprefabricadascanarias.es/guias/ayudas-casa-prefabricada-canarias</loc>
     <lastmod>2026-03-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -140,7 +140,7 @@
 
   <!-- CÉDULA DE HABITABILIDAD -->
   <url>
-    <loc>https://casasprefabricadascanarias.es/guias/tramites/cedula-habitabilidad-prefabricada-canarias</loc>
+    <loc>https://www.casasprefabricadascanarias.es/guias/tramites/cedula-habitabilidad-prefabricada-canarias</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -148,7 +148,7 @@
 
   <!-- DOCUMENTOS NECESARIOS -->
   <url>
-    <loc>https://casasprefabricadascanarias.es/guias/tramites/documentos-casa-prefabricada-canarias</loc>
+    <loc>https://www.casasprefabricadascanarias.es/guias/tramites/documentos-casa-prefabricada-canarias</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -156,7 +156,7 @@
 
   <!-- ERRORES FRECUENTES -->
   <url>
-    <loc>https://casasprefabricadascanarias.es/guias/tramites/errores-casa-prefabricada-canarias</loc>
+    <loc>https://www.casasprefabricadascanarias.es/guias/tramites/errores-casa-prefabricada-canarias</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -164,7 +164,7 @@
 
   <!-- LICENCIAS -->
   <url>
-    <loc>https://casasprefabricadascanarias.es/guias/tramites/licencias-casa-prefabricada-canarias</loc>
+    <loc>https://www.casasprefabricadascanarias.es/guias/tramites/licencias-casa-prefabricada-canarias</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -172,7 +172,7 @@
 
   <!-- SUELO RÚSTICO -->
   <url>
-    <loc>https://casasprefabricadascanarias.es/guias/tramites/suelo-rustico-prefabricada-canarias</loc>
+    <loc>https://www.casasprefabricadascanarias.es/guias/tramites/suelo-rustico-prefabricada-canarias</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -184,7 +184,7 @@
 
   <!-- AVISO LEGAL -->
   <url>
-    <loc>https://casasprefabricadascanarias.es/aviso-legal</loc>
+    <loc>https://www.casasprefabricadascanarias.es/aviso-legal</loc>
     <lastmod>2026-03-25</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
@@ -192,7 +192,7 @@
 
   <!-- POLÍTICA DE PRIVACIDAD -->
   <url>
-    <loc>https://casasprefabricadascanarias.es/privacidad</loc>
+    <loc>https://www.casasprefabricadascanarias.es/privacidad</loc>
     <lastmod>2026-03-25</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>

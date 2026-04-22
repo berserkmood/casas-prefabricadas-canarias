@@ -14,6 +14,7 @@ Allow: /
 # ================================================
 # BLOQUEAR ACCESO - Páginas que NO deben indexarse
 # ================================================
+Disallow: /gracias
 Disallow: /gracias.html
 Disallow: /admin/
 Disallow: /private/
@@ -24,13 +25,14 @@ Disallow: /cgi-bin/
 # ================================================
 # SITEMAP
 # ================================================
-Sitemap: https://casasprefabricadascanarias.es/sitemap.xml
+Sitemap: https://www.casasprefabricadascanarias.es/sitemap.xml
 
 # ================================================
 # CONFIGURACIÓN ESPECÍFICA PARA GOOGLE
 # ================================================
 User-agent: Googlebot
 Allow: /
+Disallow: /gracias
 Disallow: /gracias.html
 Crawl-delay: 1
 
