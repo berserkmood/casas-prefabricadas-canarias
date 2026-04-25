@@ -1514,3 +1514,207 @@ nav,
     flex-shrink: 0;
     margin-top: 0.125rem;
 }
+
+/* ============================================ */
+/* FORMULARIO BIFURCADO - EMBUDOS              */
+/* ============================================ */
+
+@keyframes funnelFadeIn {
+    from { opacity: 0; transform: translateY(14px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.funnel-fade-in {
+    animation: funnelFadeIn 0.35s ease-out forwards;
+}
+
+/* Grid de cards */
+.funnel-cards-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+@media (max-width: 580px) {
+    .funnel-cards-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Card base */
+.funnel-card {
+    border: 2px solid #e2e8f0;
+    border-radius: 1rem;
+    padding: 1.5rem 1.25rem;
+    text-align: center;
+    cursor: pointer;
+    transition: border-color 0.2s ease, background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    background: #ffffff;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: 'DM Sans', sans-serif;
+}
+
+.funnel-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
+
+.funnel-card:focus-visible {
+    outline: 3px solid #2d6a4f;
+    outline-offset: 2px;
+}
+
+/* Card A — verde */
+.funnel-card-a:hover {
+    border-color: #16a34a;
+    background: #f0fdf4;
+}
+
+/* Card B — azul */
+.funnel-card-b:hover {
+    border-color: #2563eb;
+    background: #eff6ff;
+}
+
+/* Icono de card */
+.funnel-card-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin-bottom: 0.25rem;
+    flex-shrink: 0;
+}
+
+.funnel-card-icon-a {
+    background: #dcfce7;
+    color: #16a34a;
+}
+
+.funnel-card-icon-b {
+    background: #dbeafe;
+    color: #2563eb;
+}
+
+/* Textos de card */
+.funnel-card-title {
+    font-weight: 700;
+    font-size: 0.9375rem;
+    color: #0f172a;
+    line-height: 1.3;
+}
+
+.funnel-card-sub {
+    font-size: 0.8125rem;
+    color: #64748b;
+    line-height: 1.4;
+}
+
+/* Botón volver */
+.funnel-back-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    color: #64748b;
+    font-size: 0.8125rem;
+    font-weight: 500;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin-bottom: 0.875rem;
+    transition: color 0.2s ease;
+    font-family: 'DM Sans', sans-serif;
+}
+
+.funnel-back-btn:hover {
+    color: #0f172a;
+}
+
+/* Badge de opción seleccionada */
+.funnel-selected-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    padding: 0.35rem 0.875rem;
+    border-radius: 999px;
+    margin-bottom: 0.25rem;
+}
+
+.funnel-selected-badge-a {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.funnel-selected-badge-b {
+    background: #dbeafe;
+    color: #1e40af;
+}
+
+/* Puntos informativos — Flujo B */
+.funnel-b-puntos {
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.875rem;
+    padding: 1rem 1.25rem;
+}
+
+.funnel-b-punto {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 0.875rem;
+    color: #334155;
+    font-weight: 500;
+}
+
+.funnel-b-punto-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #dbeafe;
+    color: #2563eb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8125rem;
+    flex-shrink: 0;
+}
+
+/* Botón azul — arquitecto */
+.btn-cta-blue {
+    background: linear-gradient(135deg, #1d4ed8, #1e40af);
+    color: white;
+    padding: 0.875rem 1.75rem;
+    border-radius: 0.75rem;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    box-shadow: 0 4px 15px rgba(29,78,216,0.3);
+    transition: all 0.3s ease;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1rem;
+    width: 100%;
+}
+
+.btn-cta-blue:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(29,78,216,0.4);
+}

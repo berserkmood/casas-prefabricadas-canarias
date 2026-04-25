@@ -134,6 +134,30 @@
     <priority>0.8</priority>
   </url>
 
+  <!-- GUÍA DE CONSTRUCTORAS GRAN CANARIA -->
+  <url>
+    <loc>https://www.casasprefabricadascanarias.es/guias/constructoras-casas-prefabricadas-gran-canaria</loc>
+    <lastmod>2026-04-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- GUÍA DE AYUDAS PRIMERA VIVIENDA 2026 -->
+  <url>
+    <loc>https://www.casasprefabricadascanarias.es/guias/ayudas-primera-vivienda-canarias-2026</loc>
+    <lastmod>2026-04-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- GUÍA DE PRESUPUESTO GRAN CANARIA -->
+  <url>
+    <loc>https://www.casasprefabricadascanarias.es/guias/presupuesto-casa-prefabricada-gran-canaria</loc>
+    <lastmod>2026-04-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <!-- ============================================= -->
   <!-- TRÁMITES                                     -->
   <!-- ============================================= -->
