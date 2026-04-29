@@ -202,6 +202,14 @@
     <priority>0.7</priority>
   </url>
 
+  <!-- ESTUDIO DE VIABILIDAD DEL TERRENO -->
+  <url>
+    <loc>https://www.casasprefabricadascanarias.es/guias/tramites/estudio-viabilidad-terreno-canarias</loc>
+    <lastmod>2026-04-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <!-- ============================================= -->
   <!-- PÁGINAS LEGALES                              -->
   <!-- ============================================= -->
