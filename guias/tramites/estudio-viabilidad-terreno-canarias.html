@@ -38,8 +38,10 @@
 
    <!-- Fonts -->
    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" media="print" onload="this.media='all'">
-   <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></noscript>
+   <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" as="style" onload="this.rel='stylesheet'">
+   <noscript>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</noscript>
        <link rel="stylesheet" href="../../assets/css/fonts.css">
     <link rel="stylesheet" href="../../assets/css/tailwind.css">
     <link rel="stylesheet" href="../../assets/css/style.min.css">
@@ -220,7 +222,7 @@
     <!-- HERO -->
     <section id="main-content" class="hero-section guias-hero relative flex items-center min-h-[70vh]">
         <div class="absolute inset-0 w-full h-full">
-            <img src="../../assets/images/hero-tramites/estudio-viabilidad-terreno.webp" alt="Arquitecto técnico realizando estudio de viabilidad en terreno canario" class="w-full h-full object-cover">
+            <img src="../../assets/images/hero-tramites/estudio-viabilidad-terreno-opt.webp" alt="Arquitecto técnico realizando estudio de viabilidad en terreno canario" class="w-full h-full object-cover">
         </div>
         <div class="relative z-10 w-full max-w-5xl mx-auto px-6 lg:px-0">
             <div class="animate-fade-up">

@@ -38,8 +38,10 @@
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" media="print" onload="this.media='all'">
-    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></noscript>
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" as="style" onload="this.rel='stylesheet'">
+    <noscript>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</noscript>
         <link rel="stylesheet" href="../../assets/css/fonts.css">
     <link rel="stylesheet" href="../../assets/css/tailwind.css">
     <link rel="stylesheet" href="../../assets/css/style.min.css">
@@ -199,7 +201,7 @@
     <!-- ============================================ -->
     <section class="hero-section guias-hero relative flex items-center min-h-[70vh]">
         <img
-  src="../../assets/images/hero-tramites/errores-casa-prefabricada.webp"
+  src="../../assets/images/hero-tramites/errores-casa-prefabricada-opt.webp"
   alt="Errores comunes en casas prefabricadas en Canarias"
   fetchpriority="high"
   decoding="sync"
