@@ -37,18 +37,14 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="manifest" href="/site.webmanifest">
     
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" media="print" onload="this.media='all'">
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></noscript>
-        <link rel="stylesheet" href="/assets/css/tailwind.css">
+        <link rel="stylesheet" href="/assets/css/fonts.css">
+    <link rel="stylesheet" href="/assets/css/tailwind.css">
     <link rel="stylesheet" href="assets/css/style.min.css">
     <link rel="canonical" href="https://www.casasprefabricadascanarias.es/" />
     
-    <link rel="preload" as="image" fetchpriority="high"
-         href="assets/images/hero-islas/hero-canarias.webp" type="image/webp">
 
 
     <script type="application/ld+json">
@@ -136,7 +132,7 @@
     <header class="header-fixed" id="header">
         <nav class="section-container flex items-center justify-between h-16 lg:h-20">
             <a href="index.html" class="flex items-center gap-3 group">
-                <div class="logo-box"><img src="assets/images/icono-logo.webp" alt="Logo Casas Prefabricadas Canarias"></div>
+                <div class="logo-box"><img src="assets/images/icono-logo-small.webp" alt="Logo Casas Prefabricadas Canarias"></div>
                 <div><div class="brand-title">Casas Prefabricadas</div><div class="brand-sub">Canarias</div></div>
             </a>
             
@@ -173,7 +169,7 @@
         <div class="mobile-menu-content">
             <div class="mobile-menu-header">
                 <div class="mobile-menu-logo">
-                    <div class="logo-box"><img src="assets/images/icono-logo.webp" alt="Logo Casas Prefabricadas Canarias"></div>
+                    <div class="logo-box"><img src="assets/images/icono-logo-small.webp" alt="Logo Casas Prefabricadas Canarias"></div>
                     <div><div class="brand-title">Casas Prefabricadas</div><div class="brand-sub">Canarias</div></div>
                 </div>
                 <button id="mobile-menu-close" class="mobile-menu-close" aria-label="Cerrar menú de navegación"><i class="fas fa-times"></i></button>
@@ -212,7 +208,13 @@
     </div>
 
    <section id="main-content" class="hero-section relative flex items-center min-h-screen">
-    <div class="hero-overlay absolute inset-0 bg-center bg-cover opacity-40" style="background-image: url(assets/images/hero-islas/hero-canarias.webp);"></div>
+    <img
+  src="assets/images/hero-islas/hero-canarias.webp"
+  alt="Casas prefabricadas en Canarias"
+  fetchpriority="high"
+  decoding="sync"
+  class="hero-overlay absolute inset-0 w-full h-full object-cover opacity-40"
+  width="1200" height="630">
     <div class="relative z-10 w-full max-w-5xl mx-auto px-6 lg:px-0">
         <div class="animate-fade-up">
             <div class="badge-floating mb-6 inline-flex items-center gap-2 bg-black/50 backdrop-blur-md text-green-400 px-4 py-2 rounded-full text-sm font-semibold">
@@ -293,7 +295,7 @@
                 <div class="carousel-modern-wrapper">
                     <div class="carousel-modern" id="carouselModern">
                         <div class="carousel-modern-track" id="carouselModernTrack">
-                                                        <div class="carousel-modern-slide"><div class="carousel-modern-image"><img src="assets/images/casas-prefabricadas/telde-gran-canaria-120m2.webp" alt="Casa prefabricada en Telde, Gran Canaria · modelo familiar 120 m²"><div class="carousel-modern-overlay"><div class="carousel-modern-caption"><h4>Telde, Gran Canaria</h4><p>Modelo Familiar · 120m²</p></div></div></div></div>
+                                                        <div class="carousel-modern-slide"><div class="carousel-modern-image"><img src="assets/images/casas-prefabricadas/telde-gran-canaria-120m2.webp" srcset="assets/images/casas-prefabricadas/telde-gran-canaria-120m2-800.webp 800w, assets/images/casas-prefabricadas/telde-gran-canaria-120m2.webp 1200w" sizes="(max-width: 768px) 100vw, 721px" alt="Casa prefabricada en Telde, Gran Canaria · modelo familiar 120 m²"><div class="carousel-modern-overlay"><div class="carousel-modern-caption"><h4>Telde, Gran Canaria</h4><p>Modelo Familiar · 120m²</p></div></div></div></div>
 
                             <div class="carousel-modern-slide"><div class="carousel-modern-image"><img src="assets/images/casas-prefabricadas/adeje-tenerife-costa-120m2.webp" alt="Casa prefabricada en Adeje, Tenerife · modelo familiar 120 m²" loading="lazy"><div class="carousel-modern-overlay"><div class="carousel-modern-caption"><h4>Adeje, Tenerife</h4><p>Modelo Familiar · 120m²</p></div></div></div></div>
                             <div class="carousel-modern-slide"><div class="carousel-modern-image"><img src="assets/images/casas-prefabricadas/vallegranrey-la-gomera-50m2.jpg" alt="Casa prefabricada en Valle Gran Rey, La Gomera · modelo compact 50 m²" loading="lazy"><div class="carousel-modern-overlay"><div class="carousel-modern-caption"><h4>Valle gran Rey, La Gomera</h4><p>Modelo Compact · 50m²</p></div></div></div></div>
@@ -673,7 +675,7 @@ function resetFunnel() {
         <div class="grid grid-cols-1 md:grid-cols-4 gap-8 pb-8 border-b border-slate-800">
             <div>
                 <div class="flex items-center gap-3 mb-4">
-                    <div class="logo-box"><img src="assets/images/icono-logo.webp" alt="Logo Casas Prefabricadas Canarias"></div>
+                    <div class="logo-box"><img src="assets/images/icono-logo-small.webp" alt="Logo Casas Prefabricadas Canarias"></div>
                     <div>
                         <div class="brand-title text-white">Casas Prefabricadas</div>
                         <div class="brand-sub text-slate-400">Canarias</div>
