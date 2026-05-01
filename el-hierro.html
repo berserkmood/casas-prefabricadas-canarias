@@ -700,7 +700,8 @@ En nuestra <a href="/guias/ayudas-casa-prefabricada-canarias.html" class="text-g
         el.classList.add('funnel-fade-in');
         if (window.innerWidth < 1024) {
             setTimeout(function() {
-                document.getElementById('contacto').scrollIntoView({ behavior: 'smooth', block: 'start' });
+                var top = el.getBoundingClientRect().top + window.pageYOffset - 80;
+                    window.scrollTo({ top: top, behavior: 'smooth' });
             }, 100);
         }
     }
